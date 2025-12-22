@@ -734,6 +734,12 @@ function CollapsibleTreeInner({
   const [showSearchResults, setShowSearchResults] = useState(false)
   const searchInputRef = useRef<HTMLInputElement>(null)
 
+  // 도움말 모달 상태
+  const [showHelpModal, setShowHelpModal] = useState(false)
+
+  // 미니맵 표시 상태 (기본: 숨김)
+  const [showMiniMap, setShowMiniMap] = useState(false)
+
   const { fitView } = useReactFlow()
 
   // 초기 확장 상태 설정 (루트 노드만 펼침)
@@ -877,147 +883,129 @@ function CollapsibleTreeInner({
   return (
     <div className="bg-white rounded-lg shadow-sm border">
       {/* 헤더 */}
-      <div className="p-4 border-b">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center">
-            <button
-              onClick={onBack}
-              className="text-gray-600 hover:text-gray-900 mr-4"
-            >
-              ← 목록
-            </button>
-            <span className="text-xl font-bold text-gray-900">
+      <div className="p-3 md:p-4 border-b">
+        {/* 첫째 줄: 목록 버튼 + 기업명 */}
+        <div className="flex items-center gap-2 mb-2">
+          <button
+            onClick={onBack}
+            className="text-gray-600 hover:text-gray-900 text-sm md:text-base shrink-0"
+          >
+            ← 목록
+          </button>
+          <div className="min-w-0 flex-1">
+            <span className="text-base md:text-xl font-bold text-gray-900 block truncate">
               {data.group_name}
             </span>
             {data.owner && (
-              <span className="ml-2 text-sm text-gray-500">
-                (동일인: {data.owner})
+              <span className="text-xs md:text-sm text-gray-500">
+                동일인: {data.owner}
               </span>
             )}
           </div>
+        </div>
 
-          {/* 검색 + 버튼 영역 */}
-          <div className="flex items-center gap-4">
-            {/* 검색창 */}
-            <div className="relative">
-              <input
-                ref={searchInputRef}
-                type="text"
-                placeholder="회사명 검색..."
-                value={searchQuery}
-                onChange={(e) => {
-                  setSearchQuery(e.target.value)
-                  setShowSearchResults(true)
-                }}
-                onFocus={() => setShowSearchResults(true)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Escape') {
-                    setSearchQuery('')
-                    setShowSearchResults(false)
-                    searchInputRef.current?.blur()
-                  } else if (e.key === 'Enter' && searchResults.length > 0) {
-                    handleSearchResultClick(searchResults[0])
-                  }
-                }}
-                className="w-64 px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+        {/* 둘째 줄: 검색창 (모바일에서는 전체 너비) */}
+        <div className="relative mb-3">
+          <input
+            ref={searchInputRef}
+            type="text"
+            placeholder="회사명 검색..."
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value)
+              setShowSearchResults(true)
+            }}
+            onFocus={() => setShowSearchResults(true)}
+            onKeyDown={(e) => {
+              if (e.key === 'Escape') {
+                setSearchQuery('')
+                setShowSearchResults(false)
+                searchInputRef.current?.blur()
+              } else if (e.key === 'Enter' && searchResults.length > 0) {
+                handleSearchResultClick(searchResults[0])
+              }
+            }}
+            className="w-full md:w-64 px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
 
-              {/* 검색 결과 드롭다운 */}
-              {showSearchResults && searchQuery.length >= 2 && (
-                <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto">
-                  {searchResults.length > 0 ? (
-                    searchResults.map((result) => (
-                      <button
-                        key={result.id}
-                        onClick={() => handleSearchResultClick(result)}
-                        className="w-full px-3 py-2 text-left text-sm hover:bg-blue-50 focus:bg-blue-50 focus:outline-none border-b border-gray-100 last:border-b-0"
-                      >
-                        <span className="font-medium text-gray-900">{result.name}</span>
-                      </button>
-                    ))
-                  ) : (
-                    <div className="px-3 py-2 text-sm text-gray-500">
-                      검색 결과가 없습니다
-                    </div>
-                  )}
+          {/* 검색 결과 드롭다운 */}
+          {showSearchResults && searchQuery.length >= 2 && (
+            <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto">
+              {searchResults.length > 0 ? (
+                searchResults.map((result) => (
+                  <button
+                    key={result.id}
+                    onClick={() => handleSearchResultClick(result)}
+                    className="w-full px-3 py-2 text-left text-sm hover:bg-blue-50 focus:bg-blue-50 focus:outline-none border-b border-gray-100 last:border-b-0"
+                  >
+                    <span className="font-medium text-gray-900">{result.name}</span>
+                  </button>
+                ))
+              ) : (
+                <div className="px-3 py-2 text-sm text-gray-500">
+                  검색 결과가 없습니다
                 </div>
               )}
             </div>
-
-            {/* 펼치기/접기 버튼 */}
-            <div className="flex gap-2">
-              <button
-                onClick={expandAll}
-                className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded"
-              >
-                모두 펼치기
-              </button>
-              <button
-              onClick={collapseAll}
-              className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded"
-            >
-              모두 접기
-            </button>
-            </div>
-          </div>
+          )}
         </div>
 
-        {/* 통계 */}
-        <div className="flex flex-wrap gap-4 text-sm mb-4">
-          <span className="bg-gray-100 px-3 py-1 rounded">
-            전체 계열사: {data.stats.total_affiliates}개
+        {/* 셋째 줄: 통계 (모바일에서 스크롤 가능) */}
+        <div className="flex gap-2 overflow-x-auto pb-2 text-xs md:text-sm mb-2 -mx-3 px-3 md:mx-0 md:px-0 md:flex-wrap">
+          <span className="bg-gray-100 px-2 md:px-3 py-1 rounded whitespace-nowrap shrink-0">
+            전체: {data.stats.total_affiliates}개
           </span>
           {data.holding_company && data.tree.length > 0 ? (
             <>
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded">
+              <span className="bg-blue-100 text-blue-800 px-2 md:px-3 py-1 rounded whitespace-nowrap shrink-0">
                 자회사: {data.stats.subsidiaries}개
               </span>
-              <span className="bg-blue-50 text-blue-600 px-3 py-1 rounded">
-                손자회사: {data.stats.grandchildren}개
+              <span className="bg-blue-50 text-blue-600 px-2 md:px-3 py-1 rounded whitespace-nowrap shrink-0">
+                손자: {data.stats.grandchildren}개
               </span>
               {data.stats.inferred_relations > 0 && (
-                <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded">
-                  추론 관계: {data.stats.inferred_relations}개
+                <span className="bg-orange-100 text-orange-800 px-2 md:px-3 py-1 rounded whitespace-nowrap shrink-0">
+                  추론: {data.stats.inferred_relations}개
                 </span>
               )}
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded">
-                기타 계열사: {data.stats.other_affiliates}개
+              <span className="bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded whitespace-nowrap shrink-0">
+                기타: {data.stats.other_affiliates}개
               </span>
             </>
           ) : (
-            <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded">
+            <span className="bg-yellow-100 text-yellow-800 px-2 md:px-3 py-1 rounded whitespace-nowrap shrink-0">
               지주회사 구조 없음
             </span>
           )}
         </div>
 
-        {/* 필터 토글 - 지주회사가 있는 경우에만 표시 */}
+        {/* 넷째 줄: 필터 토글 - 지주회사가 있는 경우에만 표시 */}
         {data.holding_company && data.tree.length > 0 && (
-          <div className="flex gap-4">
-            <label className="flex items-center gap-2 cursor-pointer">
+          <div className="flex gap-3 md:gap-4 text-xs md:text-sm">
+            <label className="flex items-center gap-1.5 cursor-pointer">
               <input
                 type="checkbox"
                 checked={showHolding}
                 onChange={(e) => setShowHolding(e.target.checked)}
-                className="w-4 h-4 text-blue-600 rounded"
+                className="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-600 rounded"
               />
-              <span className="text-sm">지주회사 구조</span>
+              <span>지주구조</span>
             </label>
-            <label className="flex items-center gap-2 cursor-pointer">
+            <label className="flex items-center gap-1.5 cursor-pointer">
               <input
                 type="checkbox"
                 checked={showOthers}
                 onChange={(e) => setShowOthers(e.target.checked)}
-                className="w-4 h-4 text-green-600 rounded"
+                className="w-3.5 h-3.5 md:w-4 md:h-4 text-green-600 rounded"
               />
-              <span className="text-sm">기타 계열사</span>
+              <span>기타 계열사</span>
             </label>
           </div>
         )}
       </div>
 
       {/* 그래프 */}
-      <div className="h-[600px]">
+      <div className="h-[calc(100vh-280px)] md:h-[600px] min-h-[400px] relative">
         {nodes.length > 0 ? (
           <ReactFlow
             nodes={nodes}
@@ -1028,6 +1016,7 @@ function CollapsibleTreeInner({
             edgeTypes={edgeTypes}
             fitView
             attributionPosition="bottom-left"
+            nodesDraggable={false}
             panOnDrag
             panOnScroll={false}
             zoomOnPinch
@@ -1036,17 +1025,55 @@ function CollapsibleTreeInner({
           >
             <Background />
             <Controls />
-            <MiniMap />
+            {showMiniMap && <MiniMap />}
           </ReactFlow>
         ) : (
           <div className="flex justify-center items-center h-full text-gray-500">
             표시할 데이터가 없습니다
           </div>
         )}
+
+        {/* 플로팅 컨트롤 버튼 (우측 상단) */}
+        <div className="absolute top-3 right-3 flex gap-1 bg-white/90 backdrop-blur rounded-lg shadow-lg p-1 z-10">
+          <button
+            onClick={expandAll}
+            className="w-8 h-8 flex items-center justify-center text-lg bg-gray-100 hover:bg-blue-100 hover:text-blue-600 rounded transition-colors"
+            title="모두 펼치기"
+          >
+            ⊕
+          </button>
+          <button
+            onClick={collapseAll}
+            className="w-8 h-8 flex items-center justify-center text-lg bg-gray-100 hover:bg-gray-200 rounded transition-colors"
+            title="모두 접기"
+          >
+            ⊖
+          </button>
+          <div className="w-px bg-gray-300 mx-0.5" />
+          <button
+            onClick={() => setShowMiniMap(!showMiniMap)}
+            className={`w-8 h-8 flex items-center justify-center text-lg rounded transition-colors ${
+              showMiniMap
+                ? 'bg-blue-100 text-blue-600'
+                : 'bg-gray-100 hover:bg-gray-200'
+            }`}
+            title={showMiniMap ? '미니맵 숨기기' : '미니맵 보기'}
+          >
+            🗺️
+          </button>
+          <div className="w-px bg-gray-300 mx-0.5" />
+          <button
+            onClick={() => setShowHelpModal(true)}
+            className="w-8 h-8 flex items-center justify-center text-lg bg-gray-100 hover:bg-gray-200 rounded transition-colors"
+            title="도움말"
+          >
+            ?
+          </button>
+        </div>
       </div>
 
-      {/* 범례 및 사용법 */}
-      <div className="p-4 border-t">
+      {/* 범례 및 사용법 - 데스크탑에서만 표시 */}
+      <div className="hidden md:block p-4 border-t">
         <div className="flex flex-wrap gap-6 text-sm mb-2">
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded" style={{ background: sourceStyles.root.bg }}></div>
@@ -1077,6 +1104,106 @@ function CollapsibleTreeInner({
           클릭: 펼치기/접기 | 호버: 상세 정보 | 📊: 주주현황 | 점선: 추론된 관계 | !: 법적 상위와 실제 최대주주 불일치
         </p>
       </div>
+
+      {/* 도움말 모달 */}
+      {showHelpModal && (
+        <div
+          className="fixed inset-0 bg-black/50 flex items-end md:items-center justify-center z-50"
+          onClick={() => setShowHelpModal(false)}
+        >
+          <div
+            className="bg-white w-full md:max-w-md md:rounded-lg rounded-t-2xl shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* 모달 헤더 */}
+            <div className="p-4 border-b flex items-center justify-between">
+              <h3 className="font-bold text-gray-900">도움말</h3>
+              <button
+                onClick={() => setShowHelpModal(false)}
+                className="text-gray-500 hover:text-gray-700 text-xl"
+              >
+                ×
+              </button>
+            </div>
+
+            {/* 모달 내용 */}
+            <div className="p-4 space-y-4">
+              {/* 노드 색상 범례 */}
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-2">노드 색상</h4>
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 rounded" style={{ background: sourceStyles.root.bg }}></div>
+                    <span>지주회사</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 rounded" style={{ background: sourceStyles.holding.bg }}></div>
+                    <span>자회사/손자회사</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 rounded" style={{ background: sourceStyles.affiliate.bg }}></div>
+                    <span>기타 계열사</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 rounded" style={{ background: sourceStyles.both.bg }}></div>
+                    <span>지주구조+계열사</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 선 스타일 */}
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-2">연결선</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-0 border-t-2 border-blue-500"></div>
+                    <span>공식 지주회사 구조</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-0 border-t-2 border-dashed border-green-500"></div>
+                    <span>주주현황 기반 추론</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 아이콘 설명 */}
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-2">아이콘</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center gap-2">
+                    <span className="text-base">📊</span>
+                    <span>주주현황 보기</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-amber-500 text-white text-xs flex items-center justify-center font-bold">!</div>
+                    <span>법적 상위 ≠ 최대주주</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 조작 방법 */}
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-2">조작 방법</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• 노드 클릭: 하위 회사 펼치기/접기</li>
+                  <li>• 드래그: 화면 이동</li>
+                  <li>• 핀치/스크롤: 확대/축소</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* 닫기 버튼 */}
+            <div className="p-4 border-t">
+              <button
+                onClick={() => setShowHelpModal(false)}
+                className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+              >
+                닫기
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 주주현황 패널 */}
       {selectedCompany && (

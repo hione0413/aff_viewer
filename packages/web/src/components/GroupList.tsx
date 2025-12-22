@@ -206,7 +206,17 @@ export function GroupList({ onSelect }: Props) {
 
   return (
     <div>
-      {/* 검색 - 항상 표시 */}
+      {/* 타이틀 */}
+      <div className="mb-6">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
+          기업족보
+        </h1>
+        <p className="text-sm text-gray-500 mt-1">
+          대한민국 대규모기업집단 계열사 관계도
+        </p>
+      </div>
+
+      {/* 검색 */}
       <div className="mb-6">
         <input
           type="text"
