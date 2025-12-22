@@ -64,12 +64,23 @@ interface CustomNodeData {
   ownershipRate?: number | null
   inferred?: boolean  // 주주현황 기반 추론 관계
   highlighted?: boolean  // 검색 결과 하이라이트
+  // 최대주주 정보 (불일치 감지용)
+  legalParentName?: string | null
+  largestStockholder?: string | null
+  largestStockholderRate?: number | null
+  parentMismatch?: boolean
   onToggle: (nodeId: string) => void
   onShowStockholders: (nodeId: string, label: string) => void
 }
 
 function CompanyNodeComponent({ id, data }: NodeProps<Node<CustomNodeData>>) {
-  const { label, childCount, isExpanded, hasChildren, source, level, inferred, highlighted, onToggle, onShowStockholders } = data
+  const {
+    label, childCount, isExpanded, hasChildren, source, level, inferred, highlighted,
+    legalParentName, largestStockholder, largestStockholderRate, parentMismatch,
+    onToggle, onShowStockholders
+  } = data
+
+  const [showTooltip, setShowTooltip] = useState(false)
 
   const style = source === 'root'
     ? sourceStyles.root
@@ -89,6 +100,9 @@ function CompanyNodeComponent({ id, data }: NodeProps<Node<CustomNodeData>>) {
     boxShadow: '0 0 0 3px #fbbf24, 0 0 12px rgba(251, 191, 36, 0.4)',
   } : {}
 
+  // 툴팁에 표시할 정보가 있는지 확인
+  const hasTooltipInfo = legalParentName || largestStockholder
+
   return (
     <div
       style={{
@@ -98,6 +112,7 @@ function CompanyNodeComponent({ id, data }: NodeProps<Node<CustomNodeData>>) {
         padding,
         color: 'white',
         fontSize,
+        position: 'relative',
         fontWeight: level === 0 ? 'bold' : 'normal',
         minWidth: '120px',
         textAlign: 'center',
@@ -106,8 +121,92 @@ function CompanyNodeComponent({ id, data }: NodeProps<Node<CustomNodeData>>) {
         ...highlightStyle,
       }}
       onClick={() => hasChildren && onToggle(id)}
+      onMouseEnter={() => hasTooltipInfo && setShowTooltip(true)}
+      onMouseLeave={() => setShowTooltip(false)}
     >
       <Handle type="target" position={Position.Left} style={{ visibility: 'hidden' }} />
+
+      {/* 불일치 경고 아이콘 */}
+      {parentMismatch && (
+        <div
+          style={{
+            position: 'absolute',
+            top: '-8px',
+            right: '-8px',
+            width: '20px',
+            height: '20px',
+            background: '#f59e0b',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '12px',
+            fontWeight: 'bold',
+            border: '2px solid white',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
+          }}
+          title="법적 상위회사와 최대주주가 다릅니다"
+        >
+          !
+        </div>
+      )}
+
+      {/* 호버 툴팁 */}
+      {showTooltip && hasTooltipInfo && (
+        <div
+          style={{
+            position: 'absolute',
+            bottom: '100%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            marginBottom: '8px',
+            padding: '8px 12px',
+            background: 'white',
+            color: '#333',
+            borderRadius: '6px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+            fontSize: '11px',
+            whiteSpace: 'nowrap',
+            zIndex: 1000,
+            textAlign: 'left',
+            minWidth: '180px',
+          }}
+        >
+          <div style={{ fontWeight: 'bold', marginBottom: '4px', color: '#1e40af' }}>
+            {label}
+          </div>
+          <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '4px' }}>
+            {legalParentName && (
+              <div style={{ marginBottom: '2px' }}>
+                <span style={{ color: '#6b7280' }}>법적 상위: </span>
+                <span>{legalParentName}</span>
+              </div>
+            )}
+            {largestStockholder && (
+              <div style={{ color: parentMismatch ? '#f59e0b' : 'inherit' }}>
+                <span style={{ color: '#6b7280' }}>최대주주: </span>
+                <span style={{ fontWeight: parentMismatch ? 'bold' : 'normal' }}>
+                  {largestStockholder} ({largestStockholderRate?.toFixed(1)}%)
+                </span>
+              </div>
+            )}
+          </div>
+          {/* 툴팁 화살표 */}
+          <div
+            style={{
+              position: 'absolute',
+              bottom: '-6px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: 0,
+              height: 0,
+              borderLeft: '6px solid transparent',
+              borderRight: '6px solid transparent',
+              borderTop: '6px solid white',
+            }}
+          />
+        </div>
+      )}
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
         <span>{label}</span>
@@ -311,6 +410,10 @@ function buildNodesAndEdges(
             ownershipRate: child.ownership_rate,
             inferred: isInferred,
             highlighted: highlightedNodeId === childId,
+            legalParentName: child.legal_parent_name,
+            largestStockholder: child.largest_stockholder,
+            largestStockholderRate: child.largest_stockholder_rate,
+            parentMismatch: child.parent_mismatch,
             onToggle,
             onShowStockholders,
           },
@@ -429,6 +532,10 @@ function buildNodesAndEdges(
               ownershipRate: affiliate.ownership_rate,
               inferred: isInferred,
               highlighted: highlightedNodeId === affiliateId,
+              legalParentName: affiliate.legal_parent_name,
+              largestStockholder: affiliate.largest_stockholder,
+              largestStockholderRate: affiliate.largest_stockholder_rate,
+              parentMismatch: affiliate.parent_mismatch,
               onToggle,
               onShowStockholders,
             },
@@ -535,6 +642,10 @@ function buildNodesAndEdges(
             ownershipRate: affiliate.ownership_rate,
             inferred: isInferred,
             highlighted: highlightedNodeId === affiliateId,
+            legalParentName: affiliate.legal_parent_name,
+            largestStockholder: affiliate.largest_stockholder,
+            largestStockholderRate: affiliate.largest_stockholder_rate,
+            parentMismatch: affiliate.parent_mismatch,
             onToggle,
             onShowStockholders,
           },
@@ -917,6 +1028,11 @@ function CollapsibleTreeInner({
             edgeTypes={edgeTypes}
             fitView
             attributionPosition="bottom-left"
+            panOnDrag
+            panOnScroll={false}
+            zoomOnPinch
+            zoomOnScroll
+            preventScrolling
           >
             <Background />
             <Controls />
@@ -952,9 +1068,13 @@ function CollapsibleTreeInner({
             <div className="w-6 h-0 border-t-2 border-dashed border-orange-500"></div>
             <span>주주현황 기반 추론</span>
           </div>
+          <div className="flex items-center gap-2">
+            <div className="w-5 h-5 rounded-full bg-amber-500 text-white text-xs flex items-center justify-center font-bold">!</div>
+            <span>법적 상위 ≠ 최대주주</span>
+          </div>
         </div>
         <p className="text-xs text-gray-500">
-          클릭: 하위 회사 펼치기/접기 | 📊: 주주현황 보기 | 점선: 주주현황 데이터 기반 추론된 소유관계
+          클릭: 펼치기/접기 | 호버: 상세 정보 | 📊: 주주현황 | 점선: 추론된 관계 | !: 법적 상위와 실제 최대주주 불일치
         </p>
       </div>
 

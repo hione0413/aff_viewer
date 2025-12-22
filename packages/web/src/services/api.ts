@@ -113,6 +113,11 @@ export interface CompanyNode {
   source: 'holding' | 'affiliate' | 'both'
   inferred: boolean  // 주주현황 기반 추론 관계 (점선으로 표시)
   children: CompanyNode[]
+  // 최대주주 정보 (불일치 감지용)
+  legal_parent_name: string | null
+  largest_stockholder: string | null
+  largest_stockholder_rate: number | null
+  parent_mismatch: boolean  // 법적 상위 != 최대주주
 }
 
 export interface IntegratedGroupResponse {

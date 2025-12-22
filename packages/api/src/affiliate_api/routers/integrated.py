@@ -18,6 +18,11 @@ class CompanyNode(BaseModel):
     source: str  # "holding", "affiliate", "both"
     inferred: bool = False  # 주주현황 기반 추론 관계 (점선으로 표시)
     children: list["CompanyNode"] = []
+    # 최대주주 정보 (불일치 감지용)
+    legal_parent_name: str | None = None  # 법적 상위회사명
+    largest_stockholder: str | None = None  # 최대주주명
+    largest_stockholder_rate: float | None = None  # 최대주주 지분율
+    parent_mismatch: bool = False  # 법적 상위 != 최대주주
 
 
 class IntegratedGroupResponse(BaseModel):
@@ -41,16 +46,64 @@ class IntegratedGroupResponse(BaseModel):
     stats: dict
 
 
+def find_largest_corporate_stockholder(
+    stockholders: list,
+    affiliate_name_map: dict[str, str],
+) -> tuple[str | None, float | None]:
+    """회사의 주주 목록에서 최대 지분을 가진 법인 주주를 찾음"""
+    best_stockholder = None
+    best_rate = 0.0
+
+    for s in stockholders:
+        # 개인, 동일인, 친족 등 제외 (법인만)
+        stockholder_type = s.stockholder_type or ''
+        if '개인' in stockholder_type:
+            continue
+        if any(kw in stockholder_type for kw in ['동일인', '친족', '임원']):
+            continue
+
+        rate = s.total_rate or 0.0
+        if rate > best_rate:
+            best_rate = rate
+            best_stockholder = s.stockholder_name
+
+    return (best_stockholder, best_rate) if best_stockholder else (None, None)
+
+
+def normalize_company_name(name: str) -> str:
+    """회사명 정규화 (비교용)"""
+    if not name:
+        return ""
+    return name.replace('(주)', '').replace('㈜', '').replace('주식회사', '').replace(' ', '').strip()
+
+
 def build_holding_tree(
     parent_corp_number: str,
+    parent_name: str,
     relations_by_parent: dict[str, list],
     affiliate_corp_numbers: set[str],
+    stockholders_by_company: dict[str, list],
+    affiliate_name_map: dict[str, str],
 ) -> list[CompanyNode]:
     """지주회사 트리 구조 생성"""
     children = []
     for r in relations_by_parent.get(parent_corp_number, []):
         # 계열사에도 있는지 확인
         source = "both" if r.subsidiary_corp_number in affiliate_corp_numbers else "holding"
+
+        # 해당 회사의 주주현황에서 최대주주 찾기
+        stockholders = stockholders_by_company.get(r.subsidiary_corp_number, [])
+        largest_stockholder, largest_rate = find_largest_corporate_stockholder(
+            stockholders, affiliate_name_map
+        )
+
+        # 법적 상위와 최대주주 불일치 확인
+        parent_mismatch = False
+        if largest_stockholder:
+            normalized_parent = normalize_company_name(parent_name)
+            normalized_largest = normalize_company_name(largest_stockholder)
+            if normalized_parent and normalized_largest and normalized_parent != normalized_largest:
+                parent_mismatch = True
 
         children.append(
             CompanyNode(
@@ -59,10 +112,17 @@ def build_holding_tree(
                 ownership_rate=r.ownership_rate,
                 relation_type=r.relation_type,
                 source=source,
+                legal_parent_name=parent_name,
+                largest_stockholder=largest_stockholder,
+                largest_stockholder_rate=largest_rate,
+                parent_mismatch=parent_mismatch,
                 children=build_holding_tree(
                     r.subsidiary_corp_number,
+                    r.subsidiary_name,  # 현재 노드가 자식들의 부모가 됨
                     relations_by_parent,
-                    affiliate_corp_numbers
+                    affiliate_corp_numbers,
+                    stockholders_by_company,
+                    affiliate_name_map,
                 ),
             )
         )
@@ -107,7 +167,22 @@ async def get_integrated_group(
             }
             break
 
-    # 4. 지주회사 트리 구조 생성
+    # 4. 모든 계열사의 주주현황 데이터 조회 (불일치 감지용)
+    stockholder_data = db.query(Stockholder).filter(
+        Stockholder.corp_number.in_(affiliate_corp_numbers)
+    ).all()
+
+    # 법인등록번호로 주주 데이터 그룹화
+    stockholders_by_company: dict[str, list] = {}
+    for s in stockholder_data:
+        if s.corp_number not in stockholders_by_company:
+            stockholders_by_company[s.corp_number] = []
+        stockholders_by_company[s.corp_number].append(s)
+
+    # 계열사 법인등록번호 → 이름 매핑
+    affiliate_name_map = {a.corporate_number: a.name for a in affiliates if a.corporate_number}
+
+    # 5. 지주회사 트리 구조 생성
     tree = []
     holding_corp_numbers = set()
 
@@ -124,34 +199,22 @@ async def get_integrated_group(
         # 트리 구성
         tree = build_holding_tree(
             holding_info["corp_number"],
+            holding_info["name"],
             relations_by_parent,
-            affiliate_corp_numbers
+            affiliate_corp_numbers,
+            stockholders_by_company,
+            affiliate_name_map,
         )
 
         # 지주회사도 holding_corp_numbers에 추가
         holding_corp_numbers.add(holding_info["corp_number"])
 
-    # 5. 주주현황 기반으로 기타 계열사의 소유 관계 추론
+    # 6. 주주현황 기반으로 기타 계열사의 소유 관계 추론
     # 기타 계열사 법인등록번호 목록
     other_corp_numbers = {
         a.corporate_number for a in affiliates
         if a.corporate_number and a.corporate_number not in holding_corp_numbers
     }
-
-    # 주주현황 데이터 조회 (기타 계열사들의 주주 정보)
-    stockholder_data = db.query(Stockholder).filter(
-        Stockholder.corp_number.in_(other_corp_numbers)
-    ).all()
-
-    # 법인등록번호로 주주 데이터 그룹화
-    stockholders_by_company: dict[str, list] = {}
-    for s in stockholder_data:
-        if s.corp_number not in stockholders_by_company:
-            stockholders_by_company[s.corp_number] = []
-        stockholders_by_company[s.corp_number].append(s)
-
-    # 계열사 법인등록번호 → 이름 매핑
-    affiliate_name_map = {a.corporate_number: a.name for a in affiliates if a.corporate_number}
 
     # 주주 이름으로 계열사 매칭 (법인등록번호가 없으므로 이름으로 매칭)
     def find_parent_affiliate(stockholders: list, all_affiliate_corp_numbers: set) -> tuple[str | None, float | None]:
@@ -194,6 +257,18 @@ async def get_integrated_group(
 
         if parent_corp:
             # 지주회사 구조 내 부모를 찾음 - 추론된 관계로 연결
+            parent_name = affiliate_name_map.get(parent_corp, "")
+            largest_stockholder, largest_rate = find_largest_corporate_stockholder(
+                stockholders, affiliate_name_map
+            )
+            # 불일치 확인 (추론된 부모 vs 최대주주)
+            parent_mismatch = False
+            if largest_stockholder:
+                normalized_parent = normalize_company_name(parent_name)
+                normalized_largest = normalize_company_name(largest_stockholder)
+                if normalized_parent and normalized_largest and normalized_parent != normalized_largest:
+                    parent_mismatch = True
+
             child_node = CompanyNode(
                 name=affiliate.name,
                 corp_number=affiliate.corporate_number,
@@ -201,6 +276,10 @@ async def get_integrated_group(
                 relation_type="추론",
                 source="affiliate",
                 inferred=True,
+                legal_parent_name=parent_name,
+                largest_stockholder=largest_stockholder,
+                largest_stockholder_rate=largest_rate,
+                parent_mismatch=parent_mismatch,
             )
             if parent_corp not in inferred_children:
                 inferred_children[parent_corp] = []
@@ -272,6 +351,7 @@ async def get_integrated_group(
     # 기타 계열사 트리 재귀 구성
     def build_other_affiliate_tree(
         corp_number: str,
+        parent_name: str,
         visited: set[str]
     ) -> list[CompanyNode]:
         """기타 계열사의 자식 노드들을 재귀적으로 구성"""
@@ -284,6 +364,13 @@ async def get_integrated_group(
             if child_corp in visited:  # 순환 참조 방지
                 continue
             child_name = affiliate_name_map.get(child_corp, child_corp)
+
+            # 최대주주 정보 조회
+            child_stockholders = stockholders_by_company.get(child_corp, [])
+            largest_stockholder, largest_rate = find_largest_corporate_stockholder(
+                child_stockholders, affiliate_name_map
+            )
+
             children.append(
                 CompanyNode(
                     name=child_name,
@@ -292,7 +379,11 @@ async def get_integrated_group(
                     relation_type="추론",
                     source="affiliate",
                     inferred=True,
-                    children=build_other_affiliate_tree(child_corp, visited.copy()),
+                    legal_parent_name=parent_name,
+                    largest_stockholder=largest_stockholder,
+                    largest_stockholder_rate=largest_rate,
+                    parent_mismatch=False,  # 기타 계열사는 불일치 표시 안함
+                    children=build_other_affiliate_tree(child_corp, child_name, visited.copy()),
                 )
             )
         return children
@@ -301,8 +392,13 @@ async def get_integrated_group(
     other_affiliates = []
     for affiliate in root_other_affiliates:
         corp_num = affiliate.corporate_number
-        children = build_other_affiliate_tree(corp_num, set())
-        has_children = len(children) > 0
+        children = build_other_affiliate_tree(corp_num, affiliate.name, set())
+
+        # 루트 기타 계열사의 최대주주 정보
+        stockholders = stockholders_by_company.get(corp_num, [])
+        largest_stockholder, largest_rate = find_largest_corporate_stockholder(
+            stockholders, affiliate_name_map
+        )
 
         other_affiliates.append(
             CompanyNode(
@@ -310,6 +406,9 @@ async def get_integrated_group(
                 corp_number=corp_num,
                 source="affiliate",
                 inferred=False,  # 루트는 추론이 아님
+                largest_stockholder=largest_stockholder,
+                largest_stockholder_rate=largest_rate,
+                parent_mismatch=False,  # 기타 계열사는 불일치 표시 안함
                 children=children,
             )
         )
