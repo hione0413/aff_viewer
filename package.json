@@ -1,0 +1,21 @@
+{
+  "name": "affiliate-visualization",
+  "version": "0.1.0",
+  "private": true,
+  "description": "대한민국 기업 계열사 시각화 서비스",
+  "scripts": {
+    "dev": "pnpm --parallel run dev",
+    "dev:api": "pnpm --filter api run dev",
+    "dev:web": "pnpm --filter web run dev",
+    "build": "pnpm --parallel run build",
+    "lint": "pnpm --parallel run lint"
+  },
+  "keywords": [
+    "corporate",
+    "affiliate",
+    "visualization",
+    "korea"
+  ],
+  "author": "",
+  "license": "MIT"
+}

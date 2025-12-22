@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.egroup.go.kr)",
+      "WebFetch(domain:www.data.go.kr)",
+      "Bash(mkdir:*)",
+      "Bash(npm create:*)",
+      "Bash(pnpm create:*)",
+      "Bash(cat:*)",
+      "Bash(curl:*)",
+      "Bash(python -m json.tool:*)",
+      "Bash(chcp 6500)",
+      "Bash(python:*)"
+    ]
+  }
+}
