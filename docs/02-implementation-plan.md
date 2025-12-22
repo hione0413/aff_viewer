@@ -1,4 +1,4 @@
-# 기업 계열사 시각화 서비스 - 실행계획
+# 기업 계열사 시각화 서비스 - 구현 현황
 
 ## 프로젝트 개요
 
@@ -11,171 +11,187 @@
 
 ---
 
-## Phase 1: 기반 구축
+## 구현 현황
 
-### 1.1 프로젝트 초기 설정
+### Phase 1: 기반 구축 ✅ 완료
 
-- [x] 프로젝트 구조 생성
-- [x] 패키지 매니저 설정 (pnpm)
+#### 1.1 프로젝트 초기 설정
+
+- [x] 프로젝트 구조 생성 (pnpm monorepo)
+- [x] 패키지 매니저 설정 (pnpm workspace)
 - [x] TypeScript 설정
 - [x] ESLint, Prettier 설정
 
-### 1.2 공공데이터포털 API 연동
+#### 1.2 공공데이터포털 API 연동
 
-- [ ] 공공데이터포털 회원가입 및 API 키 발급 *(진행 중)*
-- [x] API 클라이언트 모듈 개발
+- [x] 공공데이터포털 API 키 발급
+- [x] API 클라이언트 모듈 개발 (`packages/api/src/affiliate_api/clients/data_portal.py`)
   - 지정된 대규모기업집단 조회
   - 소속회사 조회
-  - XML 응답 파싱
+  - 지주회사 자회사/손자회사 조회
+  - XML 응답 파싱 (xmltodict)
 - [x] API 응답 타입 정의
 - [x] 에러 핸들링 및 재시도 로직
 
-### 1.3 데이터 모델 설계
+#### 1.3 데이터 모델
 
-```typescript
-// 기업집단
-interface CorporateGroup {
-  code: string;           // unityGrupCode
-  name: string;           // unityGrupNm
-  owner: string;          // smerNm (동일인)
-  representativeCompany: string;  // repreCmpny
-  affiliateCount: number; // sumCmpnyCo
-  groupType: string;      // invstmntLmtt
-  isPublic: boolean;      // entrprsCl
-}
+**CorporateGroup (기업집단)**
+```python
+class CorporateGroup(Base):
+    id: int                      # Primary Key
+    code: str                    # 기업집단코드 (unique, indexed)
+    name: str                    # 기업집단명 (indexed)
+    owner: str | None            # 동일인(총수)
+    representative_company: str  # 대표회사
+    affiliate_count: int         # 계열회사 수
+    group_type: str | None       # 집단 구분
+    is_public: bool              # 공기업 여부
+    designation_year: str        # 지정년월 (YYYYMM)
+```
 
-// 계열사
-interface Affiliate {
-  groupCode: string;      // 소속 기업집단코드
-  name: string;           // entrprsNm
-  corporateNumber: string; // jurirno
-  businessNumber: string;  // bizrno
-  ceo: string;            // rprsntvNm
-  foundedDate: string;    // fondDe
-  affiliatedDate: string; // grinil
-}
+**Affiliate (계열사)**
+```python
+class Affiliate(Base):
+    id: int                      # Primary Key
+    group_code: str              # 소속 기업집단코드 (FK, indexed)
+    name: str                    # 소속회사명 (indexed)
+    corporate_number: str | None # 법인등록번호
+    business_number: str | None  # 사업자등록번호
+    ceo: str | None              # 대표자명
+    founded_date: str | None     # 설립일 (YYYYMMDD)
+    affiliated_date: str | None  # 계열편입일
+    designation_year: str        # 지정년월
+```
+
+**HoldingCompanyRelation (지주회사 관계)**
+```python
+class HoldingCompanyRelation(Base):
+    id: int                      # Primary Key
+    holding_group_name: str      # 지주회사 그룹명 (indexed)
+    holding_corp_number: str     # 지주회사 법인등록번호 (indexed)
+    finance_type: str | None     # 금융/일반 구분
+    subsidiary_name: str         # 자/손자회사명 (indexed)
+    subsidiary_corp_number: str  # 자/손자회사 법인등록번호
+    ownership_rate: float        # 지분율
+    relation_type: str           # 자회사/손자회사/증손자회사
+    parent_corp_number: str      # 부모회사 법인등록번호
+    designation_year: str        # 공개년월
 ```
 
 ---
 
-## Phase 2: 백엔드 개발 ✅
+### Phase 2: 백엔드 개발 ✅ 완료
 
-### 2.1 기술 스택 선정
+#### 2.1 기술 스택
 
-| 구분 | 기술 | 선정 이유 |
-|------|------|----------|
-| 런타임 | Python 3.11+ | 데이터 처리 용이, XML 파싱 편리 |
-| 프레임워크 | FastAPI | 고성능, 자동 API 문서화, 타입 지원 |
-| ORM | SQLAlchemy | Python 표준 ORM |
-| DB | SQLite | 경량, 별도 설치 불필요 |
-| 스케줄러 | APScheduler | 데이터 동기화 자동화 |
+| 구분 | 기술 | 버전 |
+|------|------|------|
+| 런타임 | Python | 3.11+ |
+| 프레임워크 | FastAPI | >= 0.115.0 |
+| ORM | SQLAlchemy | >= 2.0.0 |
+| DB | SQLite | - |
+| HTTP 클라이언트 | httpx | >= 0.27.0 |
+| XML 파싱 | xmltodict | >= 0.14.0 |
+| 스케줄러 | APScheduler | >= 3.10.0 |
 
-### 2.2 API 엔드포인트 설계
+#### 2.2 구현된 API 엔드포인트
 
-```
-GET /api/groups
-  - 전체 기업집단 목록 조회
-  - Query: year (지정년월)
+| 엔드포인트 | 메서드 | 설명 | 파일 |
+|-----------|--------|------|------|
+| `/api/groups` | GET | 기업집단 목록 (검색, 페이징) | `routers/groups.py` |
+| `/api/groups/{code}` | GET | 기업집단 상세 정보 | `routers/groups.py` |
+| `/api/affiliates` | GET | 계열사 목록 (그룹 필터) | `routers/affiliates.py` |
+| `/api/affiliates/{id}` | GET | 계열사 상세 정보 | `routers/affiliates.py` |
+| `/api/search` | GET | 기업집단/계열사 통합 검색 | `routers/search.py` |
+| `/api/sync` | POST | 데이터 동기화 트리거 | `routers/sync.py` |
+| `/api/sync/status` | GET | 동기화 상태 조회 | `routers/sync.py` |
+| `/api/holding/groups` | GET | 지주회사 그룹 목록 | `routers/holding.py` |
+| `/api/holding/tree/{corp}` | GET | 지주회사 트리 조회 | `routers/holding.py` |
+| `/api/holding/sync` | POST | 지주회사 동기화 | `routers/holding.py` |
+| `/api/integrated/{code}` | GET | 통합 시각화 데이터 | `routers/integrated.py` |
 
-GET /api/groups/:groupCode
-  - 특정 기업집단 상세 정보
+#### 2.3 데이터 동기화
 
-GET /api/groups/:groupCode/affiliates
-  - 특정 기업집단의 계열사 목록
-
-GET /api/affiliates/:affiliateId
-  - 특정 계열사 상세 정보
-
-GET /api/search
-  - 기업집단/계열사 검색
-  - Query: keyword
-```
-
-### 2.3 데이터 캐싱 전략
-
-- 공정위 데이터는 연 1회 갱신 (매년 5월)
-- 일별 캐싱으로 API 호출 최소화
-- 캐시 갱신: 매일 자정 또는 수동 트리거
+- APScheduler로 매일 지정 시간(기본 02:00) 자동 동기화
+- 수동 동기화 API 제공 (`POST /api/sync`)
+- 공공데이터포털 API 호출 → XML 파싱 → DB Upsert
 
 ---
 
-## Phase 3: 프론트엔드 개발 ✅
+### Phase 3: 프론트엔드 개발 ✅ 완료
 
-### 3.1 기술 스택 선정
+#### 3.1 기술 스택
 
-| 구분 | 기술 | 선정 이유 |
-|------|------|----------|
-| 프레임워크 | React + Vite | 빠른 개발, nginx 정적 배포 가능 |
-| 언어 | TypeScript | 타입 안정성 |
-| 시각화 | React Flow (@xyflow/react) | React 친화적, 인터랙티브 그래프 |
-| 스타일링 | Tailwind CSS | 빠른 UI 개발 |
-| 상태관리 | React Query (@tanstack/react-query) | 서버 상태 관리, 캐싱 |
+| 구분 | 기술 | 버전 |
+|------|------|------|
+| 프레임워크 | React | ^18.3.1 |
+| 빌드 도구 | Vite | ^6.0.1 |
+| 언어 | TypeScript | ~5.6.2 |
+| 시각화 | @xyflow/react | ^12.3.0 |
+| 상태관리 | @tanstack/react-query | ^5.60.0 |
+| 스타일링 | Tailwind CSS | ^3.4.15 |
 
-### 3.2 주요 화면 구성
+#### 3.2 구현된 컴포넌트
 
-#### 메인 페이지
-```
-┌─────────────────────────────────────────────┐
-│  🔍 기업집단 검색                            │
-├─────────────────────────────────────────────┤
-│                                             │
-│   삼성  SK  현대자동차  LG  롯데  ...        │
-│   (카드 또는 리스트 형태)                    │
-│                                             │
-└─────────────────────────────────────────────┘
-```
+| 컴포넌트 | 경로 | 기능 |
+|---------|------|------|
+| App | `src/App.tsx` | 메인 앱, 헤더, 뷰 전환 |
+| GroupList | `src/components/GroupList.tsx` | 기업집단 카드 목록, 통합 검색 |
+| AffiliateGraph | `src/components/AffiliateGraph.tsx` | 원형 그래프 (중심에 그룹) |
+| HoldingTree | `src/components/HoldingTree.tsx` | 지주회사 계층 트리 |
+| CollapsibleTree | `src/components/CollapsibleTree.tsx` | 접힐 수 있는 트리 |
+| IntegratedGraph | `src/components/IntegratedGraph.tsx` | 통합 시각화 |
 
-#### 계열사 시각화 페이지
-```
-┌─────────────────────────────────────────────┐
-│  ← 삼성그룹 (59개 계열사)      [트리] [그래프] │
-├─────────────────────────────────────────────┤
-│                                             │
-│           ┌─────────┐                       │
-│           │ 삼성전자 │                       │
-│           └────┬────┘                       │
-│      ┌─────────┼─────────┐                  │
-│  ┌───┴───┐ ┌───┴───┐ ┌───┴───┐             │
-│  │삼성SDI│ │삼성SDS│ │삼성물산│             │
-│  └───────┘ └───────┘ └───────┘             │
-│                                             │
-├─────────────────────────────────────────────┤
-│  [필터: 업종] [정렬: 자산규모]               │
-└─────────────────────────────────────────────┘
-```
+#### 3.3 Custom Hooks
 
-### 3.3 시각화 옵션
+| Hook | 경로 | 기능 |
+|------|------|------|
+| useGroups | `src/hooks/useGroups.ts` | 기업집단 목록 조회 |
+| useAffiliates | `src/hooks/useAffiliates.ts` | 계열사 목록 조회 |
 
-| 뷰 타입 | 용도 | 라이브러리 |
-|---------|------|-----------|
-| 트리 뷰 | 계층 구조 표현 | D3.js hierarchy |
-| 네트워크 그래프 | 출자 관계 표현 | React Flow / vis.js |
-| 리스트 뷰 | 상세 정보 테이블 | AG Grid / 기본 테이블 |
+#### 3.4 API 클라이언트
+
+`src/services/api.ts`:
+- `fetchGroups(keyword?)` - 기업집단 목록
+- `fetchAffiliates(groupCode)` - 계열사 목록
+- `searchAll(keyword)` - 통합 검색
+- `triggerSync()` - 동기화 트리거
+- `fetchHoldingGroups()` - 지주회사 목록
+- `fetchHoldingTree(corpNumber)` - 지주회사 트리
+- `syncHoldingRelations()` - 지주회사 동기화
+- `fetchIntegratedGroup(groupCode)` - 통합 정보
 
 ---
 
-## Phase 4: 고도화 (선택)
+### Phase 4: 고도화 (선택)
 
-### 4.1 추가 데이터 연동
+#### 4.1 추가 데이터 연동
 
 - [ ] 소속회사 재무현황 API 연동 (자산, 매출 시각화)
 - [ ] 소속회사 주주현황 API 연동 (지분 관계 표현)
 - [ ] 순환출자 현황 API 연동 (순환출자 하이라이트)
 - [ ] DART API 연동 (상장사 추가 정보)
 
-### 4.2 시각화 고도화
+#### 4.2 시각화 고도화
 
 - [ ] 노드 크기로 자산규모 표현
 - [ ] 엣지 두께로 지분율 표현
 - [ ] 업종별 색상 구분
-- [x] 줌/패닝 인터랙션 *(React Flow 내장)*
+- [x] 줌/패닝 인터랙션 (React Flow 내장)
 - [ ] 클릭 시 상세 정보 패널
 
-### 4.3 검색 및 필터
+#### 4.3 검색 및 필터
 
+- [x] 통합 검색 (기업집단 + 계열사)
 - [ ] 기업명 자동완성 검색
 - [ ] 업종별 필터링
 - [ ] 연도별 변화 추이 (타임라인)
+
+#### 4.4 배포
+
+- [ ] Docker 컨테이너화
+- [ ] CI/CD 파이프라인 구축
+- [ ] 프로덕션 배포
 
 ---
 
@@ -185,92 +201,145 @@ GET /api/search
 ┌─────────────────────────────────────────────────────────┐
 │                        Client                           │
 │  ┌─────────────────────────────────────────────────┐   │
-│  │  React + Vite + TypeScript + React Flow         │   │
-│  │  (빌드 후 nginx 정적 배포)                       │   │
+│  │  React + Vite + TypeScript + @xyflow/react      │   │
+│  │  Tailwind CSS + React Query                     │   │
+│  │  (개발: http://localhost:3000)                   │   │
 │  └─────────────────────────────────────────────────┘   │
 └─────────────────────────┬───────────────────────────────┘
-                          │ HTTP/REST
+                          │ HTTP/REST (Vite Proxy → /api)
 ┌─────────────────────────▼───────────────────────────────┐
 │                        Server                           │
 │  ┌─────────────────────────────────────────────────┐   │
-│  │  FastAPI + Python + SQLAlchemy                  │   │
+│  │  FastAPI + Python 3.11+ + SQLAlchemy 2.0        │   │
+│  │  (http://localhost:8000)                         │   │
 │  └─────────────────────────────────────────────────┘   │
 │  ┌─────────────────────────────────────────────────┐   │
-│  │  SQLite (로컬 DB) + APScheduler (동기화)        │   │
+│  │  SQLite (affiliate.db) + APScheduler            │   │
 │  └─────────────────────────────────────────────────┘   │
 └─────────────────────────┬───────────────────────────────┘
                           │ HTTP/REST (XML)
 ┌─────────────────────────▼───────────────────────────────┐
 │              공공데이터포털 API                          │
 │  - 기업집단포털 (공정거래위원회)                         │
-│  - DART (금융감독원) - 선택                             │
+│    • 대규모기업집단 조회                                │
+│    • 소속회사 조회                                      │
+│    • 지주회사 자회사/손자회사 현황                       │
 └─────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 디렉토리 구조 (예시)
+## 디렉토리 구조
 
 ```
-affiliate-visualization/
-├── docs/                    # 문서
-├── packages/
-│   ├── api/                 # 백엔드
-│   │   ├── src/
-│   │   │   ├── controllers/
-│   │   │   ├── services/
-│   │   │   ├── clients/     # 외부 API 클라이언트
-│   │   │   ├── types/
-│   │   │   └── utils/
-│   │   └── package.json
-│   │
-│   └── web/                 # 프론트엔드
-│       ├── src/
-│       │   ├── components/
-│       │   ├── pages/
-│       │   ├── hooks/
-│       │   ├── services/
-│       │   └── types/
-│       └── package.json
+aff/
+├── docs/                           # 문서
+│   ├── 01-data-research.md         # 데이터 조사 보고서
+│   └── 02-implementation-plan.md   # 구현 현황 (현재 문서)
 │
-├── package.json             # 루트 (monorepo)
-└── README.md
+├── packages/
+│   ├── api/                        # 백엔드 (FastAPI)
+│   │   ├── src/affiliate_api/
+│   │   │   ├── __init__.py
+│   │   │   ├── main.py             # FastAPI 앱 진입점
+│   │   │   ├── config.py           # 설정 관리
+│   │   │   ├── database.py         # SQLAlchemy 설정
+│   │   │   ├── scheduler.py        # APScheduler 설정
+│   │   │   ├── models/             # 데이터 모델
+│   │   │   │   ├── group.py
+│   │   │   │   ├── affiliate.py
+│   │   │   │   └── holding.py
+│   │   │   ├── routers/            # API 라우터
+│   │   │   │   ├── groups.py
+│   │   │   │   ├── affiliates.py
+│   │   │   │   ├── sync.py
+│   │   │   │   ├── search.py
+│   │   │   │   ├── holding.py
+│   │   │   │   └── integrated.py
+│   │   │   ├── services/           # 비즈니스 로직
+│   │   │   │   └── sync_service.py
+│   │   │   └── clients/            # 외부 API 클라이언트
+│   │   │       └── data_portal.py
+│   │   ├── .env                    # 환경 변수
+│   │   ├── .env.example            # 환경 변수 템플릿
+│   │   └── pyproject.toml          # Python 프로젝트 설정
+│   │
+│   └── web/                        # 프론트엔드 (React)
+│       ├── src/
+│       │   ├── main.tsx            # React 진입점
+│       │   ├── App.tsx             # 메인 App 컴포넌트
+│       │   ├── components/         # React 컴포넌트
+│       │   │   ├── GroupList.tsx
+│       │   │   ├── AffiliateGraph.tsx
+│       │   │   ├── CollapsibleTree.tsx
+│       │   │   ├── HoldingTree.tsx
+│       │   │   └── IntegratedGraph.tsx
+│       │   ├── hooks/              # 커스텀 Hooks
+│       │   │   ├── useGroups.ts
+│       │   │   └── useAffiliates.ts
+│       │   ├── services/           # API 통신
+│       │   │   └── api.ts
+│       │   └── types/              # TypeScript 타입
+│       │       └── index.ts
+│       ├── index.html
+│       ├── package.json
+│       ├── tsconfig.json
+│       ├── vite.config.js
+│       └── tailwind.config.js
+│
+├── .prettierrc                     # Prettier 설정
+├── .gitignore                      # Git 무시 파일
+├── package.json                    # 루트 monorepo 설정
+├── pnpm-workspace.yaml             # pnpm workspace 설정
+├── start.sh / start.bat            # 시작 스크립트
+├── stop.sh / stop.bat              # 중지 스크립트
+└── README.md                       # 프로젝트 README
 ```
 
 ---
 
-## 실행 단계 요약
+## 실행 방법
 
-| 단계 | 작업 | 산출물 | 상태 |
-|------|------|--------|------|
-| **Step 1** | API 키 발급 | 공공데이터포털 인증키 | ⏳ 진행중 |
-| **Step 2** | 프로젝트 초기화 | 기본 프로젝트 구조 | ✅ 완료 |
-| **Step 3** | API 클라이언트 개발 | 공정위 API 연동 모듈 | ✅ 완료 |
-| **Step 4** | 백엔드 API 개발 | REST API 서버 | ✅ 완료 |
-| **Step 5** | 프론트엔드 기본 UI | 기업집단 목록 페이지 | ✅ 완료 |
-| **Step 6** | 시각화 구현 | 계열사 트리/그래프 뷰 | ✅ 완료 |
-| **Step 7** | 테스트 및 배포 | 운영 환경 배포 | ⬜ 대기 |
+### 시작
+
+```bash
+# Windows
+start.bat
+
+# Linux / macOS
+./start.sh
+
+# 또는 pnpm 명령어
+pnpm dev        # 전체 (API + Web)
+pnpm dev:api    # API만
+pnpm dev:web    # Web만
+```
+
+### 접속
+
+| 서비스 | URL |
+|--------|-----|
+| Web UI | http://localhost:3000 |
+| API | http://localhost:8000 |
+| API Docs (Swagger) | http://localhost:8000/docs |
+
+### 중지
+
+```bash
+# Windows
+stop.bat
+
+# Linux / macOS
+./stop.sh
+```
 
 ---
 
-## 다음 단계
+## 진행 상태 요약
 
-1. **공공데이터포털 API 키 발급** *(진행 중)*
-   - https://www.data.go.kr 접속
-   - 회원가입 후 API 활용신청
-   - 발급 후 `packages/api/.env` 파일에 설정
-
-2. ~~**기술 스택 최종 확정**~~ ✅ 완료
-   - 프론트엔드: React + Vite
-   - 백엔드: FastAPI + SQLite
-   - 시각화: React Flow
-   - 모노레포 (pnpm workspace)
-
-3. **테스트 및 검증**
-   - API 키 설정 후 백엔드 실행
-   - 데이터 동기화 테스트
-   - 프론트엔드 연동 확인
-
-4. **배포 준비** *(Phase 4 이후)*
-   - Phase 1~3 기본 기능 검증 완료 후 배포
-   - Phase 4 고도화는 MVP 이후 진행
+| 단계 | 작업 | 상태 |
+|------|------|------|
+| Phase 1 | 프로젝트 초기화 & API 연동 | ✅ 완료 |
+| Phase 2 | 백엔드 API 개발 | ✅ 완료 |
+| Phase 3 | 프론트엔드 UI & 시각화 | ✅ 완료 |
+| Phase 4 | 고도화 (재무, 지분, 배포) | ⬜ 대기 |

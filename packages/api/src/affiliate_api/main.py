@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from affiliate_api.config import settings
 from affiliate_api.database import create_tables
-from affiliate_api.routers import groups, affiliates, sync, search, holding, integrated
+from affiliate_api.routers import groups, affiliates, sync, search, holding, integrated, stockholder
 from affiliate_api.scheduler import start_scheduler, shutdown_scheduler
 
 
@@ -47,6 +47,7 @@ app.include_router(sync.router, prefix="/api/sync", tags=["동기화"])
 app.include_router(search.router, prefix="/api/search", tags=["검색"])
 app.include_router(holding.router, prefix="/api/holding", tags=["지주회사"])
 app.include_router(integrated.router, prefix="/api/integrated", tags=["통합"])
+app.include_router(stockholder.router, prefix="/api/stockholders", tags=["주주현황"])
 
 
 @app.get("/")

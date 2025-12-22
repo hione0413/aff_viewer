@@ -152,3 +152,75 @@ class DataPortalClient:
             page += 1
 
         return all_items
+
+    async def get_stockholders(
+        self,
+        year: str = "202405",
+        group_code: str | None = None,
+        corp_number: str | None = None,
+        page: int = 1,
+        num_of_rows: int = 100,
+    ) -> tuple[list[dict], int]:
+        """
+        주주현황 조회
+
+        Args:
+            year: 지정년월 (YYYYMM 형식)
+            group_code: 기업집단 코드 (선택)
+            corp_number: 법인등록번호 (선택)
+            page: 페이지 번호
+            num_of_rows: 페이지당 결과 수
+
+        Returns:
+            (주주 목록, 전체 건수)
+        """
+        url = f"{self.BASE_URL}/stockholderCompSttusList/stockholderCompSttusListApi"
+        params = {
+            "ServiceKey": self.api_key,
+            "pageNo": str(page),
+            "numOfRows": str(num_of_rows),
+            "presentnYear": year,
+        }
+
+        if group_code:
+            params["unityGrupCode"] = group_code
+        if corp_number:
+            params["jurirno"] = corp_number
+
+        response = await self.client.get(url, params=params)
+        response.raise_for_status()
+
+        data = self._parse_xml(response.text)
+
+        # 주주현황 API는 다른 응답 구조 사용
+        root = data.get("stockholderCompSttusList", {})
+        total = int(root.get("totalCount", 0))
+
+        items = root.get("stockholderCompSttus", [])
+        if isinstance(items, dict):
+            items = [items]
+        if items is None:
+            items = []
+
+        return items, total
+
+    async def get_all_stockholders(
+        self,
+        year: str = "202405",
+        group_code: str | None = None,
+        corp_number: str | None = None,
+    ) -> list[dict]:
+        """주주현황 전체 조회 (페이징 처리)"""
+        all_items = []
+        page = 1
+
+        while True:
+            items, total = await self.get_stockholders(year, group_code, corp_number, page, 100)
+            all_items.extend(items)
+
+            if len(all_items) >= total or not items:
+                break
+
+            page += 1
+
+        return all_items

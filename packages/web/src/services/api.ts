@@ -111,6 +111,7 @@ export interface CompanyNode {
   ownership_rate: number | null
   relation_type: string | null
   source: 'holding' | 'affiliate' | 'both'
+  inferred: boolean  // 주주현황 기반 추론 관계 (점선으로 표시)
   children: CompanyNode[]
 }
 
@@ -127,6 +128,7 @@ export interface IntegratedGroupResponse {
     total_affiliates: number
     in_holding_structure: number
     other_affiliates: number
+    inferred_relations: number
     subsidiaries: number
     grandchildren: number
     great_grandchildren: number
@@ -137,6 +139,55 @@ export async function fetchIntegratedGroup(groupCode: string): Promise<Integrate
   const response = await fetch(`${API_BASE}/integrated/${groupCode}`)
   if (!response.ok) {
     throw new Error('통합 그룹 정보를 불러오는데 실패했습니다')
+  }
+  return response.json()
+}
+
+// 주주현황 API
+export interface StockholderInfo {
+  stockholder_name: string
+  stockholder_type: string | null
+  total_rate: number | null
+  common_rate: number | null
+  preferred_rate: number | null
+  is_corporate: boolean
+}
+
+export interface StockholderListResponse {
+  company_name: string
+  corp_number: string
+  stockholders: StockholderInfo[]
+  total_count: number
+  corporate_count: number
+  individual_count: number
+  individual_total_rate: number
+}
+
+export async function fetchStockholders(
+  corpNumber: string,
+  hideIndividuals: boolean = false
+): Promise<StockholderListResponse> {
+  const params = new URLSearchParams()
+  if (hideIndividuals) params.set('hide_individuals', 'true')
+
+  const response = await fetch(`${API_BASE}/stockholders/${corpNumber}?${params}`)
+  if (!response.ok) {
+    if (response.status === 404) {
+      throw new Error('주주현황 정보가 없습니다')
+    }
+    throw new Error('주주현황을 불러오는데 실패했습니다')
+  }
+  return response.json()
+}
+
+export async function syncStockholders(year?: string, groupCode?: string): Promise<{ message: string; count: number }> {
+  const params = new URLSearchParams()
+  if (year) params.set('year', year)
+  if (groupCode) params.set('group_code', groupCode)
+
+  const response = await fetch(`${API_BASE}/stockholders/sync?${params}`, { method: 'POST' })
+  if (!response.ok) {
+    throw new Error('주주현황 동기화에 실패했습니다')
   }
   return response.json()
 }
