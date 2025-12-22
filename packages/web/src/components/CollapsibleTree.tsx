@@ -1,11 +1,13 @@
-import { useState, useCallback, useMemo } from 'react'
+import { useState, useCallback, useMemo, useRef, useEffect } from 'react'
 import {
   ReactFlow,
+  ReactFlowProvider,
   Background,
   Controls,
   MiniMap,
   useNodesState,
   useEdgesState,
+  useReactFlow,
   Handle,
   Position,
   BaseEdge,
@@ -20,6 +22,13 @@ import '@xyflow/react/dist/style.css'
 import { useQuery } from '@tanstack/react-query'
 import { fetchIntegratedGroup, type CompanyNode } from '../services/api'
 import { StockholderPanel } from './StockholderPanel'
+
+// 검색 결과 타입
+interface SearchResult {
+  id: string
+  name: string
+  path: string[]  // 루트부터 해당 노드까지의 경로 (ID 목록)
+}
 
 interface Props {
   groupCode: string
@@ -45,6 +54,7 @@ function countAllChildren(node: CompanyNode): number {
 
 // 커스텀 노드 컴포넌트
 interface CustomNodeData {
+  [key: string]: unknown  // Index signature for React Flow compatibility
   label: string
   childCount: number
   isExpanded: boolean
@@ -53,12 +63,13 @@ interface CustomNodeData {
   level: number
   ownershipRate?: number | null
   inferred?: boolean  // 주주현황 기반 추론 관계
+  highlighted?: boolean  // 검색 결과 하이라이트
   onToggle: (nodeId: string) => void
   onShowStockholders: (nodeId: string, label: string) => void
 }
 
 function CompanyNodeComponent({ id, data }: NodeProps<Node<CustomNodeData>>) {
-  const { label, childCount, isExpanded, hasChildren, source, level, inferred, onToggle, onShowStockholders } = data
+  const { label, childCount, isExpanded, hasChildren, source, level, inferred, highlighted, onToggle, onShowStockholders } = data
 
   const style = source === 'root'
     ? sourceStyles.root
@@ -73,6 +84,11 @@ function CompanyNodeComponent({ id, data }: NodeProps<Node<CustomNodeData>>) {
   // 추론된 관계인 경우 테두리 스타일 변경
   const borderStyle = inferred ? 'dashed' : 'solid'
 
+  // 하이라이트된 노드 스타일
+  const highlightStyle = highlighted ? {
+    boxShadow: '0 0 0 3px #fbbf24, 0 0 12px rgba(251, 191, 36, 0.4)',
+  } : {}
+
   return (
     <div
       style={{
@@ -86,6 +102,8 @@ function CompanyNodeComponent({ id, data }: NodeProps<Node<CustomNodeData>>) {
         minWidth: '120px',
         textAlign: 'center',
         cursor: hasChildren ? 'pointer' : 'default',
+        transition: 'all 0.3s ease',
+        ...highlightStyle,
       }}
       onClick={() => hasChildren && onToggle(id)}
     >
@@ -93,19 +111,6 @@ function CompanyNodeComponent({ id, data }: NodeProps<Node<CustomNodeData>>) {
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
         <span>{label}</span>
-        {hasChildren && (
-          <span
-            style={{
-              padding: '2px 6px',
-              background: 'rgba(255,255,255,0.2)',
-              borderRadius: '10px',
-              fontSize: '10px',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {isExpanded ? '▼' : '▶'} {childCount}
-          </span>
-        )}
         {showStockholderBtn && (
           <button
             onClick={(e) => {
@@ -120,12 +125,24 @@ function CompanyNodeComponent({ id, data }: NodeProps<Node<CustomNodeData>>) {
               color: 'white',
               fontSize: '10px',
               cursor: 'pointer',
-              marginLeft: '4px',
             }}
             title="주주현황 보기"
           >
             📊
           </button>
+        )}
+        {hasChildren && (
+          <span
+            style={{
+              padding: '2px 6px',
+              background: 'rgba(255,255,255,0.2)',
+              borderRadius: '10px',
+              fontSize: '10px',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {isExpanded ? '▼' : '▶'} {childCount}
+          </span>
         )}
       </div>
 
@@ -205,12 +222,25 @@ function buildNodesAndEdges(
   onShowStockholders: (nodeId: string, label: string) => void,
   showHolding: boolean,
   showOthers: boolean,
+  highlightedNodeId: string | null,
 ): { nodes: Node[]; edges: Edge[] } {
   const nodes: Node[] = []
   const edges: Edge[] = []
 
   const nodeHeight = 60   // 노드 간 세로 간격
-  const levelWidth = 250  // 레벨 간 가로 간격
+  const baseGap = 80      // 노드 간 최소 가로 간격
+
+  // 노드 너비 추정 (글자 수 기반)
+  function estimateNodeWidth(label: string, level: number): number {
+    const fontSize = level === 0 ? 14 : level === 1 ? 12 : 11
+    const charWidth = fontSize * 0.7  // 한글 기준 대략적인 글자 너비
+    const padding = level === 0 ? 40 : level === 1 ? 32 : 24
+    const buttonWidth = 80  // 펼치기 버튼 + 주주현황 버튼
+    return Math.max(120, label.length * charWidth + padding + buttonWidth)
+  }
+
+  // 각 레벨별 최대 x 위치 추적 (노드 오른쪽 끝)
+  const levelMaxX: Map<number, number> = new Map()
 
   // 현재 Y 위치 추적
   let currentY = 50
@@ -222,14 +252,17 @@ function buildNodesAndEdges(
     // 지주회사 노드
     const rootId = holdingCorpNumber
     const totalChildren = tree.reduce((sum, c) => sum + 1 + countAllChildren(c), 0)
+    const rootX = 50
+    const rootWidth = estimateNodeWidth(holdingName, 0)
 
     nodes.push({
       id: rootId,
       type: 'company',
-      position: { x: 50, y: currentY },
+      position: { x: rootX, y: currentY },
       data: {
         label: holdingName,
         childCount: totalChildren,
+        highlighted: highlightedNodeId === rootId,
         isExpanded: expandedNodes.has(rootId),
         hasChildren: tree.length > 0,
         source: 'root',
@@ -239,28 +272,35 @@ function buildNodesAndEdges(
       },
     })
 
+    // 레벨 0의 최대 x 위치 설정
+    levelMaxX.set(0, rootX + rootWidth)
+
     // 재귀적으로 노드 추가 (수평 레이아웃)
     function addNodes(
       children: CompanyNode[],
       parentId: string,
       parentExpanded: boolean,
-      level: number,
-      x: number
+      level: number
     ): void {
       if (!parentExpanded) return
+
+      // 이전 레벨의 최대 x 위치를 기준으로 현재 레벨의 시작 x 계산
+      const prevLevelMaxX = levelMaxX.get(level - 1) || 50
+      const currentLevelX = prevLevelMaxX + baseGap
 
       children.forEach((child) => {
         const childId = child.corp_number
         const isExpanded = expandedNodes.has(childId)
         const childCount = countAllChildren(child)
         const isInferred = child.inferred === true
+        const nodeWidth = estimateNodeWidth(child.name, level)
 
         currentY += nodeHeight
 
         nodes.push({
           id: childId,
           type: 'company',
-          position: { x, y: currentY },
+          position: { x: currentLevelX, y: currentY },
           data: {
             label: child.name,
             childCount,
@@ -270,10 +310,15 @@ function buildNodesAndEdges(
             level,
             ownershipRate: child.ownership_rate,
             inferred: isInferred,
+            highlighted: highlightedNodeId === childId,
             onToggle,
             onShowStockholders,
           },
         })
+
+        // 현재 레벨의 최대 x 위치 업데이트
+        const currentMaxX = levelMaxX.get(level) || 0
+        levelMaxX.set(level, Math.max(currentMaxX, currentLevelX + nodeWidth))
 
         // 추론된 관계는 점선, 기타 계열사는 녹색 유지
         const strokeColor = sourceStyles[child.source as keyof typeof sourceStyles]?.bg || '#3b82f6'
@@ -292,14 +337,14 @@ function buildNodesAndEdges(
 
         // 자식 노드 재귀 처리
         if (isExpanded && child.children.length > 0) {
-          addNodes(child.children, childId, true, level + 1, x + levelWidth)
+          addNodes(child.children, childId, true, level + 1)
         }
       })
     }
 
     // 1레벨(자회사)부터 시작
     if (expandedNodes.has(rootId)) {
-      addNodes(tree, rootId, true, 1, 50 + levelWidth)
+      addNodes(tree, rootId, true, 1)
     }
 
     // 기타 계열사 (지주회사가 있는 경우)
@@ -310,10 +355,14 @@ function buildNodesAndEdges(
       // 기타 계열사 전체 자식 수 계산
       const totalOtherChildren = otherAffiliates.reduce((sum, a) => sum + 1 + countAllChildren(a), 0)
 
+      // 레벨 1 시작 x 위치 계산
+      const otherGroupX = (levelMaxX.get(0) || 50) + baseGap
+      const otherGroupWidth = estimateNodeWidth('기타 계열사', 1)
+
       nodes.push({
         id: otherGroupId,
         type: 'company',
-        position: { x: 50 + levelWidth, y: currentY },
+        position: { x: otherGroupX, y: currentY },
         data: {
           label: '기타 계열사',
           childCount: totalOtherChildren,
@@ -321,10 +370,15 @@ function buildNodesAndEdges(
           hasChildren: true,
           source: 'affiliate',
           level: 1,
+          highlighted: highlightedNodeId === otherGroupId,
           onToggle,
           onShowStockholders,
         },
       })
+
+      // 기타 계열사 그룹의 레벨 1 최대 x 업데이트
+      const currentLevel1MaxX = levelMaxX.get(1) || 0
+      levelMaxX.set(1, Math.max(currentLevel1MaxX, otherGroupX + otherGroupWidth))
 
       edges.push({
         id: `${rootId}-${otherGroupId}`,
@@ -334,15 +388,22 @@ function buildNodesAndEdges(
         style: { stroke: '#9ca3af', strokeWidth: 2, strokeDasharray: '5,5' },
       })
 
+      // 기타 계열사용 레벨별 최대 x 위치 (별도 관리)
+      const otherLevelMaxX: Map<number, number> = new Map()
+      otherLevelMaxX.set(1, otherGroupX + otherGroupWidth)
+
       // 기타 계열사 트리 재귀 추가
       function addOtherAffiliateNodes(
         affiliateList: CompanyNode[],
         parentId: string,
         parentExpanded: boolean,
-        level: number,
-        x: number
+        level: number
       ): void {
         if (!parentExpanded) return
+
+        // 이전 레벨의 최대 x 위치를 기준으로 현재 레벨의 시작 x 계산
+        const prevLevelMaxX = otherLevelMaxX.get(level - 1) || otherGroupX
+        const currentLevelX = prevLevelMaxX + baseGap
 
         affiliateList.forEach((affiliate) => {
           const affiliateId = affiliate.corp_number
@@ -350,13 +411,14 @@ function buildNodesAndEdges(
           const childCount = countAllChildren(affiliate)
           const isInferred = affiliate.inferred === true
           const hasChildren = affiliate.children.length > 0
+          const nodeWidth = estimateNodeWidth(affiliate.name, level)
 
           currentY += nodeHeight
 
           nodes.push({
             id: affiliateId,
             type: 'company',
-            position: { x, y: currentY },
+            position: { x: currentLevelX, y: currentY },
             data: {
               label: affiliate.name,
               childCount,
@@ -366,10 +428,15 @@ function buildNodesAndEdges(
               level,
               ownershipRate: affiliate.ownership_rate,
               inferred: isInferred,
+              highlighted: highlightedNodeId === affiliateId,
               onToggle,
               onShowStockholders,
             },
           })
+
+          // 현재 레벨의 최대 x 위치 업데이트
+          const currentMaxX = otherLevelMaxX.get(level) || 0
+          otherLevelMaxX.set(level, Math.max(currentMaxX, currentLevelX + nodeWidth))
 
           // 추론된 관계는 점선
           const edgeStyle = isInferred
@@ -387,13 +454,13 @@ function buildNodesAndEdges(
 
           // 자식 노드 재귀 처리
           if (isExpanded && hasChildren) {
-            addOtherAffiliateNodes(affiliate.children, affiliateId, true, level + 1, x + levelWidth)
+            addOtherAffiliateNodes(affiliate.children, affiliateId, true, level + 1)
           }
         })
       }
 
       if (expandedNodes.has(otherGroupId)) {
-        addOtherAffiliateNodes(otherAffiliates, otherGroupId, true, 2, 50 + levelWidth * 2)
+        addOtherAffiliateNodes(otherAffiliates, otherGroupId, true, 2)
       }
     }
   } else {
@@ -404,6 +471,8 @@ function buildNodesAndEdges(
     }
 
     const rootId = 'group-root'
+    const rootX = 50
+    const rootWidth = estimateNodeWidth(groupName, 0)
 
     // 전체 자식 수 계산
     const totalChildren = allAffiliates.reduce((sum, a) => sum + 1 + countAllChildren(a), 0)
@@ -412,7 +481,7 @@ function buildNodesAndEdges(
     nodes.push({
       id: rootId,
       type: 'company',
-      position: { x: 50, y: currentY },
+      position: { x: rootX, y: currentY },
       data: {
         label: groupName,
         childCount: totalChildren,
@@ -420,20 +489,27 @@ function buildNodesAndEdges(
         hasChildren: true,
         source: 'root',
         level: 0,
+        highlighted: highlightedNodeId === rootId,
         onToggle,
         onShowStockholders,
       },
     })
+
+    // 레벨 0의 최대 x 위치 설정
+    levelMaxX.set(0, rootX + rootWidth)
 
     // 계열사 트리 재귀 추가
     function addAffiliateNodes(
       affiliateList: CompanyNode[],
       parentId: string,
       parentExpanded: boolean,
-      level: number,
-      x: number
+      level: number
     ): void {
       if (!parentExpanded) return
+
+      // 이전 레벨의 최대 x 위치를 기준으로 현재 레벨의 시작 x 계산
+      const prevLevelMaxX = levelMaxX.get(level - 1) || rootX
+      const currentLevelX = prevLevelMaxX + baseGap
 
       affiliateList.forEach((affiliate) => {
         const affiliateId = affiliate.corp_number
@@ -441,13 +517,14 @@ function buildNodesAndEdges(
         const childCount = countAllChildren(affiliate)
         const isInferred = affiliate.inferred === true
         const hasChildren = affiliate.children.length > 0
+        const nodeWidth = estimateNodeWidth(affiliate.name, level)
 
         currentY += nodeHeight
 
         nodes.push({
           id: affiliateId,
           type: 'company',
-          position: { x, y: currentY },
+          position: { x: currentLevelX, y: currentY },
           data: {
             label: affiliate.name,
             childCount,
@@ -457,10 +534,15 @@ function buildNodesAndEdges(
             level,
             ownershipRate: affiliate.ownership_rate,
             inferred: isInferred,
+            highlighted: highlightedNodeId === affiliateId,
             onToggle,
             onShowStockholders,
           },
         })
+
+        // 현재 레벨의 최대 x 위치 업데이트
+        const currentMaxX = levelMaxX.get(level) || 0
+        levelMaxX.set(level, Math.max(currentMaxX, currentLevelX + nodeWidth))
 
         // 추론된 관계는 점선
         const edgeStyle = isInferred
@@ -478,43 +560,131 @@ function buildNodesAndEdges(
 
         // 자식 노드 재귀 처리
         if (isExpanded && hasChildren) {
-          addAffiliateNodes(affiliate.children, affiliateId, true, level + 1, x + levelWidth)
+          addAffiliateNodes(affiliate.children, affiliateId, true, level + 1)
         }
       })
     }
 
     // 계열사 표시
     if (expandedNodes.has(rootId)) {
-      addAffiliateNodes(allAffiliates, rootId, true, 1, 50 + levelWidth)
+      addAffiliateNodes(allAffiliates, rootId, true, 1)
     }
   }
 
   return { nodes, edges }
 }
 
-export function CollapsibleTree({ groupCode, onBack }: Props) {
+// 트리에서 회사 검색 (재귀)
+function searchInTree(
+  nodes: CompanyNode[],
+  query: string,
+  currentPath: string[],
+  rootId: string,
+): SearchResult[] {
+  const results: SearchResult[] = []
+  const lowerQuery = query.toLowerCase()
+
+  for (const node of nodes) {
+    const nodePath = [...currentPath, node.corp_number]
+
+    if (node.name.toLowerCase().includes(lowerQuery)) {
+      results.push({
+        id: node.corp_number,
+        name: node.name,
+        path: nodePath,
+      })
+    }
+
+    // 자식 노드 검색
+    if (node.children.length > 0) {
+      results.push(...searchInTree(node.children, query, nodePath, rootId))
+    }
+  }
+
+  return results
+}
+
+// 내부 컴포넌트 (useReactFlow 사용을 위해 분리)
+function CollapsibleTreeInner({
+  onBack,
+  data,
+}: {
+  onBack: () => void
+  data: NonNullable<Awaited<ReturnType<typeof fetchIntegratedGroup>>>
+}) {
   const [showHolding, setShowHolding] = useState(true)
   const [showOthers, setShowOthers] = useState(true)
   const [expandedNodes, setExpandedNodes] = useState<Set<string>>(new Set())
   const [selectedCompany, setSelectedCompany] = useState<{ corpNumber: string; name: string } | null>(null)
 
-  const { data, isLoading, error } = useQuery({
-    queryKey: ['integratedGroup', groupCode],
-    queryFn: () => fetchIntegratedGroup(groupCode),
-  })
+  // 검색 관련 상태
+  const [searchQuery, setSearchQuery] = useState('')
+  const [highlightedNodeId, setHighlightedNodeId] = useState<string | null>(null)
+  const [showSearchResults, setShowSearchResults] = useState(false)
+  const searchInputRef = useRef<HTMLInputElement>(null)
+
+  const { fitView } = useReactFlow()
 
   // 초기 확장 상태 설정 (루트 노드만 펼침)
-  useMemo(() => {
-    if (expandedNodes.size === 0 && data) {
+  useEffect(() => {
+    if (expandedNodes.size === 0) {
       if (data.holding_corp_number && data.tree.length > 0) {
-        // 지주회사가 있는 경우
         setExpandedNodes(new Set([data.holding_corp_number]))
       } else {
-        // 지주회사가 없는 경우
         setExpandedNodes(new Set(['group-root']))
       }
     }
-  }, [data])
+  }, [])
+
+  // 검색 결과 계산
+  const searchResults = useMemo(() => {
+    if (searchQuery.length < 2) return []
+
+    const results: SearchResult[] = []
+    const rootId = data.holding_corp_number || 'group-root'
+
+    // 지주회사 트리에서 검색
+    if (data.tree.length > 0) {
+      results.push(...searchInTree(data.tree, searchQuery, [rootId], rootId))
+    }
+
+    // 기타 계열사에서 검색
+    if (data.other_affiliates.length > 0) {
+      const otherPath = data.holding_corp_number
+        ? [rootId, 'other-affiliates']
+        : [rootId]
+      results.push(...searchInTree(data.other_affiliates, searchQuery, otherPath, rootId))
+    }
+
+    return results.slice(0, 10) // 최대 10개만 표시
+  }, [searchQuery, data])
+
+  // 검색 결과 클릭 핸들러
+  const handleSearchResultClick = useCallback((result: SearchResult) => {
+    // 1. 경로의 모든 노드 펼치기
+    setExpandedNodes(prev => {
+      const next = new Set(prev)
+      result.path.forEach(id => next.add(id))
+      return next
+    })
+
+    // 2. 하이라이트 설정
+    setHighlightedNodeId(result.id)
+
+    // 3. 검색창 닫기
+    setSearchQuery('')
+    setShowSearchResults(false)
+
+    // 4. 잠시 후 해당 노드로 포커스 (노드가 렌더링된 후)
+    setTimeout(() => {
+      fitView({ nodes: [{ id: result.id }], duration: 500, padding: 0.5 })
+    }, 100)
+
+    // 5. 3초 후 하이라이트 해제
+    setTimeout(() => {
+      setHighlightedNodeId(null)
+    }, 3000)
+  }, [fitView])
 
   const handleToggle = useCallback((nodeId: string) => {
     setExpandedNodes(prev => {
@@ -535,9 +705,6 @@ export function CollapsibleTree({ groupCode, onBack }: Props) {
   }, [])
 
   const { nodes: initialNodes, edges: initialEdges } = useMemo(() => {
-    if (!data) {
-      return { nodes: [], edges: [] }
-    }
     return buildNodesAndEdges(
       data.holding_corp_number,
       data.holding_company || data.group_name,
@@ -548,9 +715,10 @@ export function CollapsibleTree({ groupCode, onBack }: Props) {
       handleToggle,
       handleShowStockholders,
       showHolding,
-      showOthers
+      showOthers,
+      highlightedNodeId
     )
-  }, [data, expandedNodes, handleToggle, handleShowStockholders, showHolding, showOthers])
+  }, [data, expandedNodes, handleToggle, handleShowStockholders, showHolding, showOthers, highlightedNodeId])
 
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes)
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges)
@@ -560,24 +728,6 @@ export function CollapsibleTree({ groupCode, onBack }: Props) {
     setNodes(initialNodes)
     setEdges(initialEdges)
   }, [initialNodes, initialEdges, setNodes, setEdges])
-
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-96">
-        <div className="text-gray-500">로딩 중...</div>
-      </div>
-    )
-  }
-
-  if (error) {
-    return (
-      <div className="bg-red-50 text-red-600 p-4 rounded-lg">
-        정보를 불러오는데 실패했습니다.
-      </div>
-    )
-  }
-
-  if (!data) return null
 
   const expandAll = () => {
     const allIds = new Set<string>()
@@ -618,7 +768,7 @@ export function CollapsibleTree({ groupCode, onBack }: Props) {
       {/* 헤더 */}
       <div className="p-4 border-b">
         <div className="flex items-center justify-between mb-4">
-          <div>
+          <div className="flex items-center">
             <button
               onClick={onBack}
               className="text-gray-600 hover:text-gray-900 mr-4"
@@ -634,19 +784,70 @@ export function CollapsibleTree({ groupCode, onBack }: Props) {
               </span>
             )}
           </div>
-          <div className="flex gap-2">
-            <button
-              onClick={expandAll}
-              className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded"
-            >
-              모두 펼치기
-            </button>
-            <button
+
+          {/* 검색 + 버튼 영역 */}
+          <div className="flex items-center gap-4">
+            {/* 검색창 */}
+            <div className="relative">
+              <input
+                ref={searchInputRef}
+                type="text"
+                placeholder="회사명 검색..."
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value)
+                  setShowSearchResults(true)
+                }}
+                onFocus={() => setShowSearchResults(true)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Escape') {
+                    setSearchQuery('')
+                    setShowSearchResults(false)
+                    searchInputRef.current?.blur()
+                  } else if (e.key === 'Enter' && searchResults.length > 0) {
+                    handleSearchResultClick(searchResults[0])
+                  }
+                }}
+                className="w-64 px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+
+              {/* 검색 결과 드롭다운 */}
+              {showSearchResults && searchQuery.length >= 2 && (
+                <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto">
+                  {searchResults.length > 0 ? (
+                    searchResults.map((result) => (
+                      <button
+                        key={result.id}
+                        onClick={() => handleSearchResultClick(result)}
+                        className="w-full px-3 py-2 text-left text-sm hover:bg-blue-50 focus:bg-blue-50 focus:outline-none border-b border-gray-100 last:border-b-0"
+                      >
+                        <span className="font-medium text-gray-900">{result.name}</span>
+                      </button>
+                    ))
+                  ) : (
+                    <div className="px-3 py-2 text-sm text-gray-500">
+                      검색 결과가 없습니다
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* 펼치기/접기 버튼 */}
+            <div className="flex gap-2">
+              <button
+                onClick={expandAll}
+                className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded"
+              >
+                모두 펼치기
+              </button>
+              <button
               onClick={collapseAll}
               className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded"
             >
               모두 접기
             </button>
+            </div>
           </div>
         </div>
 
@@ -766,5 +967,37 @@ export function CollapsibleTree({ groupCode, onBack }: Props) {
         />
       )}
     </div>
+  )
+}
+
+// 외부 컴포넌트 - 데이터 fetching + ReactFlowProvider 래핑
+export function CollapsibleTree({ groupCode, onBack }: Props) {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ['integrated-group', groupCode],
+    queryFn: () => fetchIntegratedGroup(groupCode),
+  })
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-96">
+        <div className="text-gray-500">로딩 중...</div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="bg-red-50 text-red-600 p-4 rounded-lg">
+        정보를 불러오는데 실패했습니다.
+      </div>
+    )
+  }
+
+  if (!data) return null
+
+  return (
+    <ReactFlowProvider>
+      <CollapsibleTreeInner onBack={onBack} data={data} />
+    </ReactFlowProvider>
   )
 }
