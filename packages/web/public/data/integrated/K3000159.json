@@ -1,0 +1,72 @@
+{
+  "group_code": "K3000159",
+  "group_name": "에이치엠엠",
+  "owner": "에이치엠엠(주)",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "에이치엔엘트랜스(주)",
+      "corp_number": "1801111481314",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 51.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에이치엠엠(주)",
+      "corp_number": "1101110193740",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 99.98,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에이치엠엠오션서비스(주)",
+      "corp_number": "1801110813550",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에이치티알헤시라스(주)",
+      "corp_number": "1101116452174",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 4,
+    "in_holding_structure": 0,
+    "other_affiliates": 4,
+    "inferred_relations": 0,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

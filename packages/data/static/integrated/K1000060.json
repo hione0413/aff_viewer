@@ -1,0 +1,112 @@
+{
+  "group_code": "K1000060",
+  "group_name": "태광",
+  "owner": "이호진",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "태광산업(주)",
+      "corp_number": "1101110185276",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 29.48,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)세광패션",
+          "corp_number": "1101114342020",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "태광산업(주)",
+          "largest_stockholder": "태광산업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)이채널",
+          "corp_number": "1101111861685",
+          "ownership_rate": 55.09,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "태광산업(주)",
+          "largest_stockholder": "태광산업(주)",
+          "largest_stockholder_rate": 55.09,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)한국케이블텔레콤",
+          "corp_number": "1101113514323",
+          "ownership_rate": 91.64,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "태광산업(주)",
+          "largest_stockholder": "태광산업(주)",
+          "largest_stockholder_rate": 91.64,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "서한물산(주)",
+          "corp_number": "1101116555530",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "태광산업(주)",
+          "largest_stockholder": "태광산업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "티엘케미칼(주)",
+          "corp_number": "2301110360956",
+          "ownership_rate": 60.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "태광산업(주)",
+          "largest_stockholder": "태광산업(주)",
+          "largest_stockholder_rate": 60.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "티투프라이빗에쿼티(주)",
+      "corp_number": "1101119126031",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 20,
+    "in_holding_structure": 0,
+    "other_affiliates": 2,
+    "inferred_relations": 5,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

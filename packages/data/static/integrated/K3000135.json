@@ -1,0 +1,126 @@
+{
+  "group_code": "K3000135",
+  "group_name": "셀트리온",
+  "owner": "서정진",
+  "holding_company": "(주)셀트리온홀딩스",
+  "holding_corp_number": "1201110551178",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "(주)셀트리온엔터테인먼트",
+      "corp_number": "1101114767757",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)셀트리온홀딩스",
+      "largest_stockholder": "(주)셀트리온홀딩스",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)셀트리온",
+      "corp_number": "1350110034038",
+      "ownership_rate": 20.02,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)셀트리온홀딩스",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 66.88,
+      "parent_mismatch": true,
+      "children": [
+        {
+          "name": "(주)셀트리온제약",
+          "corp_number": "1101112112764",
+          "ownership_rate": 54.96,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)셀트리온",
+          "largest_stockholder": "(주)셀트리온",
+          "largest_stockholder_rate": 54.81,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "other_affiliates": [
+    {
+      "name": "(주)서린홀딩스",
+      "corp_number": "1101117727253",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)서원디앤디",
+      "corp_number": "1101117026332",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)셀트리온바이오솔루션스",
+      "corp_number": "1201111430876",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)셀트리온스킨큐어",
+      "corp_number": "1101111995723",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 69.12,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)티에스이엔씨",
+      "corp_number": "1201110379223",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 9,
+    "in_holding_structure": 4,
+    "other_affiliates": 5,
+    "inferred_relations": 0,
+    "subsidiaries": 2,
+    "grandchildren": 1,
+    "great_grandchildren": 0
+  }
+}

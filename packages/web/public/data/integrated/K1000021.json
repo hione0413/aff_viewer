@@ -1,0 +1,339 @@
+{
+  "group_code": "K1000021",
+  "group_name": "DB",
+  "owner": "김준기",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)디비아이엔씨",
+      "corp_number": "1101110210859",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 51.15,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "디비커뮤니케이션즈(주)",
+          "corp_number": "1101118732029",
+          "ownership_rate": 49.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)디비아이엔씨",
+          "largest_stockholder": "(주)디비아이엔씨",
+          "largest_stockholder_rate": 49.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)디비하이텍",
+      "corp_number": "1101110026206",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 69.95,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)디비글로벌칩",
+          "corp_number": "1311110703908",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)디비하이텍",
+          "largest_stockholder": "(주)디비하이텍",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)디비기술투자",
+          "corp_number": "1211110457979",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)디비하이텍",
+          "largest_stockholder": "(주)디비하이텍",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)디비저축은행",
+          "corp_number": "1101110135627",
+          "ownership_rate": 1.15,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)디비하이텍",
+          "largest_stockholder": "디비금융투자(주)",
+          "largest_stockholder_rate": 49.98,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "동부철구(주)",
+          "corp_number": "1101110367212",
+          "ownership_rate": 49.71,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)디비하이텍",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 50.29,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)디비메탈",
+              "corp_number": "1101113836678",
+              "ownership_rate": 0.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동부철구(주)",
+              "largest_stockholder": "(주)디비하이텍",
+              "largest_stockholder_rate": 28.83,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)디비월드건설",
+                  "corp_number": "1101118820311",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)디비메탈",
+                  "largest_stockholder": "(주)디비메탈",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "농업회사법인 대지영농(주)",
+      "corp_number": "1445110008660",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 20.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "디비금융투자(주)",
+      "corp_number": "1101110339956",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 62.38,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "디비자산운용(주)",
+          "corp_number": "1101111363160",
+          "ownership_rate": 55.33,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "디비금융투자(주)",
+          "largest_stockholder": "디비금융투자(주)",
+          "largest_stockholder_rate": 55.33,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "디비생명보험(주)",
+      "corp_number": "1101110623606",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "디비손해보험(주)",
+      "largest_stockholder_rate": 82.95,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "디비손해보험(주)",
+      "corp_number": "1101110095285",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 61.54,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)디비월드",
+          "corp_number": "1101110628086",
+          "ownership_rate": 1.63,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "디비손해보험(주)",
+          "largest_stockholder": "(주)디비아이엔씨",
+          "largest_stockholder_rate": 33.97,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "디비씨앤에스자동차손해사정(주)",
+          "corp_number": "1101114558669",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "디비손해보험(주)",
+          "largest_stockholder": "디비손해보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "디비씨에스아이손해사정(주)",
+          "corp_number": "1101114558354",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "디비손해보험(주)",
+          "largest_stockholder": "디비손해보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "디비씨에이에스손해사정(주)",
+          "corp_number": "1101114558940",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "디비손해보험(주)",
+          "largest_stockholder": "디비손해보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "디비엠앤에스(주)",
+          "corp_number": "1101115074367",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "디비손해보험(주)",
+          "largest_stockholder": "디비손해보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "디비금융서비스(주)",
+              "corp_number": "1101115314474",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "디비엠앤에스(주)",
+              "largest_stockholder": "디비엠앤에스(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "디비자동차보험손해사정(주)",
+          "corp_number": "1101110367402",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "디비손해보험(주)",
+          "largest_stockholder": "디비손해보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "디비캐피탈(주)",
+          "corp_number": "1101111220641",
+          "ownership_rate": 93.57,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "디비손해보험(주)",
+          "largest_stockholder": "디비손해보험(주)",
+          "largest_stockholder_rate": 93.57,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "디비스탁인베스트(주)",
+      "corp_number": "1101114983329",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 34.07,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "디비인베스트(주)",
+      "corp_number": "1101114220359",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 73.51,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 24,
+    "in_holding_structure": 0,
+    "other_affiliates": 8,
+    "inferred_relations": 16,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

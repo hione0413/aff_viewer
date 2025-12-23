@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { fetchStockholders, type StockholderInfo } from '../services/api'
+import { fetchStockholders, type StockholderInfo } from '../services/sqlite-service'
 import { useState } from 'react'
 
 interface Props {
@@ -103,15 +103,26 @@ export function StockholderPanel({ corpNumber, companyName, onClose }: Props) {
   )
 }
 
+// 개인 이름 마스킹 (홍길동 → 홍**)
+function maskName(name: string): string {
+  if (!name || name.length <= 1) return name
+  return name[0] + '*'.repeat(name.length - 1)
+}
+
 function StockholderRow({ stockholder }: { stockholder: StockholderInfo }) {
   const bgColor = stockholder.is_corporate ? 'bg-blue-50' : 'bg-gray-50'
   const textColor = stockholder.is_corporate ? 'text-blue-800' : 'text-gray-600'
+
+  // 개인 주주는 이름 마스킹
+  const displayName = stockholder.is_corporate
+    ? stockholder.stockholder_name
+    : maskName(stockholder.stockholder_name)
 
   return (
     <div className={`${bgColor} p-3 rounded flex items-center justify-between`}>
       <div>
         <div className={`font-medium ${textColor}`}>
-          {stockholder.stockholder_name}
+          {displayName}
         </div>
         <div className="text-xs text-gray-500">
           {stockholder.is_corporate ? '법인' : '개인'}

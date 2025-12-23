@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">기업족보</string>
+    <string name="title_activity_main">기업족보</string>
+    <string name="package_name">com.aff.corporate</string>
+    <string name="custom_url_scheme">com.aff.corporate</string>
+</resources>

@@ -1,0 +1,354 @@
+{
+  "group_code": "K1000087",
+  "group_name": "현대백화점",
+  "owner": "정지선",
+  "holding_company": "(주)현대퓨처넷",
+  "holding_corp_number": "1101110842785",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "(주)케이티에이치씨엔",
+      "corp_number": "1101117670238",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "holding",
+      "inferred": false,
+      "legal_parent_name": "(주)현대퓨처넷",
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)미디어지니",
+      "corp_number": "1101113213206",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "holding",
+      "inferred": false,
+      "legal_parent_name": "(주)현대퓨처넷",
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)현대바이오랜드",
+      "corp_number": "1101111192981",
+      "ownership_rate": 30.85,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)현대퓨처넷",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 65.0,
+      "parent_mismatch": true,
+      "children": []
+    }
+  ],
+  "other_affiliates": [
+    {
+      "name": "(주)지누스",
+      "corp_number": "1347110002553",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 53.47,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)한섬",
+      "corp_number": "1101110531578",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 55.32,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)현대그린푸드",
+      "corp_number": "1345110623337",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 49.12,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)현대캐터링시스템",
+          "corp_number": "1101114940931",
+          "ownership_rate": 80.2,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)현대그린푸드",
+          "largest_stockholder": "(주)현대그린푸드",
+          "largest_stockholder_rate": 80.2,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)현대리바트",
+      "corp_number": "1345110034097",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 56.64,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)현대리바트엠앤에스",
+          "corp_number": "1345110098019",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)현대리바트",
+          "largest_stockholder": "(주)현대리바트",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)현대에버다임",
+      "corp_number": "1101111042574",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 53.85,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)현대지에프홀딩스",
+      "corp_number": "1101110095201",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 39.67,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)씨엔에스푸드시스템",
+          "corp_number": "1512110011644",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)현대지에프홀딩스",
+          "largest_stockholder": "(주)현대지에프홀딩스",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)현대드림투어",
+          "corp_number": "1101113434307",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)현대지에프홀딩스",
+          "largest_stockholder": "(주)현대지에프홀딩스",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)현대에이앤아이",
+          "corp_number": "1101113927328",
+          "ownership_rate": 10.41,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)현대지에프홀딩스",
+          "largest_stockholder": "동일인",
+          "largest_stockholder_rate": 73.39,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)현대백화점",
+              "corp_number": "1101112644725",
+              "ownership_rate": 4.31,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)현대에이앤아이",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 57.32,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)더현대광주",
+                  "corp_number": "2001110717195",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)현대백화점",
+                  "largest_stockholder": "(주)현대백화점",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "(주)현대디에프",
+                  "corp_number": "1101116164795",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)현대백화점",
+                  "largest_stockholder": "(주)현대백화점",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "한무쇼핑(주)",
+                  "corp_number": "1101110525795",
+                  "ownership_rate": 46.34,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)현대백화점",
+                  "largest_stockholder": "(주)현대백화점",
+                  "largest_stockholder_rate": 46.34,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "(주)현대이지웰",
+          "corp_number": "1101112693235",
+          "ownership_rate": 31.65,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)현대지에프홀딩스",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 68.35,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)비노에이치",
+              "corp_number": "1345110567478",
+              "ownership_rate": 43.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)현대이지웰",
+              "largest_stockholder": "(주)현대지에프홀딩스",
+              "largest_stockholder_rate": 47.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "(주)현대홈쇼핑",
+          "corp_number": "1101112248882",
+          "ownership_rate": 25.01,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)현대지에프홀딩스",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 54.59,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)현대엘앤씨",
+              "corp_number": "1101115453644",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)현대홈쇼핑",
+              "largest_stockholder": "(주)현대홈쇼핑",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "대원강업(주)",
+              "corp_number": "1101110015556",
+              "ownership_rate": 7.67,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)현대홈쇼핑",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 64.93,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)삼원강재",
+                  "corp_number": "1746110014924",
+                  "ownership_rate": 54.64,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "대원강업(주)",
+                  "largest_stockholder": "대원강업(주)",
+                  "largest_stockholder_rate": 54.64,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "대원정밀공업(주)",
+                  "corp_number": "1301110007260",
+                  "ownership_rate": 30.46,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "대원강업(주)",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 69.53,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_affiliates": 24,
+    "in_holding_structure": 4,
+    "other_affiliates": 6,
+    "inferred_relations": 16,
+    "subsidiaries": 3,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

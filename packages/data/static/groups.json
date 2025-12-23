@@ -1,0 +1,833 @@
+{
+  "total": 92,
+  "items": [
+    {
+      "code": "K1000050",
+      "name": "에스케이",
+      "owner": "최태원",
+      "representative_company": "에스케이(주)",
+      "affiliate_count": 198,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000082",
+      "name": "한화",
+      "owner": "김승연",
+      "representative_company": "(주)한화",
+      "affiliate_count": 119,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000137",
+      "name": "카카오",
+      "owner": "김범수",
+      "representative_company": "(주)카카오",
+      "affiliate_count": 115,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000076",
+      "name": "지에스",
+      "owner": "허창수",
+      "representative_company": "(주)지에스",
+      "affiliate_count": 98,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000027",
+      "name": "롯데",
+      "owner": "신동빈",
+      "representative_company": "롯데지주(주)",
+      "affiliate_count": 92,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000064",
+      "name": "대신",
+      "owner": "양홍석",
+      "representative_company": "대신증권(주)",
+      "affiliate_count": 84,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000027",
+      "name": "현대자동차",
+      "owner": "정의선",
+      "representative_company": "현대자동차(주)",
+      "affiliate_count": 74,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000062",
+      "name": "엘에스",
+      "owner": "구자은",
+      "representative_company": "(주)엘에스",
+      "affiliate_count": 72,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000055",
+      "name": "씨제이",
+      "owner": "이재현",
+      "representative_company": "씨제이(주)",
+      "affiliate_count": 66,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000153",
+      "name": "BS(舊 보성)",
+      "owner": "이기승",
+      "representative_company": "(주)비에스보성",
+      "affiliate_count": 66,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000303",
+      "name": "대광",
+      "owner": "조영훈",
+      "representative_company": "(주)대광건영",
+      "affiliate_count": 64,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000032",
+      "name": "삼성",
+      "owner": "이재용",
+      "representative_company": "삼성전자(주)",
+      "affiliate_count": 63,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000051",
+      "name": "엘지",
+      "owner": "구광모",
+      "representative_company": "(주)엘지",
+      "affiliate_count": 63,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000161",
+      "name": "유진",
+      "owner": "유경선",
+      "representative_company": "유진기업(주)",
+      "affiliate_count": 63,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000086",
+      "name": "효성",
+      "owner": "조현준",
+      "representative_company": "(주)효성",
+      "affiliate_count": 60,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000042",
+      "name": "신세계",
+      "owner": "이명희",
+      "representative_company": "(주)신세계",
+      "affiliate_count": 59,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000134",
+      "name": "SM",
+      "owner": "우오현",
+      "representative_company": "대한해운(주)",
+      "affiliate_count": 58,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K2000062",
+      "name": "중앙",
+      "owner": "홍석현",
+      "representative_company": "중앙홀딩스(주)",
+      "affiliate_count": 57,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000091",
+      "name": "농협",
+      "owner": "농업협동조합중앙회",
+      "representative_company": "농업협동조합중앙회",
+      "affiliate_count": 56,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000139",
+      "name": "중흥건설",
+      "owner": "정창선",
+      "representative_company": "중흥건설(주)",
+      "affiliate_count": 51,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K2000045",
+      "name": "태영",
+      "owner": "윤세영",
+      "representative_company": "(주)티와이홀딩스",
+      "affiliate_count": 51,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000064",
+      "name": "포스코",
+      "owner": "포스코홀딩스(주)",
+      "representative_company": "포스코홀딩스(주)",
+      "affiliate_count": 49,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000070",
+      "name": "케이티",
+      "owner": "(주)케이티",
+      "representative_company": "(주)케이티",
+      "affiliate_count": 47,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000223",
+      "name": "원익",
+      "owner": "이용한",
+      "representative_company": "(주)원익홀딩스",
+      "affiliate_count": 47,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000011",
+      "name": "DL",
+      "owner": "이해욱",
+      "representative_company": "디엘(주)",
+      "affiliate_count": 45,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000138",
+      "name": "네이버",
+      "owner": "이해진",
+      "representative_company": "네이버(주)",
+      "affiliate_count": 45,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000059",
+      "name": "코오롱",
+      "owner": "이웅열",
+      "representative_company": "(주)코오롱",
+      "affiliate_count": 45,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000156",
+      "name": "다우키움",
+      "owner": "김익래",
+      "representative_company": "키움증권(주)",
+      "affiliate_count": 45,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000121",
+      "name": "하림",
+      "owner": "김홍국",
+      "representative_company": "(주)하림지주",
+      "affiliate_count": 43,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000081",
+      "name": "한진",
+      "owner": "조원태",
+      "representative_company": "(주)한진칼",
+      "affiliate_count": 42,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000189",
+      "name": "대방건설",
+      "owner": "구교운",
+      "representative_company": "대방건설(주)",
+      "affiliate_count": 41,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000145",
+      "name": "호반건설",
+      "owner": "김상열",
+      "representative_company": "(주)호반건설",
+      "affiliate_count": 40,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000219",
+      "name": "사조",
+      "owner": "주진우",
+      "representative_company": "사조산업(주)",
+      "affiliate_count": 40,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K2000057",
+      "name": "에이치디씨",
+      "owner": "정몽규",
+      "representative_company": "에이치디씨(주)",
+      "affiliate_count": 34,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K2000025",
+      "name": "삼천리",
+      "owner": "이만득",
+      "representative_company": "(주)삼천리",
+      "affiliate_count": 33,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000052",
+      "name": "HD현대",
+      "owner": "정몽준",
+      "representative_company": "에이치디한국조선해양(주)",
+      "affiliate_count": 32,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K2000038",
+      "name": "이랜드",
+      "owner": "박성수",
+      "representative_company": "(주)이랜드월드",
+      "affiliate_count": 32,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000258",
+      "name": "신영",
+      "owner": "정춘보",
+      "representative_company": "(주)신영",
+      "affiliate_count": 32,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000167",
+      "name": "아이에스지주",
+      "owner": "권혁운",
+      "representative_company": "아이에스지주(주)",
+      "affiliate_count": 32,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000162",
+      "name": "넷마블",
+      "owner": "방준혁",
+      "representative_company": "넷마블(주)",
+      "affiliate_count": 31,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000052",
+      "name": "영풍",
+      "owner": "장형진",
+      "representative_company": "(주)영풍",
+      "affiliate_count": 30,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K2000035",
+      "name": "애경",
+      "owner": "장영신",
+      "representative_company": "에이케이홀딩스(주)",
+      "affiliate_count": 30,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000093",
+      "name": "미래에셋",
+      "owner": "박현주",
+      "representative_company": "미래에셋캐피탈(주)",
+      "affiliate_count": 28,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000144",
+      "name": "장금상선",
+      "owner": "정태순",
+      "representative_company": "장금상선(주)",
+      "affiliate_count": 28,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000160",
+      "name": "삼표",
+      "owner": "정도원",
+      "representative_company": "(주)삼표산업",
+      "affiliate_count": 28,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000211",
+      "name": "KG",
+      "owner": "곽재선",
+      "representative_company": "케이지케미칼(주)",
+      "affiliate_count": 26,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000281",
+      "name": "고려에이치씨",
+      "owner": "박정석",
+      "representative_company": "(주)고려에이치씨",
+      "affiliate_count": 26,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000074",
+      "name": "한국앤컴퍼니그룹(舊 한국타이어)",
+      "owner": "조양래",
+      "representative_company": "한국앤컴퍼니(주)",
+      "affiliate_count": 25,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000201",
+      "name": "소노인터내셔널",
+      "owner": "박춘희",
+      "representative_company": "(주)소노인터내셔널",
+      "affiliate_count": 25,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000026",
+      "name": "두산",
+      "owner": "박정원",
+      "representative_company": "(주)두산",
+      "affiliate_count": 24,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000087",
+      "name": "현대백화점",
+      "owner": "정지선",
+      "representative_company": "(주)현대지에프홀딩스",
+      "affiliate_count": 24,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000021",
+      "name": "DB",
+      "owner": "김준기",
+      "representative_company": "(주)디비아이엔씨",
+      "affiliate_count": 24,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000024",
+      "name": "오씨아이",
+      "owner": "이우현",
+      "representative_company": "오씨아이홀딩스(주)",
+      "affiliate_count": 24,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000041",
+      "name": "세아",
+      "owner": "이순형",
+      "representative_company": "(주)세아홀딩스",
+      "affiliate_count": 24,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000119",
+      "name": "넥슨",
+      "owner": "유정현",
+      "representative_company": "(주)엔엑스씨",
+      "affiliate_count": 23,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000025",
+      "name": "동원",
+      "owner": "김남정",
+      "representative_company": "동원산업(주)",
+      "affiliate_count": 23,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000254",
+      "name": "글로벌세아",
+      "owner": "김웅기",
+      "representative_company": "글로벌세아(주)",
+      "affiliate_count": 23,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K2000005",
+      "name": "농심",
+      "owner": "신동원",
+      "representative_company": "(주)농심",
+      "affiliate_count": 22,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K2000060",
+      "name": "부영",
+      "owner": "이중근",
+      "representative_company": "(주)부영",
+      "affiliate_count": 21,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000077",
+      "name": "한솔",
+      "owner": "조동길",
+      "representative_company": "한솔홀딩스(주)",
+      "affiliate_count": 21,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000060",
+      "name": "태광",
+      "owner": "이호진",
+      "representative_company": "태광산업(주)",
+      "affiliate_count": 20,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000279",
+      "name": "빗썸",
+      "owner": "이정훈",
+      "representative_company": "(주)빗썸홀딩스",
+      "affiliate_count": 20,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000206",
+      "name": "영원",
+      "owner": "성기학",
+      "representative_company": "(주)영원무역홀딩스",
+      "affiliate_count": 20,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000184",
+      "name": "엠디엠",
+      "owner": "문주현",
+      "representative_company": "(주)엠디엠",
+      "affiliate_count": 19,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000178",
+      "name": "BGF",
+      "owner": "홍석조",
+      "representative_company": "(주)비지에프",
+      "affiliate_count": 19,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000220",
+      "name": "엘아이지",
+      "owner": "구본상",
+      "representative_company": "(주)엘아이지",
+      "affiliate_count": 18,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000010",
+      "name": "케이티앤지",
+      "owner": "(주)케이티앤지",
+      "representative_company": "(주)케이티앤지",
+      "affiliate_count": 17,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000280",
+      "name": "엘엑스",
+      "owner": "구본준",
+      "representative_company": "(주)엘엑스홀딩스",
+      "affiliate_count": 17,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000268",
+      "name": "에코프로",
+      "owner": "이동채",
+      "representative_company": "(주)에코프로",
+      "affiliate_count": 17,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000243",
+      "name": "쿠팡",
+      "owner": "쿠팡(주)",
+      "representative_company": "쿠팡(주)",
+      "affiliate_count": 16,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000065",
+      "name": "교보생명보험",
+      "owner": "신창재",
+      "representative_company": "교보생명보험(주)",
+      "affiliate_count": 16,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000140",
+      "name": "금호석유화학",
+      "owner": "박찬구",
+      "representative_company": "금호석유화학(주)",
+      "affiliate_count": 16,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000020",
+      "name": "동국제강",
+      "owner": "장세주",
+      "representative_company": "동국홀딩스(주)",
+      "affiliate_count": 16,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000199",
+      "name": "오케이금융그룹",
+      "owner": "최윤",
+      "representative_company": "오케이홀딩스대부(주)",
+      "affiliate_count": 16,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000076",
+      "name": "HL",
+      "owner": "정몽원",
+      "representative_company": "에이치엘홀딩스(주)",
+      "affiliate_count": 15,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000062",
+      "name": "아모레퍼시픽",
+      "owner": "서경배",
+      "representative_company": "(주)아모레퍼시픽홀딩스",
+      "affiliate_count": 15,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000158",
+      "name": "반도홀딩스",
+      "owner": "권홍사",
+      "representative_company": "(주)반도홀딩스",
+      "affiliate_count": 15,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000198",
+      "name": "현대해상화재보험",
+      "owner": "정몽윤",
+      "representative_company": "현대해상화재보험(주)",
+      "affiliate_count": 14,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000001",
+      "name": "케이씨씨",
+      "owner": "정몽진",
+      "representative_company": "(주)케이씨씨",
+      "affiliate_count": 13,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000033",
+      "name": "삼양",
+      "owner": "김윤",
+      "representative_company": "(주)삼양홀딩스",
+      "affiliate_count": 13,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K1000067",
+      "name": "하이트진로",
+      "owner": "박문덕",
+      "representative_company": "하이트진로홀딩스(주)",
+      "affiliate_count": 12,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000284",
+      "name": "하이브",
+      "owner": "방시혁",
+      "representative_company": "(주)하이브",
+      "affiliate_count": 12,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000256",
+      "name": "두나무",
+      "owner": "두나무(주)",
+      "representative_company": "두나무(주)",
+      "affiliate_count": 11,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000164",
+      "name": "파라다이스",
+      "owner": "전필립",
+      "representative_company": "(주)파라다이스글로벌",
+      "affiliate_count": 11,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000135",
+      "name": "셀트리온",
+      "owner": "서정진",
+      "representative_company": "(주)셀트리온홀딩스",
+      "affiliate_count": 9,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000257",
+      "name": "크래프톤",
+      "owner": "장병규",
+      "representative_company": "(주)크래프톤",
+      "affiliate_count": 9,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000282",
+      "name": "DN",
+      "owner": "김상헌",
+      "representative_company": "(주)디엔오토모티브",
+      "affiliate_count": 7,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000159",
+      "name": "에이치엠엠",
+      "owner": "에이치엠엠(주)",
+      "representative_company": "에이치엠엠(주)",
+      "affiliate_count": 4,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000026",
+      "name": "한국항공우주산업",
+      "owner": "한국항공우주산업(주)",
+      "representative_company": "한국항공우주산업(주)",
+      "affiliate_count": 4,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000055",
+      "name": "한국지엠",
+      "owner": "한국지엠(주)",
+      "representative_company": "한국지엠(주)",
+      "affiliate_count": 3,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    },
+    {
+      "code": "K2000059",
+      "name": "에쓰-오일",
+      "owner": "에쓰-오일(주)",
+      "representative_company": "에쓰-오일(주)",
+      "affiliate_count": 2,
+      "group_type": "상호출자제한집단",
+      "is_public": false
+    },
+    {
+      "code": "K3000056",
+      "name": "유코카캐리어스",
+      "owner": "유코카캐리어스(주)",
+      "representative_company": "유코카캐리어스(주)",
+      "affiliate_count": 2,
+      "group_type": "공시대상기업집단",
+      "is_public": false
+    }
+  ]
+}

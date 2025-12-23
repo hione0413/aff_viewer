@@ -1,0 +1,208 @@
+{
+  "group_code": "K3000198",
+  "group_name": "현대해상화재보험",
+  "owner": "정몽윤",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)엠브이유",
+      "corp_number": "1101119041619",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)헤렌코퍼레이션",
+      "corp_number": "1101118629771",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 2.37,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "현대해상화재보험(주)",
+      "corp_number": "1101110035893",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 64.85,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)마이금융파트너",
+          "corp_number": "1101117770559",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "현대해상화재보험(주)",
+          "largest_stockholder": "현대해상화재보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "현대씨앤알(주)",
+          "corp_number": "1101110563901",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "현대해상화재보험(주)",
+          "largest_stockholder": "현대해상화재보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)에이치지이니셔티브",
+              "corp_number": "1101115402261",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "현대씨앤알(주)",
+              "largest_stockholder": "현대씨앤알(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "에이치지이니셔티브 시몬느 임팩트 제1호 창업벤처전문 사모투자 합자회사",
+                  "corp_number": "1101130024850",
+                  "ownership_rate": 15.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)에이치지이니셔티브",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 85.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "현대인베스트먼트자산운용(주)",
+          "corp_number": "1101112034314",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "현대해상화재보험(주)",
+          "largest_stockholder": "현대해상화재보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "현대인베스트먼트글로벌전문투자형사모부동산1호투자(유)",
+              "corp_number": "1101140221800",
+              "ownership_rate": 0.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "현대인베스트먼트자산운용(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 99.99,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "현대하이라이프손해사정(주)",
+          "corp_number": "1101112550568",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "현대해상화재보험(주)",
+          "largest_stockholder": "현대해상화재보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "현대하이카손해사정(주)",
+          "corp_number": "1101110677679",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "현대해상화재보험(주)",
+          "largest_stockholder": "현대해상화재보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "현대에이치디에스(주)",
+              "corp_number": "1101111059610",
+              "ownership_rate": 50.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "현대하이카손해사정(주)",
+              "largest_stockholder": "현대하이카손해사정(주)",
+              "largest_stockholder_rate": 50.0,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "애드커넥스(주)",
+                  "corp_number": "1101118353388",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "현대에이치디에스(주)",
+                  "largest_stockholder": "현대에이치디에스(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "현대하임자산운용(주)",
+          "corp_number": "1101118916467",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "현대해상화재보험(주)",
+          "largest_stockholder": "현대해상화재보험(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_affiliates": 14,
+    "in_holding_structure": 0,
+    "other_affiliates": 3,
+    "inferred_relations": 11,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

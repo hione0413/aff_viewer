@@ -1,0 +1,338 @@
+{
+  "group_code": "K1000026",
+  "group_name": "두산",
+  "owner": "박정원",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)두산",
+      "corp_number": "1101110013774",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 45.89,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)두산모빌리티이노베이션",
+          "corp_number": "1345110308129",
+          "ownership_rate": 86.12,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)두산",
+          "largest_stockholder": "(주)두산",
+          "largest_stockholder_rate": 86.12,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)두산베어스",
+          "corp_number": "1101110346919",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)두산",
+          "largest_stockholder": "(주)두산",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)두산인베스트먼트",
+          "corp_number": "1101118693031",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)두산",
+          "largest_stockholder": "(주)두산",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)두산테스나",
+              "corp_number": "1311110082427",
+              "ownership_rate": 38.69,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)두산인베스트먼트",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 60.84,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "(주)오리콤",
+          "corp_number": "1101110176986",
+          "ownership_rate": 60.89,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)두산",
+          "largest_stockholder": "(주)두산",
+          "largest_stockholder_rate": 60.89,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)한컴",
+              "corp_number": "1101110362957",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)오리콤",
+              "largest_stockholder": "(주)오리콤",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "두산경영연구원(주)",
+          "corp_number": "1101115976761",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)두산",
+          "largest_stockholder": "(주)두산",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "두산로보틱스(주)",
+          "corp_number": "1101115798272",
+          "ownership_rate": 68.19,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)두산",
+          "largest_stockholder": "(주)두산",
+          "largest_stockholder_rate": 68.19,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "두산로지스틱스솔루션(주)",
+          "corp_number": "1345110391661",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)두산",
+          "largest_stockholder": "(주)두산",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "두산포트폴리오홀딩스(주)",
+          "corp_number": "1101118224266",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)두산",
+          "largest_stockholder": "(주)두산",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)원상",
+      "corp_number": "1342110262016",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 18.75,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "두산모트롤(주)",
+      "corp_number": "1942110376328",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "두산밥캣(주)",
+      "corp_number": "1101115402237",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 53.82,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "두산밥캣코리아(주)",
+          "corp_number": "1201111161455",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "두산밥캣(주)",
+          "largest_stockholder": "두산밥캣(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "두산에너빌리티(주)",
+      "corp_number": "1942110000943",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 69.32,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "두산리사이클솔루션(주)",
+          "corp_number": "1311110711860",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "두산에너빌리티(주)",
+          "largest_stockholder": "두산에너빌리티(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "두산지오솔루션(주)",
+          "corp_number": "1311110722130",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "두산에너빌리티(주)",
+          "largest_stockholder": "두산에너빌리티(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "두산큐벡스(주)",
+          "corp_number": "1401110032570",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "두산에너빌리티(주)",
+          "largest_stockholder": "두산에너빌리티(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "두산퓨얼셀(주)",
+          "corp_number": "2149110058935",
+          "ownership_rate": 30.33,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "두산에너빌리티(주)",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 64.18,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "하이엑시움모터스(주)",
+              "corp_number": "1101118308086",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "두산퓨얼셀(주)",
+              "largest_stockholder": "두산퓨얼셀(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "오성파워오엔엠(주)",
+          "corp_number": "1942110282690",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "두산에너빌리티(주)",
+          "largest_stockholder": "두산에너빌리티(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "두산에이치투이노베이션(주)",
+      "corp_number": "1101118033998",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "HyAxiom Inc.",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "솔라디루프(주)",
+      "corp_number": "1311110754779",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 24,
+    "in_holding_structure": 0,
+    "other_affiliates": 7,
+    "inferred_relations": 17,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

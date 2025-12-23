@@ -55,11 +55,12 @@ def find_largest_corporate_stockholder(
     best_rate = 0.0
 
     for s in stockholders:
-        # 개인, 동일인, 친족 등 제외 (법인만)
+        # 개인, 친족, 임원 등 제외 (법인만)
+        # 주의: '동일인'은 기업집단의 총수를 의미하므로 제외하지 않음
         stockholder_type = s.stockholder_type or ''
         if '개인' in stockholder_type:
             continue
-        if any(kw in stockholder_type for kw in ['동일인', '친족', '임원']):
+        if any(kw in stockholder_type for kw in ['친족', '임원']):
             continue
 
         rate = s.total_rate or 0.0
@@ -223,7 +224,7 @@ async def get_integrated_group(
             # 주주가 법인인 경우만 (개인 제외)
             if not s.stockholder_type or '개인' in (s.stockholder_type or ''):
                 continue
-            if any(kw in (s.stockholder_type or '') for kw in ['동일인', '친족', '임원']):
+            if any(kw in (s.stockholder_type or '') for kw in ['친족', '임원']):
                 continue
 
             # 주주 이름으로 계열사 매칭

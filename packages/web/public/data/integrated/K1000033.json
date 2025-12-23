@@ -1,0 +1,206 @@
+{
+  "group_code": "K1000033",
+  "group_name": "삼양",
+  "owner": "김윤",
+  "holding_company": "(주)삼양홀딩스",
+  "holding_corp_number": "1101110026181",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "삼남석유화학(주)",
+      "corp_number": "1101110557061",
+      "ownership_rate": 40.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)삼양홀딩스",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 60.0,
+      "parent_mismatch": true,
+      "children": []
+    },
+    {
+      "name": "(주)삼양사",
+      "corp_number": "1101114720945",
+      "ownership_rate": 61.83,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)삼양홀딩스",
+      "largest_stockholder": "(주)삼양홀딩스",
+      "largest_stockholder_rate": 59.69,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "삼양화인테크놀로지(주)",
+          "corp_number": "2111110040056",
+          "ownership_rate": 50.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)삼양사",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 50.0,
+          "parent_mismatch": true,
+          "children": []
+        },
+        {
+          "name": "(주)삼양패키징",
+          "corp_number": "1101115554418",
+          "ownership_rate": 56.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)삼양사",
+          "largest_stockholder": "(주)삼양사",
+          "largest_stockholder_rate": 59.4,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)삼양에코테크",
+              "corp_number": "1101118490685",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)삼양패키징",
+              "largest_stockholder": "(주)삼양패키징",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "(주)삼양케이씨아이",
+          "corp_number": "1244110011884",
+          "ownership_rate": 50.01,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)삼양사",
+          "largest_stockholder": "(주)삼양사",
+          "largest_stockholder_rate": 50.65,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)삼양에프앤비",
+      "corp_number": "1101112376716",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)삼양홀딩스",
+      "largest_stockholder": "(주)삼양홀딩스",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "삼양데이타시스템(주)",
+      "corp_number": "1101111153545",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)삼양홀딩스",
+      "largest_stockholder": "(주)삼양홀딩스",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)삼양바이오팜",
+      "corp_number": "1101114720953",
+      "ownership_rate": 93.71,
+      "relation_type": "자회사",
+      "source": "holding",
+      "inferred": false,
+      "legal_parent_name": "(주)삼양홀딩스",
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)메디켐",
+          "corp_number": "1341110074611",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "holding",
+          "inferred": false,
+          "legal_parent_name": "(주)삼양바이오팜",
+          "largest_stockholder": null,
+          "largest_stockholder_rate": null,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "삼양화성(주)",
+      "corp_number": "1101110614556",
+      "ownership_rate": 50.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)삼양홀딩스",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 50.0,
+      "parent_mismatch": true,
+      "children": []
+    },
+    {
+      "name": "삼양이노켐(주)",
+      "corp_number": "2111110028151",
+      "ownership_rate": 97.29,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)삼양홀딩스",
+      "largest_stockholder": "(주)삼양홀딩스",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)삼양엔씨켐",
+      "corp_number": "1314110209166",
+      "ownership_rate": 61.76,
+      "relation_type": "추론",
+      "source": "affiliate",
+      "inferred": true,
+      "legal_parent_name": "(주)삼양홀딩스",
+      "largest_stockholder": "(주)삼양홀딩스",
+      "largest_stockholder_rate": 61.76,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "other_affiliates": [
+    {
+      "name": "(주)우리",
+      "corp_number": "1543110045490",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 13,
+    "in_holding_structure": 12,
+    "other_affiliates": 1,
+    "inferred_relations": 2,
+    "subsidiaries": 7,
+    "grandchildren": 4,
+    "great_grandchildren": 0
+  }
+}

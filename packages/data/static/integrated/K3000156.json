@@ -1,0 +1,622 @@
+{
+  "group_code": "K3000156",
+  "group_name": "다우키움",
+  "owner": "김익래",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)알트탭",
+      "corp_number": "1101116052099",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)와이즈버즈",
+      "corp_number": "1101116417590",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 53.87,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)애드이피션시",
+          "corp_number": "1101114953992",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)와이즈버즈",
+          "largest_stockholder": "(주)와이즈버즈",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)이머니",
+      "corp_number": "1101112797342",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "(주)이머니",
+      "largest_stockholder_rate": 54.82,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)다우데이타",
+          "corp_number": "1101110863484",
+          "ownership_rate": 31.56,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)이머니",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 36.74,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)다우기술",
+              "corp_number": "1101110414758",
+              "ownership_rate": 45.2,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)다우데이타",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 48.75,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)키다리스타",
+                  "corp_number": "1101114638263",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)다우기술",
+                  "largest_stockholder": "(주)다우기술",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "(주)키움이앤에스",
+                  "corp_number": "1101111719397",
+                  "ownership_rate": 81.18,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)다우기술",
+                  "largest_stockholder": "(주)다우기술",
+                  "largest_stockholder_rate": 81.18,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "키움코어랜드일반부동산사모투자회사제1호",
+                      "corp_number": "1101118349139",
+                      "ownership_rate": 13.89,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "(주)키움이앤에스",
+                      "largest_stockholder": "기타",
+                      "largest_stockholder_rate": 85.97,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "키움평택피에프브이(주)",
+                      "corp_number": "1101118410956",
+                      "ownership_rate": 81.82,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "(주)키움이앤에스",
+                      "largest_stockholder": "(주)키움이앤에스",
+                      "largest_stockholder_rate": 81.82,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "키움증권(주)",
+                  "corp_number": "1101111867948",
+                  "ownership_rate": 39.28,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)다우기술",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 55.62,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "(주)키움예스저축은행",
+                      "corp_number": "1101110113475",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "키움증권(주)",
+                      "largest_stockholder": "키움증권(주)",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "(주)키움저축은행",
+                      "corp_number": "1243110008949",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "키움증권(주)",
+                      "largest_stockholder": "키움증권(주)",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "글로벌강소기업키움엠앤에이전략창업벤처전문사모투자합자회사",
+                      "corp_number": "1101130021997",
+                      "ownership_rate": 20.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "키움증권(주)",
+                      "largest_stockholder": "기타",
+                      "largest_stockholder_rate": 79.98,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "비엔더블유키움엔이엑스사모투자합자회사",
+                      "corp_number": "1101130031839",
+                      "ownership_rate": 52.5,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "키움증권(주)",
+                      "largest_stockholder": "키움증권(주)",
+                      "largest_stockholder_rate": 52.5,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "케이디비키움테크그로스사모투자 합자회사",
+                      "corp_number": "1101130034578",
+                      "ownership_rate": 10.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "키움증권(주)",
+                      "largest_stockholder": "기타",
+                      "largest_stockholder_rate": 70.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "키움비하이스마트이노베이션사모투자합자회사",
+                      "corp_number": "1101130032134",
+                      "ownership_rate": 9.83,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "키움증권(주)",
+                      "largest_stockholder": "기타",
+                      "largest_stockholder_rate": 77.89,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "키움에프앤아이(주)",
+                      "corp_number": "1101117660304",
+                      "ownership_rate": 98.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "키움증권(주)",
+                      "largest_stockholder": "키움증권(주)",
+                      "largest_stockholder_rate": 98.0,
+                      "parent_mismatch": false,
+                      "children": [
+                        {
+                          "name": "케이에프비에스제이호기업재무안정사모투자합자회사",
+                          "corp_number": "1101130035849",
+                          "ownership_rate": 84.16,
+                          "relation_type": "추론",
+                          "source": "affiliate",
+                          "inferred": true,
+                          "legal_parent_name": "키움에프앤아이(주)",
+                          "largest_stockholder": "키움에프앤아이(주)",
+                          "largest_stockholder_rate": 84.16,
+                          "parent_mismatch": false,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "키움캐피탈(주)",
+                      "corp_number": "1101116837772",
+                      "ownership_rate": 98.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "키움증권(주)",
+                      "largest_stockholder": "키움증권(주)",
+                      "largest_stockholder_rate": 98.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "키움투자자산운용(주)",
+                      "corp_number": "1101110568133",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "키움증권(주)",
+                      "largest_stockholder": "키움증권(주)",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": [
+                        {
+                          "name": "한국전력우리스프랏글로벌사모투자전문회사",
+                          "corp_number": "1101130017756",
+                          "ownership_rate": 1.5,
+                          "relation_type": "추론",
+                          "source": "affiliate",
+                          "inferred": true,
+                          "legal_parent_name": "키움투자자산운용(주)",
+                          "largest_stockholder": "기타",
+                          "largest_stockholder_rate": 98.5,
+                          "parent_mismatch": false,
+                          "children": [
+                            {
+                              "name": "코파칠레태양광(유)",
+                              "corp_number": "1101140216744",
+                              "ownership_rate": 100.0,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "한국전력우리스프랏글로벌사모투자전문회사",
+                              "largest_stockholder": "한국전력우리스프랏글로벌사모투자전문회사",
+                              "largest_stockholder_rate": 100.0,
+                              "parent_mismatch": false,
+                              "children": []
+                            },
+                            {
+                              "name": "한국전력우리스프랏글로벌제2차(유)",
+                              "corp_number": "1101140210613",
+                              "ownership_rate": 100.0,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "한국전력우리스프랏글로벌사모투자전문회사",
+                              "largest_stockholder": "한국전력우리스프랏글로벌사모투자전문회사",
+                              "largest_stockholder_rate": 100.0,
+                              "parent_mismatch": false,
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "한국전력우리스프랏글로벌해외자원개발사모투자전문회사",
+                          "corp_number": "1101130017764",
+                          "ownership_rate": 1.5,
+                          "relation_type": "추론",
+                          "source": "affiliate",
+                          "inferred": true,
+                          "legal_parent_name": "키움투자자산운용(주)",
+                          "largest_stockholder": "기타",
+                          "largest_stockholder_rate": 98.5,
+                          "parent_mismatch": false,
+                          "children": [
+                            {
+                              "name": "한국전력우리스프랏글로벌해외자원개발제3차(유)",
+                              "corp_number": "1101140210499",
+                              "ownership_rate": 100.0,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "한국전력우리스프랏글로벌해외자원개발사모투자전문회사",
+                              "largest_stockholder": "한국전력우리스프랏글로벌해외자원개발사모투자전문회사",
+                              "largest_stockholder_rate": 100.0,
+                              "parent_mismatch": false,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "(주)사람인",
+              "corp_number": "1101113318387",
+              "ownership_rate": 6.24,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)다우데이타",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 45.27,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)라라잡",
+                  "corp_number": "1311110540136",
+                  "ownership_rate": 87.85,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)사람인",
+                  "largest_stockholder": "(주)사람인",
+                  "largest_stockholder_rate": 87.85,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "(주)사람인에이치에스",
+                  "corp_number": "1101116049335",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)사람인",
+                  "largest_stockholder": "(주)사람인",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "(주)키다리스튜디오",
+          "corp_number": "1101110539382",
+          "ownership_rate": 2.13,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)이머니",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 55.2,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)레진엔터테인먼트",
+              "corp_number": "1101114853291",
+              "ownership_rate": 94.29,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)키다리스튜디오",
+              "largest_stockholder": "(주)키다리스튜디오",
+              "largest_stockholder_rate": 94.29,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)이매진스",
+              "corp_number": "1101113042324",
+              "ownership_rate": 41.67,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)키다리스튜디오",
+              "largest_stockholder": "(주)키다리스튜디오",
+              "largest_stockholder_rate": 41.67,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)게티이미지코리아",
+                  "corp_number": "1101116380549",
+                  "ownership_rate": 50.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)이매진스",
+                  "largest_stockholder": "(주)이매진스",
+                  "largest_stockholder_rate": 50.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "키움에셋플래너(주)",
+          "corp_number": "1101112776445",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)이머니",
+          "largest_stockholder": "(주)이머니",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "키움곤지암일반사모부동산투자회사",
+      "corp_number": "1101118404503",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "키움인베스트먼트(주)",
+      "corp_number": "1101111659105",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "키움증권(주)",
+      "largest_stockholder_rate": 98.07,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "키움히어로제4호사모투자합자회사",
+          "corp_number": "1101130028282",
+          "ownership_rate": 21.05,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "키움인베스트먼트(주)",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 42.11,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "키움크리스제삼호사모투자합자회사",
+      "corp_number": "1101130036350",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "한국정보인증(주)",
+      "corp_number": "1101111727332",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 48.46,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "에스지서비스(주)",
+          "corp_number": "1101114003854",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "한국정보인증(주)",
+          "largest_stockholder": "한국정보인증(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "키움프라이빗에쿼티(주)",
+          "corp_number": "1101116386901",
+          "ownership_rate": 40.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "한국정보인증(주)",
+          "largest_stockholder": "한국정보인증(주)",
+          "largest_stockholder_rate": 40.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "키움시리우스사모투자합자회사",
+              "corp_number": "1101130029941",
+              "ownership_rate": 15.09,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "키움프라이빗에쿼티(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 56.59,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "키움크리스제일호사모투자합자회사",
+              "corp_number": "1101130031045",
+              "ownership_rate": 20.16,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "키움프라이빗에쿼티(주)",
+              "largest_stockholder": "키움증권(주)",
+              "largest_stockholder_rate": 39.92,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "키움크리스제일호투자목적회사(주)",
+                  "corp_number": "1101118033930",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "키움크리스제일호사모투자합자회사",
+                  "largest_stockholder": "키움크리스제일호사모투자합자회사",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "키움푸드테크사모투자합자회사",
+              "corp_number": "1101130031087",
+              "ownership_rate": 34.48,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "키움프라이빗에쿼티(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 51.73,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_affiliates": 45,
+    "in_holding_structure": 0,
+    "other_affiliates": 7,
+    "inferred_relations": 38,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "group_code": "K1000024",
+  "group_name": "오씨아이",
+  "owner": "이우현",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)새한리싸이클",
+      "corp_number": "1346110061866",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)유니드",
+      "corp_number": "1101110275069",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 52.51,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "오씨아이홀딩스(주)",
+          "corp_number": "1746110000981",
+          "ownership_rate": 0.58,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)유니드",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 70.9,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)디씨알이",
+              "corp_number": "1201110464149",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "오씨아이홀딩스(주)",
+              "largest_stockholder": "오씨아이홀딩스(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "부광약품(주)",
+              "corp_number": "1101110030405",
+              "ownership_rate": 11.32,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "오씨아이홀딩스(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 88.68,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "부광메디카(주)",
+                  "corp_number": "1101115755199",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "부광약품(주)",
+                  "largest_stockholder": "부광약품(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "오씨아이(주)",
+              "corp_number": "1101118626793",
+              "ownership_rate": 44.97,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "오씨아이홀딩스(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 52.48,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "오씨아이드림(주)",
+                  "corp_number": "1101117198024",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "오씨아이(주)",
+                  "largest_stockholder": "오씨아이(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "오씨아이에스이(주)",
+              "corp_number": "2111110035867",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "오씨아이홀딩스(주)",
+              "largest_stockholder": "오씨아이홀딩스(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "오씨아이정보통신(주)",
+              "corp_number": "1101111443780",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "오씨아이홀딩스(주)",
+              "largest_stockholder": "오씨아이홀딩스(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "오씨아이파워(주)",
+              "corp_number": "1101114984137",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "오씨아이홀딩스(주)",
+              "largest_stockholder": "오씨아이홀딩스(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "오씨아이페로(주)",
+              "corp_number": "1101112410233",
+              "ownership_rate": 50.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "오씨아이홀딩스(주)",
+              "largest_stockholder": "오씨아이홀딩스(주)",
+              "largest_stockholder_rate": 50.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "행복도시태양광발전소(주)",
+              "corp_number": "1311110336311",
+              "ownership_rate": 40.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "오씨아이홀딩스(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 60.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "(주)유니드글로벌상사",
+      "corp_number": "1101111072159",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)유니드비티플러스",
+          "corp_number": "1101118466280",
+          "ownership_rate": 25.06,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)유니드글로벌상사",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 51.7,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)피앤오케미칼",
+      "corp_number": "2046110062322",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "(주)포스코퓨처엠",
+      "largest_stockholder_rate": 51.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에스지씨에너지(주)",
+      "corp_number": "1101110079817",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 51.2,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "에스지씨그린파워(주)",
+          "corp_number": "2111110042698",
+          "ownership_rate": 95.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "에스지씨에너지(주)",
+          "largest_stockholder": "에스지씨에너지(주)",
+          "largest_stockholder_rate": 95.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "에스지씨디벨롭먼트(주)",
+          "corp_number": "2111110033639",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "에스지씨에너지(주)",
+          "largest_stockholder": "에스지씨에너지(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "에스지씨솔루션(주)",
+          "corp_number": "1101117669736",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "에스지씨에너지(주)",
+          "largest_stockholder": "에스지씨에너지(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "에스지씨이앤씨(주)",
+          "corp_number": "1101110327555",
+          "ownership_rate": 26.85,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "에스지씨에너지(주)",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 45.07,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "웨스트사이드로지스틱스(주)",
+              "corp_number": "2111110080606",
+              "ownership_rate": 49.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "에스지씨이앤씨(주)",
+              "largest_stockholder": "에스지씨에너지(주)",
+              "largest_stockholder_rate": 51.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "에스지씨파트너스(주)",
+          "corp_number": "1101118124242",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "에스지씨에너지(주)",
+          "largest_stockholder": "에스지씨에너지(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "오씨아이스페셜티(주)",
+      "corp_number": "1615110108609",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "오씨아이홀딩스(주)",
+      "largest_stockholder_rate": 78.07,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 24,
+    "in_holding_structure": 0,
+    "other_affiliates": 6,
+    "inferred_relations": 18,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

@@ -119,7 +119,8 @@ class StockholderListResponse(BaseModel):
 def is_corporate_stockholder(stockholder_type: str | None, name: str) -> bool:
     """법인 주주 여부 판단"""
     # 개인 관련 키워드
-    individual_keywords = ['동일인', '친족', '임원', '비등기임원', '계열회사임원']
+    # 주의: '동일인'은 기업집단의 총수를 의미하므로 개인으로 분류하지 않음
+    individual_keywords = ['친족', '임원', '비등기임원', '계열회사임원']
 
     if stockholder_type:
         # 명확한 개인 유형

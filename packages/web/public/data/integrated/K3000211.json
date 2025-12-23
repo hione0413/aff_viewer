@@ -1,0 +1,368 @@
+{
+  "group_code": "K3000211",
+  "group_name": "KG",
+  "owner": "곽재선",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)케이스마트인슈",
+      "corp_number": "1311110475169",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)케이지모빌리언스",
+          "corp_number": "1101111911050",
+          "ownership_rate": 0.03,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)케이스마트인슈",
+          "largest_stockholder": "(주)케이지이니시스",
+          "largest_stockholder_rate": 50.37,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "케이지아이씨티(주)",
+          "corp_number": "1101117622601",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)케이스마트인슈",
+          "largest_stockholder": "(주)케이스마트인슈",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "이데일리(주)",
+              "corp_number": "1101111853608",
+              "ownership_rate": 1.12,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "케이지아이씨티(주)",
+              "largest_stockholder": "케이지이티에스(주)",
+              "largest_stockholder_rate": 34.98,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)이데일리씨앤비",
+                  "corp_number": "1101112810128",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "이데일리(주)",
+                  "largest_stockholder": "이데일리(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "(주)케이지써닝라이프",
+                  "corp_number": "1345110166296",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "이데일리(주)",
+                  "largest_stockholder": "이데일리(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "(주)케이지제로인",
+                  "corp_number": "1101111269540",
+                  "ownership_rate": 7.35,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "이데일리(주)",
+                  "largest_stockholder": "(주)케이지제로인",
+                  "largest_stockholder_rate": 29.22,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "케이지케미칼(주)",
+                      "corp_number": "1243110008999",
+                      "ownership_rate": 20.91,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "(주)케이지제로인",
+                      "largest_stockholder": "기타",
+                      "largest_stockholder_rate": 49.0,
+                      "parent_mismatch": false,
+                      "children": [
+                        {
+                          "name": "케이지모빌리티(주)",
+                          "corp_number": "1101110035132",
+                          "ownership_rate": 0.0,
+                          "relation_type": "추론",
+                          "source": "affiliate",
+                          "inferred": true,
+                          "legal_parent_name": "케이지케미칼(주)",
+                          "largest_stockholder": "케이지이티에스(주)",
+                          "largest_stockholder_rate": 56.4,
+                          "parent_mismatch": false,
+                          "children": [
+                            {
+                              "name": "케이지모빌리티커머셜(주)",
+                              "corp_number": "1952110012468",
+                              "ownership_rate": 100.0,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "케이지모빌리티(주)",
+                              "largest_stockholder": "케이지모빌리티(주)",
+                              "largest_stockholder_rate": 100.0,
+                              "parent_mismatch": false,
+                              "children": [
+                                {
+                                  "name": "에디슨에이아이(주)",
+                                  "corp_number": "1952110017690",
+                                  "ownership_rate": 100.0,
+                                  "relation_type": "추론",
+                                  "source": "affiliate",
+                                  "inferred": true,
+                                  "legal_parent_name": "케이지모빌리티커머셜(주)",
+                                  "largest_stockholder": "케이지모빌리티커머셜(주)",
+                                  "largest_stockholder_rate": 100.0,
+                                  "parent_mismatch": false,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "이데일리엠(주)",
+                  "corp_number": "1101118319455",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "이데일리(주)",
+                  "largest_stockholder": "이데일리(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "(주)케이지에듀원",
+      "corp_number": "1101111959183",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "(주)케이지모빌리언스",
+      "largest_stockholder_rate": 76.44,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)케이지에프앤비",
+      "corp_number": "1101113163675",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "크라운에프앤비(주)",
+      "largest_stockholder_rate": 74.29,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)케이지이니시스",
+      "corp_number": "1101111602667",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 54.5,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)케이지디지털에셋홀딩스",
+          "corp_number": "1101118213532",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)케이지이니시스",
+          "largest_stockholder": "(주)케이지이니시스",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)메타핀컴퍼니",
+              "corp_number": "1101118247268",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)케이지디지털에셋홀딩스",
+              "largest_stockholder": "(주)케이지디지털에셋홀딩스",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "케이지에코솔루션(주)",
+          "corp_number": "1101111799183",
+          "ownership_rate": 3.83,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)케이지이니시스",
+          "largest_stockholder": "케이지케미칼(주)",
+          "largest_stockholder_rate": 40.92,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "케이지캐피탈(주)",
+          "corp_number": "1313110156591",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)케이지이니시스",
+          "largest_stockholder": "(주)케이지이니시스",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "케이지스틸(주)",
+      "corp_number": "1101110393308",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 60.01,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)에스엘케이",
+          "corp_number": "1345110637031",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "케이지스틸(주)",
+          "largest_stockholder": "케이지스틸(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "케이지스틸에스앤디(주)",
+          "corp_number": "1650110087883",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "케이지스틸(주)",
+          "largest_stockholder": "케이지스틸(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "케이지스틸에스앤아이(주)",
+          "corp_number": "1201111289710",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "케이지스틸(주)",
+          "largest_stockholder": "케이지스틸(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "케이지에너켐(주)",
+          "corp_number": "1943110030550",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "케이지스틸(주)",
+          "largest_stockholder": "케이지스틸(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "케이지이앤씨(주)",
+          "corp_number": "1545110089030",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "케이지스틸(주)",
+          "largest_stockholder": "케이지스틸(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "케이지지엔에스(주)",
+          "corp_number": "1650110043819",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "케이지스틸(주)",
+          "largest_stockholder": "케이지스틸(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_affiliates": 26,
+    "in_holding_structure": 0,
+    "other_affiliates": 5,
+    "inferred_relations": 21,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

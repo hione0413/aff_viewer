@@ -1,0 +1,218 @@
+{
+  "group_code": "K1000067",
+  "group_name": "하이트진로",
+  "owner": "박문덕",
+  "holding_company": "하이트진로홀딩스(주)",
+  "holding_corp_number": "1101110013766",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "하이트진로(주)",
+      "corp_number": "1101110028591",
+      "ownership_rate": 64.34,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "하이트진로홀딩스(주)",
+      "largest_stockholder": "하이트진로홀딩스(주)",
+      "largest_stockholder_rate": 50.27,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "천주물류(주)",
+          "corp_number": "1901110051504",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "holding",
+          "inferred": false,
+          "legal_parent_name": "하이트진로(주)",
+          "largest_stockholder": null,
+          "largest_stockholder_rate": null,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "진로양조(주)",
+          "corp_number": "1452110012616",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "holding",
+          "inferred": false,
+          "legal_parent_name": "하이트진로(주)",
+          "largest_stockholder": null,
+          "largest_stockholder_rate": null,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "강원물류(주)",
+          "corp_number": "1452110006049",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "holding",
+          "inferred": false,
+          "legal_parent_name": "하이트진로(주)",
+          "largest_stockholder": null,
+          "largest_stockholder_rate": null,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "하이트진로산업(주)",
+          "corp_number": "1341110002662",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "하이트진로(주)",
+          "largest_stockholder": "하이트진로(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "블루헤런(주)",
+              "corp_number": "1312110015971",
+              "ownership_rate": 100.0,
+              "relation_type": "증손자회사",
+              "source": "both",
+              "inferred": false,
+              "legal_parent_name": "하이트진로산업(주)",
+              "largest_stockholder": "하이트진로산업(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "농업회사법인 팜컬쳐(주)",
+          "corp_number": "2113110010526",
+          "ownership_rate": 90.0,
+          "relation_type": "손자회사",
+          "source": "holding",
+          "inferred": false,
+          "legal_parent_name": "하이트진로(주)",
+          "largest_stockholder": null,
+          "largest_stockholder_rate": null,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "수양물류(주)",
+          "corp_number": "2101110038854",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "하이트진로(주)",
+          "largest_stockholder": "하이트진로(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "하이트진로음료(주)",
+          "corp_number": "1101113436634",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "하이트진로(주)",
+          "largest_stockholder": "하이트진로(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)진로소주",
+      "corp_number": "1901110047371",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "하이트진로홀딩스(주)",
+      "largest_stockholder": "하이트진로홀딩스(주)",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "other_affiliates": [
+    {
+      "name": "(유)평암농산법인",
+      "corp_number": "1901140002733",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "(유)평암농산법인",
+      "largest_stockholder_rate": 32.02,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)송정",
+      "corp_number": "1615110048491",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)연암",
+      "corp_number": "1341110079562",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)진백글로벌",
+      "corp_number": "1301111199305",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "서영이앤티(주)",
+      "corp_number": "1101111849524",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 14.69,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 12,
+    "in_holding_structure": 11,
+    "other_affiliates": 5,
+    "inferred_relations": 0,
+    "subsidiaries": 2,
+    "grandchildren": 7,
+    "great_grandchildren": 1
+  }
+}

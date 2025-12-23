@@ -1,0 +1,861 @@
+{
+  "group_code": "K3000161",
+  "group_name": "유진",
+  "owner": "유경선",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)얼라이언스",
+      "corp_number": "1345110444527",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)하루테크",
+      "corp_number": "1341110620646",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "금왕에프원(주)",
+      "corp_number": "1501110315239",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "남부산업(주)",
+      "corp_number": "1348110041179",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 40.8,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "우진레미콘(주)",
+      "corp_number": "2850110246088",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "성인산업(주)",
+          "corp_number": "1201110300757",
+          "ownership_rate": 15.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "우진레미콘(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 70.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "유진고메사모투자합자회사",
+      "corp_number": "1101130036764",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "유진기업(주)",
+      "corp_number": "1101110376148",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 49.68,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)동양",
+          "corp_number": "1101110005333",
+          "ownership_rate": 23.68,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 49.62,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)동양에너지",
+              "corp_number": "1101114835794",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)동양",
+              "largest_stockholder": "(주)동양",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)유진홈센터",
+              "corp_number": "1101114498568",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)동양",
+              "largest_stockholder": "(주)동양",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "유진한일합섬(주)",
+              "corp_number": "1101116615714",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)동양",
+              "largest_stockholder": "(주)동양",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)한일합섬",
+                  "corp_number": "1101117748093",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "유진한일합섬(주)",
+                  "largest_stockholder": "유진한일합섬(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "인프라이니셔티브1호사모투자합자회사",
+              "corp_number": "1101130023761",
+              "ownership_rate": 5.56,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)동양",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 83.23,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "리싸이클린(유)",
+                  "corp_number": "1101140292538",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "인프라이니셔티브1호사모투자합자회사",
+                  "largest_stockholder": "인프라이니셔티브1호사모투자합자회사",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "(주)한빛그린환경",
+                      "corp_number": "1501110046181",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "리싸이클린(유)",
+                      "largest_stockholder": "리싸이클린(유)",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "토탈클린(유)",
+                  "corp_number": "1101140274510",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "인프라이니셔티브1호사모투자합자회사",
+                  "largest_stockholder": "인프라이니셔티브1호사모투자합자회사",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "(주)씨에스에코",
+                      "corp_number": "1348110337370",
+                      "ownership_rate": 71.8,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "토탈클린(유)",
+                      "largest_stockholder": "토탈클린(유)",
+                      "largest_stockholder_rate": 71.8,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "(주)유진디랩",
+          "corp_number": "1101115723659",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)유진로지스틱스",
+          "corp_number": "1312110007928",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)유진소닉",
+              "corp_number": "1101116069705",
+              "ownership_rate": 53.14,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)유진로지스틱스",
+              "largest_stockholder": "(주)유진로지스틱스",
+              "largest_stockholder_rate": 53.14,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "굿앤파트너스(주)",
+              "corp_number": "1101116617679",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)유진로지스틱스",
+              "largest_stockholder": "(주)유진로지스틱스",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "(주)유진에너팜",
+          "corp_number": "1349110056506",
+          "ownership_rate": 10.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 57.2,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)지구레미콘",
+          "corp_number": "1101112797318",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "경산기업(주)",
+          "corp_number": "1101118109806",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "농업회사법인 자연팜앤바이오(주)",
+          "corp_number": "1101117183900",
+          "ownership_rate": 90.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 90.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "당진기업(주)",
+          "corp_number": "1650110000900",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "동화기업(주)",
+          "corp_number": "2059110009632",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "유성산업(주)",
+          "corp_number": "1346110008769",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "유진레저(주)",
+          "corp_number": "1101114281319",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "고운레저(주)",
+              "corp_number": "1452110032424",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "유진레저(주)",
+              "largest_stockholder": "유진레저(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "유진투자증권(주)",
+              "corp_number": "1101110007826",
+              "ownership_rate": 0.97,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "유진레저(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 62.44,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "유진더블유사모투자합자회사",
+                  "corp_number": "1101130031847",
+                  "ownership_rate": 22.79,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "유진투자증권(주)",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 42.73,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "유진더블유(유)",
+                      "corp_number": "1101140286797",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "유진더블유사모투자합자회사",
+                      "largest_stockholder": "유진더블유사모투자합자회사",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "유진스마트모빌리티사모투자합자회사",
+                  "corp_number": "1101130026301",
+                  "ownership_rate": 15.79,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "유진투자증권(주)",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 61.87,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "유진에버베스트턴어라운드기업재무안정사모투자전문회사",
+                  "corp_number": "1101130019059",
+                  "ownership_rate": 7.14,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "유진투자증권(주)",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 91.76,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "유진자산운용(주)",
+                  "corp_number": "1101110651954",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "유진투자증권(주)",
+                  "largest_stockholder": "유진투자증권(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "유진유니콘사모투자합자회사",
+                      "corp_number": "1101130030211",
+                      "ownership_rate": 3.14,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "유진자산운용(주)",
+                      "largest_stockholder": "기타",
+                      "largest_stockholder_rate": 94.13,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "유진크레딧밸류전문투자형사모부동산모투자(유)",
+                      "corp_number": "1101140268688",
+                      "ownership_rate": 0.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "유진자산운용(주)",
+                      "largest_stockholder": "기타",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "유진프라이디움일반사모부동산모투자(유)",
+                      "corp_number": "1101140266210",
+                      "ownership_rate": 0.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "유진자산운용(주)",
+                      "largest_stockholder": "기타",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "유진투자선물(주)",
+                  "corp_number": "1101110795116",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "유진투자증권(주)",
+                  "largest_stockholder": "유진투자증권(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "유진비디에스(주)",
+          "corp_number": "1101113726746",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)힐스프링인베스트먼트",
+              "corp_number": "1101118191085",
+              "ownership_rate": 95.24,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "유진비디에스(주)",
+              "largest_stockholder": "유진비디에스(주)",
+              "largest_stockholder_rate": 95.24,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "유진아이티서비스(주)",
+          "corp_number": "1101115577725",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "유진엠(주)",
+          "corp_number": "1101112894073",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "유진엠플러스(주)",
+              "corp_number": "1101115205011",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "유진엠(주)",
+              "largest_stockholder": "유진엠(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "유진이엔티(주)",
+          "corp_number": "1101118765020",
+          "ownership_rate": 51.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 51.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)와이티엔",
+              "corp_number": "1101110971873",
+              "ownership_rate": 30.95,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "유진이엔티(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 69.04,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)와이티엔디엠비",
+                  "corp_number": "1101113121756",
+                  "ownership_rate": 28.52,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)와이티엔",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 71.49,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "(주)와이티엔라디오",
+                  "corp_number": "1101113780437",
+                  "ownership_rate": 37.08,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)와이티엔",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 62.93,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "유진프라이빗에쿼티(주)",
+          "corp_number": "1101115654010",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "유진토르사모투자합자회사",
+              "corp_number": "1101130030576",
+              "ownership_rate": 1.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "유진프라이빗에쿼티(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 99.01,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "로지테크홀딩스(유)",
+                  "corp_number": "1101140281458",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "유진토르사모투자합자회사",
+                  "largest_stockholder": "유진토르사모투자합자회사",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "유진하나리싸이클링사모투자합자회사",
+              "corp_number": "2850130000737",
+              "ownership_rate": 0.42,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "유진프라이빗에쿼티(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 99.58,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "초록숲투자제1호(유)",
+                  "corp_number": "2850140007632",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "유진하나리싸이클링사모투자합자회사",
+                  "largest_stockholder": "유진하나리싸이클링사모투자합자회사",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "동우바이오(주)",
+                      "corp_number": "1601110144305",
+                      "ownership_rate": 84.89,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "초록숲투자제1호(유)",
+                      "largest_stockholder": "초록숲투자제1호(유)",
+                      "largest_stockholder_rate": 84.89,
+                      "parent_mismatch": false,
+                      "children": [
+                        {
+                          "name": "동우팜(주)",
+                          "corp_number": "1345110579530",
+                          "ownership_rate": 100.0,
+                          "relation_type": "추론",
+                          "source": "affiliate",
+                          "inferred": true,
+                          "legal_parent_name": "동우바이오(주)",
+                          "largest_stockholder": "동우바이오(주)",
+                          "largest_stockholder_rate": 100.0,
+                          "parent_mismatch": false,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "초록숲투자제2호(유)",
+                  "corp_number": "2850140007624",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "유진하나리싸이클링사모투자합자회사",
+                  "largest_stockholder": "유진하나리싸이클링사모투자합자회사",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "(주)동림",
+                      "corp_number": "1746110002309",
+                      "ownership_rate": 85.54,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "초록숲투자제2호(유)",
+                      "largest_stockholder": "초록숲투자제2호(유)",
+                      "largest_stockholder_rate": 85.54,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "천안기업(주)",
+          "corp_number": "1615110019434",
+          "ownership_rate": 80.88,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 80.88,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "현대개발(주)",
+          "corp_number": "2054110009963",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유진기업(주)",
+          "largest_stockholder": "유진기업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "유진프라임물류제1호일반사모부동산투자(유)",
+      "corp_number": "1344140002470",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "이순산업(주)",
+      "corp_number": "2844110060415",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 63,
+    "in_holding_structure": 0,
+    "other_affiliates": 9,
+    "inferred_relations": 54,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "group_code": "K2000060",
+  "group_name": "부영",
+  "owner": "이중근",
+  "holding_company": "(주)부영",
+  "holding_corp_number": "1101110346191",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "(주)부영주택",
+      "corp_number": "1101114252188",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)부영",
+      "largest_stockholder": "(주)부영",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "천원종합개발(주)",
+          "corp_number": "1346110023006",
+          "ownership_rate": 99.55,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)부영주택",
+          "largest_stockholder": "(주)부영주택",
+          "largest_stockholder_rate": 99.57,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)인천일보",
+          "corp_number": "1201110010215",
+          "ownership_rate": 49.87,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)부영주택",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 50.13,
+          "parent_mismatch": true,
+          "children": [
+            {
+              "name": "(주)인천출판사",
+              "corp_number": "1201110867294",
+              "ownership_rate": 100.0,
+              "relation_type": "증손자회사",
+              "source": "both",
+              "inferred": false,
+              "legal_parent_name": "(주)인천일보",
+              "largest_stockholder": "(주)인천일보",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "(주)부영유통",
+          "corp_number": "2241110027009",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)부영주택",
+          "largest_stockholder": "(주)부영주택",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)무주덕유산리조트",
+          "corp_number": "1101110282098",
+          "ownership_rate": 74.95,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)부영주택",
+          "largest_stockholder": "(주)부영주택",
+          "largest_stockholder_rate": 74.95,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)부영환경산업",
+          "corp_number": "1101114550178",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)부영주택",
+          "largest_stockholder": "(주)부영주택",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)더클래식씨씨",
+          "corp_number": "2201110044099",
+          "ownership_rate": 98.85,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)부영주택",
+          "largest_stockholder": "(주)부영주택",
+          "largest_stockholder_rate": 98.85,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)오투리조트",
+          "corp_number": "1448110011097",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)부영주택",
+          "largest_stockholder": "(주)부영주택",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)비와이월드",
+          "corp_number": "1942110249351",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)부영주택",
+          "largest_stockholder": "(주)부영주택",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "other_affiliates": [
+    {
+      "name": "(주)광영토건",
+      "corp_number": "1101110208931",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "(주)광영토건",
+      "largest_stockholder_rate": 48.84,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)남양개발",
+      "corp_number": "1152110020144",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)부영엔터테인먼트",
+      "corp_number": "1101111538896",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)한라일보사",
+      "corp_number": "2201110005976",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 50.99,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)에이치아이엠",
+          "corp_number": "2201110126128",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)한라일보사",
+          "largest_stockholder": "(주)한라일보사",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "남광건설산업(주)",
+      "corp_number": "1101111189045",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)동광주택",
+          "corp_number": "1101114251932",
+          "ownership_rate": 3.45,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "남광건설산업(주)",
+          "largest_stockholder": "동광주택산업(주)",
+          "largest_stockholder_rate": 96.55,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "대화도시가스(주)",
+      "corp_number": "2047110001592",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 95.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "동광주택산업(주)",
+      "corp_number": "1101110490807",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 91.52,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "부강주택관리(주)",
+      "corp_number": "1349110003226",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 21,
+    "in_holding_structure": 11,
+    "other_affiliates": 8,
+    "inferred_relations": 2,
+    "subsidiaries": 1,
+    "grandchildren": 8,
+    "great_grandchildren": 1
+  }
+}

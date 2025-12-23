@@ -1,0 +1,325 @@
+{
+  "group_code": "K1000025",
+  "group_name": "동원",
+  "owner": "김남정",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "동원산업(주)",
+      "corp_number": "1101110003098",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 46.4,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)동원에프앤비",
+          "corp_number": "1101112101816",
+          "ownership_rate": 74.38,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 74.38,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)동원홈푸드",
+              "corp_number": "1615110022122",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)동원에프앤비",
+              "largest_stockholder": "(주)동원에프앤비",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "동원씨앤에스(주)",
+              "corp_number": "1101112862591",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)동원에프앤비",
+              "largest_stockholder": "(주)동원에프앤비",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "동원팜스(주)",
+              "corp_number": "1101113809138",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)동원에프앤비",
+              "largest_stockholder": "(주)동원에프앤비",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "농업회사법인 어석합자회사",
+          "corp_number": "1344710002412",
+          "ownership_rate": 89.88,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 89.88,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "동원건설산업(주)",
+          "corp_number": "1311110330941",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "천안신사산업단지(주)",
+              "corp_number": "1615110312292",
+              "ownership_rate": 70.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동원건설산업(주)",
+              "largest_stockholder": "동원건설산업(주)",
+              "largest_stockholder_rate": 70.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "동원기술투자(주)",
+          "corp_number": "1101118198502",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "동원로엑스(주)",
+          "corp_number": "1101114505769",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)동원티엘에스",
+              "corp_number": "2849110180205",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동원로엑스(주)",
+              "largest_stockholder": "동원로엑스(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)동화",
+              "corp_number": "1717110053569",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동원로엑스(주)",
+              "largest_stockholder": "동원로엑스(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "넥스트로(주)",
+              "corp_number": "1101118604210",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동원로엑스(주)",
+              "largest_stockholder": "동원로엑스(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "동원로엑스인천(주)",
+              "corp_number": "1201110305327",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동원로엑스(주)",
+              "largest_stockholder": "동원로엑스(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "한창종합물류(주)",
+              "corp_number": "1717110042075",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동원로엑스(주)",
+              "largest_stockholder": "동원로엑스(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "동원로엑스냉장(주)",
+          "corp_number": "1801110985002",
+          "ownership_rate": 85.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 85.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "동원로엑스냉장투(주)",
+          "corp_number": "1801111280857",
+          "ownership_rate": 85.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 85.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "동원부산컨테이너터미널(주)",
+          "corp_number": "1801110356013",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "동원글로벌터미널부산(주)",
+              "corp_number": "1942110354572",
+              "ownership_rate": 60.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동원부산컨테이너터미널(주)",
+              "largest_stockholder": "동원부산컨테이너터미널(주)",
+              "largest_stockholder_rate": 60.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "동원시스템즈(주)",
+          "corp_number": "1341110011712",
+          "ownership_rate": 70.67,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 70.67,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "진안물사랑(주)",
+              "corp_number": "1101114257724",
+              "ownership_rate": 44.81,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동원시스템즈(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 55.19,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "비아이디씨(주)",
+          "corp_number": "1801110549551",
+          "ownership_rate": 51.04,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 51.04,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "케이스마트양식(주)",
+          "corp_number": "1449110016904",
+          "ownership_rate": 51.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "동원산업(주)",
+          "largest_stockholder": "동원산업(주)",
+          "largest_stockholder_rate": 51.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_affiliates": 23,
+    "in_holding_structure": 0,
+    "other_affiliates": 1,
+    "inferred_relations": 22,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

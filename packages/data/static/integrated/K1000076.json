@@ -1,0 +1,231 @@
+{
+  "group_code": "K1000076",
+  "group_name": "HL",
+  "owner": "정몽원",
+  "holding_company": "(주)한라홀딩스",
+  "holding_corp_number": "1313110030042",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "에이치엘디앤아이한라(주)",
+      "corp_number": "1101110274699",
+      "ownership_rate": 115.85,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)한라홀딩스",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 51.2,
+      "parent_mismatch": true,
+      "children": [
+        {
+          "name": "목포신항만운영(주)",
+          "corp_number": "2011110029648",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "에이치엘디앤아이한라(주)",
+          "largest_stockholder": "에이치엘디앤아이한라(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "배곧신도시지역특성화타운(주)",
+          "corp_number": "1355110264792",
+          "ownership_rate": 95.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "에이치엘디앤아이한라(주)",
+          "largest_stockholder": "에이치엘디앤아이한라(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "에이치엘로지스앤코(주)",
+          "corp_number": "1348110132001",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "에이치엘디앤아이한라(주)",
+          "largest_stockholder": "에이치엘디앤아이한라(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)한라세라지오",
+          "corp_number": "1349110005074",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "holding",
+          "inferred": false,
+          "legal_parent_name": "에이치엘디앤아이한라(주)",
+          "largest_stockholder": null,
+          "largest_stockholder_rate": null,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "에이치엘에코텍(주)",
+          "corp_number": "1101113600370",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "에이치엘디앤아이한라(주)",
+          "largest_stockholder": "에이치엘디앤아이한라(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "에이치엘위코(주)",
+      "corp_number": "1314110140633",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)한라홀딩스",
+      "largest_stockholder": "에이치엘홀딩스(주)",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": true,
+      "children": []
+    },
+    {
+      "name": "(주)제이제이한라",
+      "corp_number": "1101110984842",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)한라홀딩스",
+      "largest_stockholder": "에이치엘홀딩스(주)",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": true,
+      "children": []
+    },
+    {
+      "name": "(주)에이치엘클레무브",
+      "corp_number": "1345110132825",
+      "ownership_rate": 50.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)한라홀딩스",
+      "largest_stockholder": "에이치엘만도(주)",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": true,
+      "children": []
+    },
+    {
+      "name": "에이치엘만도(주)",
+      "corp_number": "1313110140776",
+      "ownership_rate": 30.25,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)한라홀딩스",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 69.74,
+      "parent_mismatch": true,
+      "children": [
+        {
+          "name": "만도브로제(주)",
+          "corp_number": "1201110566557",
+          "ownership_rate": 50.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "에이치엘만도(주)",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 50.0,
+          "parent_mismatch": true,
+          "children": []
+        },
+        {
+          "name": "(주)만도차이나홀딩스",
+          "corp_number": "1313110119630",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "holding",
+          "inferred": false,
+          "legal_parent_name": "에이치엘만도(주)",
+          "largest_stockholder": null,
+          "largest_stockholder_rate": null,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "에이치엘리츠운용(주)",
+      "corp_number": "1101117802716",
+      "ownership_rate": 90.1,
+      "relation_type": "추론",
+      "source": "affiliate",
+      "inferred": true,
+      "legal_parent_name": "에이치엘홀딩스(주)",
+      "largest_stockholder": "에이치엘홀딩스(주)",
+      "largest_stockholder_rate": 90.1,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "other_affiliates": [
+    {
+      "name": "로터스프라이빗에쿼티(주)",
+      "corp_number": "1101117700150",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "발안남양도로(주)",
+      "corp_number": "1101119069447",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에이치엘로보틱스(주)",
+      "corp_number": "1311110746023",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 15,
+    "in_holding_structure": 13,
+    "other_affiliates": 3,
+    "inferred_relations": 1,
+    "subsidiaries": 5,
+    "grandchildren": 7,
+    "great_grandchildren": 0
+  }
+}

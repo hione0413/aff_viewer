@@ -1,0 +1,59 @@
+{
+  "group_code": "K3000055",
+  "group_name": "한국지엠",
+  "owner": "한국지엠(주)",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "지엠아시아퍼시픽지역본부(주)",
+      "corp_number": "1101111590432",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "GM Asia, LLC",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "지엠테크니컬센터코리아(주)",
+      "corp_number": "1201110975295",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "GM Investments Pty, Ltd.",
+      "largest_stockholder_rate": 46.15,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "한국지엠(주)",
+      "corp_number": "1201110294124",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "GM Investments Pty, Ltd.",
+      "largest_stockholder_rate": 46.14,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 3,
+    "in_holding_structure": 0,
+    "other_affiliates": 3,
+    "inferred_relations": 0,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

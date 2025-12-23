@@ -1,0 +1,327 @@
+{
+  "group_code": "K3000254",
+  "group_name": "글로벌세아",
+  "owner": "김웅기",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)인디에프",
+      "corp_number": "1101110279996",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "글로벌세아(주)",
+      "largest_stockholder_rate": 67.01,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "나산실업(주)",
+          "corp_number": "1101111257123",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)인디에프",
+          "largest_stockholder": "(주)인디에프",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)전주에너지",
+      "corp_number": "2059110015978",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)전주원파워",
+      "corp_number": "2101110022435",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)전주파워",
+      "corp_number": "2101110099757",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)전주페이퍼",
+      "corp_number": "2101110145568",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)태범",
+      "corp_number": "1101111020405",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "고덕에너지솔루션(주)",
+      "corp_number": "1313110033995",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "글로벌세아(주)",
+      "corp_number": "1101110581565",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 84.8,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)에스앤에이",
+          "corp_number": "1348110769721",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "글로벌세아(주)",
+          "largest_stockholder": "글로벌세아(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "세아상역(주)",
+          "corp_number": "1101115879345",
+          "ownership_rate": 61.94,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "글로벌세아(주)",
+          "largest_stockholder": "글로벌세아(주)",
+          "largest_stockholder_rate": 61.94,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "세아이에스지인베스트먼트(주)",
+              "corp_number": "1101118116819",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "세아상역(주)",
+              "largest_stockholder": "세아상역(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)발맥스기술",
+                  "corp_number": "1341110165915",
+                  "ownership_rate": 51.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "세아이에스지인베스트먼트(주)",
+                  "largest_stockholder": "세아 이에스지 인베스트먼트(주)",
+                  "largest_stockholder_rate": 51.0,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "(주)발맥스기술비지피경주",
+                      "corp_number": "1712110140506",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "(주)발맥스기술",
+                      "largest_stockholder": "(주)발맥스기술",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "태림페이퍼(주)",
+              "corp_number": "1301110026236",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "세아상역(주)",
+              "largest_stockholder": "세아상역(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "태림판지(주)",
+                  "corp_number": "1313110179569",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "태림페이퍼(주)",
+                  "largest_stockholder": "태림페이퍼(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "태림포장(주)",
+                  "corp_number": "1301110010015",
+                  "ownership_rate": 68.78,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "태림페이퍼(주)",
+                  "largest_stockholder": "태림페이퍼(주)",
+                  "largest_stockholder_rate": 68.78,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "동림로지스틱(주)",
+                      "corp_number": "1355110192943",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "태림포장(주)",
+                      "largest_stockholder": "태림포장(주)",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "티앤제이인베스트먼트(주)",
+                  "corp_number": "1314110575385",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "태림페이퍼(주)",
+                  "largest_stockholder": "태림페이퍼(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "쌍용건설(주)",
+          "corp_number": "1101110220395",
+          "ownership_rate": 89.98,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "글로벌세아(주)",
+          "largest_stockholder": "글로벌세아(주)",
+          "largest_stockholder_rate": 89.98,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)정암에이치앤디",
+              "corp_number": "1101114111920",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "쌍용건설(주)",
+              "largest_stockholder": "쌍용건설(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "에스엔에이시스템(주)",
+          "corp_number": "1101111993694",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "글로벌세아(주)",
+          "largest_stockholder": "글로벌세아(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "동원페이퍼(주)",
+      "corp_number": "2112110005628",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "태림포장(주)",
+      "largest_stockholder_rate": 60.14,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 23,
+    "in_holding_structure": 0,
+    "other_affiliates": 9,
+    "inferred_relations": 14,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

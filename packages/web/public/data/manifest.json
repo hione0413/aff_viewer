@@ -1,0 +1,12 @@
+{
+  "version": "20251223090618",
+  "generated_at": "2025-12-23T09:06:18.847887",
+  "total_groups": 92,
+  "total_affiliates": 3301,
+  "data_source": "공정거래위원회 기업집단포털",
+  "files": {
+    "groups": "groups.json",
+    "affiliates_index": "affiliates_index.json",
+    "integrated": "integrated/{group_code}.json"
+  }
+}

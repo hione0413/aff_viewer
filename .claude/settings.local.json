@@ -22,7 +22,20 @@
       "Bash(npm run build:*)",
       "Bash(.venv\\\\Scripts\\\\python:*)",
       "Bash(.venvScriptspython -c \"from affiliate_api.database import SessionLocal; from affiliate_api.models import HoldingRelation; db = SessionLocal\\(\\); sk_holding = db.query\\(HoldingRelation\\).filter\\(HoldingRelation.holding_name.like\\(''%%SK%%''\\)\\).first\\(\\); holding_corp = sk_holding.holding_corp_number if sk_holding else None; print\\(f''SK 지주회사 법인번호: {holding_corp}''\\); direct_subs = db.query\\(HoldingRelation\\).filter\\(HoldingRelation.holding_corp_number == holding_corp, HoldingRelation.parent_corp_number == None\\).all\\(\\) if holding_corp else []; print\\(f''직접 자회사 \\(depth 1\\): {len\\(direct_subs\\)}개''\\); [print\\(f''  - {s.subsidiary_name} \\({s.subsidiary_corp_number}\\)''\\) for s in direct_subs[:3]]; db.close\\(\\)\")",
-      "Bash(timeout 5 npm run dev:*)"
+      "Bash(timeout 5 npm run dev:*)",
+      "Bash(.venvScriptspython -c \"\nfrom affiliate_api.database import SessionLocal\nfrom affiliate_api.models import HoldingCompanyRelation, Stockholder, Affiliate\n\ndb = SessionLocal\\(\\)\n\n# 1. 울산아로마틱스 법인번호 찾기\nprint\\(''=== 울산아로마틱스 계열사 정보 ===''\\)\naffiliate = db.query\\(Affiliate\\).filter\\(Affiliate.name.like\\(''%울산아로마틱스%''\\)\\).first\\(\\)\nif affiliate:\n    print\\(f''회사명: {affiliate.name}''\\)\n    print\\(f''법인번호: {affiliate.corporate_number}''\\)\n    corp_num = affiliate.corporate_number\nelse:\n    print\\(''Not found''\\)\n    corp_num = None\n\n# 2. 에스케이지오센트릭 법인번호 찾기\nprint\\(\\)\nprint\\(''=== 에스케이지오센트릭 계열사 정보 ===''\\)\nparent = db.query\\(Affiliate\\).filter\\(Affiliate.name.like\\(''%에스케이지오센트릭%''\\)\\).first\\(\\)\nif parent:\n    print\\(f''회사명: {parent.name}''\\)\n    print\\(f''법인번호: {parent.corporate_number}''\\)\n    parent_corp = parent.corporate_number\nelse:\n    print\\(''Not found''\\)\n    parent_corp = None\n\n# 3. 지주회사 관계 테이블에서 확인\nprint\\(\\)\nprint\\(''=== HoldingCompanyRelation 테이블 ===''\\)\nif corp_num:\n    relations = db.query\\(HoldingCompanyRelation\\).filter\\(\n        HoldingCompanyRelation.subsidiary_name.like\\(''%울산아로마틱스%''\\)\n    \\).all\\(\\)\n    for r in relations:\n        print\\(f''지주회사: {r.holding_group_name}''\\)\n        print\\(f''상위회사: {r.parent_corp_number}''\\)\n        print\\(f''자회사: {r.subsidiary_name} \\({r.subsidiary_corp_number}\\)''\\)\n        print\\(f''지분율: {r.ownership_rate}%''\\)\n        print\\(f''관계유형: {r.relation_type}''\\)\n        print\\(''---''\\)\n\n# 4. 주주현황 테이블에서 울산아로마틱스의 주주 확인\nprint\\(\\)\nprint\\(''=== 울산아로마틱스 주주현황 ===''\\)\nif corp_num:\n    stockholders = db.query\\(Stockholder\\).filter\\(\n        Stockholder.corp_number == corp_num\n    \\).order_by\\(Stockholder.total_rate.desc\\(\\)\\).all\\(\\)\n    print\\(f''총 {len\\(stockholders\\)}건''\\)\n    for s in stockholders:\n        print\\(f''  주주: {s.stockholder_name} | 유형: {s.stockholder_type} | 지분율: {s.total_rate}% | 연도: {s.designation_year}''\\)\n\ndb.close\\(\\)\n\")",
+      "Bash(C:\\\\workspace_my\\\\aff\\\\packages\\\\api\\\\.venv\\\\Scripts\\\\python.exe:*)",
+      "Bash(C:/workspace_my/aff/packages/api/.venv/Scripts/python.exe C:/workspace_my/aff/packages/api/check_data.py)",
+      "Bash(.venvScriptspython.exe C:workspace_myaffpackagesdatascriptsgenerate_static_data.py)",
+      "Bash(C:workspace_myaffpackagesapi.venvScriptspython.exe C:workspace_myaffpackagesdatascriptsgenerate_static_data.py)",
+      "Bash(cmd /c \"C:\\\\workspace_my\\\\aff\\\\packages\\\\api\\\\.venv\\\\Scripts\\\\python.exe C:\\\\workspace_my\\\\aff\\\\packages\\\\data\\\\scripts\\\\generate_static_data.py\")",
+      "Bash(.venvScriptspython.exe ..datascriptsgenerate_static_data.py)",
+      "Bash(.venv/Scripts/python.exe:*)",
+      "Bash(pnpm build:*)",
+      "Bash(npm install:*)",
+      "Bash(npx cap init:*)",
+      "Bash(npx cap:*)",
+      "Bash(npm:*)"
     ]
   }
 }

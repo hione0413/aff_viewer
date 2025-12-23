@@ -1,0 +1,791 @@
+{
+  "group_code": "K3000134",
+  "group_name": "SM",
+  "owner": "우오현",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)나진",
+      "corp_number": "1101118095964",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)삼라",
+      "corp_number": "1101110002834",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 68.82,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)남선알미늄",
+          "corp_number": "1701110005042",
+          "ownership_rate": 30.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)삼라",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 70.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)남선홀딩스",
+              "corp_number": "1701110706393",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)남선알미늄",
+              "largest_stockholder": "(주)남선알미늄",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "(주)울산방송",
+          "corp_number": "1812110040788",
+          "ownership_rate": 30.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)삼라",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 70.01,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)유비씨플러스",
+              "corp_number": "2301110377042",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)울산방송",
+              "largest_stockholder": "(주)울산방송",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "우방토건(주)",
+          "corp_number": "1748110037344",
+          "ownership_rate": 15.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)삼라",
+          "largest_stockholder": "에스엠인더스트리(주)",
+          "largest_stockholder_rate": 85.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)삼라마이다스",
+      "corp_number": "2001110069330",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 74.01,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "국일제지(주)",
+          "corp_number": "1345110001377",
+          "ownership_rate": 89.14,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)삼라마이다스",
+          "largest_stockholder": "(주)삼라마이다스",
+          "largest_stockholder_rate": 89.14,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "국일그래핀(주)",
+              "corp_number": "1601110499049",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "국일제지(주)",
+              "largest_stockholder": "국일제지(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "동아건설산업(주)",
+          "corp_number": "1101110119762",
+          "ownership_rate": 48.49,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)삼라마이다스",
+          "largest_stockholder": "(주)삼라마이다스",
+          "largest_stockholder_rate": 48.49,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "경남기업(주)",
+              "corp_number": "1101110008262",
+              "ownership_rate": 65.9,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동아건설산업(주)",
+              "largest_stockholder": "동아건설산업(주)",
+              "largest_stockholder_rate": 65.9,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "에스엠스틸(주)",
+              "corp_number": "1243110028914",
+              "ownership_rate": 19.69,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "동아건설산업(주)",
+              "largest_stockholder": "동일인",
+              "largest_stockholder_rate": 39.45,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)우방",
+                  "corp_number": "1701110352732",
+                  "ownership_rate": 9.02,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "에스엠스틸(주)",
+                  "largest_stockholder": "에스엠인더스트리(주)",
+                  "largest_stockholder_rate": 37.69,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "(주)케이알티산업",
+                      "corp_number": "1101116892453",
+                      "ownership_rate": 99.97,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "(주)우방",
+                      "largest_stockholder": "(주)우방",
+                      "largest_stockholder_rate": 99.97,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "(주)티케이케미칼",
+                      "corp_number": "1101113783457",
+                      "ownership_rate": 15.03,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "(주)우방",
+                      "largest_stockholder": "기타",
+                      "largest_stockholder_rate": 52.11,
+                      "parent_mismatch": false,
+                      "children": [
+                        {
+                          "name": "에스엠상선(주)",
+                          "corp_number": "2001110026017",
+                          "ownership_rate": 29.55,
+                          "relation_type": "추론",
+                          "source": "affiliate",
+                          "inferred": true,
+                          "legal_parent_name": "(주)티케이케미칼",
+                          "largest_stockholder": "(주)삼라마이다스",
+                          "largest_stockholder_rate": 41.37,
+                          "parent_mismatch": false,
+                          "children": [
+                            {
+                              "name": "에스엠상선경인터미널(주)",
+                              "corp_number": "1201110575409",
+                              "ownership_rate": 100.0,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "에스엠상선(주)",
+                              "largest_stockholder": "에스엠상선(주)",
+                              "largest_stockholder_rate": 100.0,
+                              "parent_mismatch": false,
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "에스엠하이플러스(주)",
+                          "corp_number": "1311110191187",
+                          "ownership_rate": 34.1,
+                          "relation_type": "추론",
+                          "source": "affiliate",
+                          "inferred": true,
+                          "legal_parent_name": "(주)티케이케미칼",
+                          "largest_stockholder": "에스엠스틸(주)",
+                          "largest_stockholder_rate": 54.41,
+                          "parent_mismatch": false,
+                          "children": [
+                            {
+                              "name": "서남바이오에너지(주)",
+                              "corp_number": "1101115162401",
+                              "ownership_rate": 29.0,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "에스엠하이플러스(주)",
+                              "largest_stockholder": "기타",
+                              "largest_stockholder_rate": 71.0,
+                              "parent_mismatch": false,
+                              "children": []
+                            },
+                            {
+                              "name": "에스엠레저산업(주)",
+                              "corp_number": "1451110019557",
+                              "ownership_rate": 100.0,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "에스엠하이플러스(주)",
+                              "largest_stockholder": "에스엠하이플러스(주)",
+                              "largest_stockholder_rate": 100.0,
+                              "parent_mismatch": false,
+                              "children": []
+                            },
+                            {
+                              "name": "에스엠신용정보(주)",
+                              "corp_number": "1101111801277",
+                              "ownership_rate": 21.06,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "에스엠하이플러스(주)",
+                              "largest_stockholder": "기타",
+                              "largest_stockholder_rate": 58.94,
+                              "parent_mismatch": false,
+                              "children": [
+                                {
+                                  "name": "에스엠에이엠씨투자대부(주)",
+                                  "corp_number": "1101112217423",
+                                  "ownership_rate": 97.14,
+                                  "relation_type": "추론",
+                                  "source": "affiliate",
+                                  "inferred": true,
+                                  "legal_parent_name": "에스엠신용정보(주)",
+                                  "largest_stockholder": "에스엠신용정보(주)",
+                                  "largest_stockholder_rate": 97.14,
+                                  "parent_mismatch": false,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "에스엠화진(주)",
+                              "corp_number": "1747110002646",
+                              "ownership_rate": 2.47,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "에스엠하이플러스(주)",
+                              "largest_stockholder": "(주)삼라마이다스",
+                              "largest_stockholder_rate": 59.91,
+                              "parent_mismatch": false,
+                              "children": []
+                            },
+                            {
+                              "name": "제주플러스팜(주)",
+                              "corp_number": "2201110232537",
+                              "ownership_rate": 90.0,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "에스엠하이플러스(주)",
+                              "largest_stockholder": "에스엠하이플러스(주)",
+                              "largest_stockholder_rate": 90.0,
+                              "parent_mismatch": false,
+                              "children": []
+                            },
+                            {
+                              "name": "탑스텐동강시스타(주)",
+                              "corp_number": "1414110015082",
+                              "ownership_rate": 100.0,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "에스엠하이플러스(주)",
+                              "largest_stockholder": "에스엠하이플러스(주)",
+                              "largest_stockholder_rate": 100.0,
+                              "parent_mismatch": false,
+                              "children": []
+                            },
+                            {
+                              "name": "탑스텐빌라드애월제주(주)",
+                              "corp_number": "2201110253559",
+                              "ownership_rate": 100.0,
+                              "relation_type": "추론",
+                              "source": "affiliate",
+                              "inferred": true,
+                              "legal_parent_name": "에스엠하이플러스(주)",
+                              "largest_stockholder": "에스엠하이플러스(주)",
+                              "largest_stockholder_rate": 100.0,
+                              "parent_mismatch": false,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "신촌역사(주)",
+          "corp_number": "1101111361429",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)삼라마이다스",
+          "largest_stockholder": "(주)삼라마이다스",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "에스티엑스건설(주)",
+          "corp_number": "1941110009939",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)삼라마이다스",
+          "largest_stockholder": "(주)삼라마이다스",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "에스티엑스건설더블유(주)",
+              "corp_number": "1942110354324",
+              "ownership_rate": 10.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "에스티엑스건설(주)",
+              "largest_stockholder": "에스티엑스건설산업(주)",
+              "largest_stockholder_rate": 90.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "에스티엑스건설산업(주)",
+          "corp_number": "1955110293210",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)삼라마이다스",
+          "largest_stockholder": "(주)삼라마이다스",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)에스엠바로코사",
+      "corp_number": "1345110041092",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "에스엠자산개발(주)",
+      "largest_stockholder_rate": 86.16,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)에스엠바로코사경인",
+          "corp_number": "1101110280133",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)에스엠바로코사",
+          "largest_stockholder": "(주)에스엠바로코사",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)에스엠바로코사부산",
+          "corp_number": "1201110216920",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)에스엠바로코사",
+          "largest_stockholder": "(주)에스엠바로코사",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)에스엠벡셀",
+      "corp_number": "1341110003058",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "에스엠하이플러스(주)",
+      "largest_stockholder_rate": 48.42,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)제이비와이에스케이제2호기업구조조정부동산투자회사",
+      "corp_number": "1101110920349",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)코니스",
+      "corp_number": "1101118103105",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)한스인테크",
+      "corp_number": "1747110018304",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)한스케미칼자산",
+      "corp_number": "1747110068870",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "삼환기업(주)",
+      "corp_number": "1101110020307",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 21.71,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "신화디앤디(주)",
+      "corp_number": "1101116370574",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에스엠인더스트리(주)",
+      "corp_number": "1846110007779",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "(주)삼라",
+      "largest_stockholder_rate": 47.7,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)삼라농원",
+          "corp_number": "1101115126598",
+          "ownership_rate": 25.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "에스엠인더스트리(주)",
+          "largest_stockholder": "에스엠스틸(주)",
+          "largest_stockholder_rate": 32.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)태길종합건설",
+          "corp_number": "1101111629455",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "에스엠인더스트리(주)",
+          "largest_stockholder": "에스엠인더스트리(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "대한해운(주)",
+          "corp_number": "1101110008212",
+          "ownership_rate": 1.68,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "에스엠인더스트리(주)",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 50.64,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "대한상선(주)",
+              "corp_number": "1101110356140",
+              "ownership_rate": 70.49,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "대한해운(주)",
+              "largest_stockholder": "대한해운(주)",
+              "largest_stockholder_rate": 70.49,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "한덕철광산업(주)",
+                  "corp_number": "1449110003109",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "대한상선(주)",
+                  "largest_stockholder": "대한상선(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "대한해운엘엔지(주)",
+              "corp_number": "1101117545522",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "대한해운(주)",
+              "largest_stockholder": "대한해운(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "한국선박금융(주)",
+              "corp_number": "1101112711376",
+              "ownership_rate": 48.24,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "대한해운(주)",
+              "largest_stockholder": "대한해운(주)",
+              "largest_stockholder_rate": 48.24,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "에스엠자산개발(주)",
+      "corp_number": "1351110040869",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "에스엠하이플러스(주)",
+      "largest_stockholder_rate": 32.25,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에스엠중공업(주)",
+      "corp_number": "1954110045340",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "에스엠하이플러스(주)",
+      "largest_stockholder_rate": 32.25,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에스엠홀딩스(주)",
+      "corp_number": "1344110123412",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에이치엔더블유(주)",
+      "corp_number": "1101119006514",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에이치엔아이엑스(주)",
+      "corp_number": "1101118500640",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에이치엔이앤씨(주)",
+      "corp_number": "1101116458271",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "창명해운(주)",
+      "corp_number": "1101110565262",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 48.74,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "케이엘씨에스엠(주)",
+      "corp_number": "1101110211683",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "대한해운(주)",
+      "largest_stockholder_rate": 65.8,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "호텔탑스텐(주)",
+      "corp_number": "1411110086708",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 58,
+    "in_holding_structure": 0,
+    "other_affiliates": 21,
+    "inferred_relations": 37,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

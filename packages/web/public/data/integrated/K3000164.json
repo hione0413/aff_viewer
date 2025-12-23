@@ -1,0 +1,153 @@
+{
+  "group_code": "K3000164",
+  "group_name": "파라다이스",
+  "owner": "전필립",
+  "holding_company": "(주)파라다이스글로벌",
+  "holding_corp_number": "1801110183276",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "(주)파라다이스플래닝",
+      "corp_number": "1101113214650",
+      "ownership_rate": 60.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)파라다이스글로벌",
+      "largest_stockholder": "주식회사파라다이스글로벌",
+      "largest_stockholder_rate": 60.0,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "계룡에스피씨(주)",
+          "corp_number": "1101111312654",
+          "ownership_rate": 49.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)파라다이스플래닝",
+          "largest_stockholder": "(주)파라다이스플래닝",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)비노파라다이스",
+      "corp_number": "1101111530800",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)파라다이스글로벌",
+      "largest_stockholder": "주식회사파라다이스글로벌",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)비노에프앤비",
+          "corp_number": "1101118577772",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)비노파라다이스",
+          "largest_stockholder": "(주)비노파라다이스",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)파라다이스",
+      "corp_number": "1101110129274",
+      "ownership_rate": 38.23,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)파라다이스글로벌",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 48.24,
+      "parent_mismatch": true,
+      "children": [
+        {
+          "name": "(주)파라다이스호텔부산",
+          "corp_number": "1801110000313",
+          "ownership_rate": 169.52,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)파라다이스",
+          "largest_stockholder": "(주)파라다이스",
+          "largest_stockholder_rate": 74.49,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)파라다이스세가사미",
+          "corp_number": "1201110620056",
+          "ownership_rate": 55.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)파라다이스",
+          "largest_stockholder": "(주)파라다이스",
+          "largest_stockholder_rate": 55.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)파라다이스이앤에이",
+      "corp_number": "1101116177079",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)파라다이스글로벌",
+      "largest_stockholder": "주식회사파라다이스글로벌",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)파라다이스에이치앤알",
+      "corp_number": "1101116114641",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)파라다이스글로벌",
+      "largest_stockholder": "주식회사파라다이스글로벌",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)파라다이스투어",
+      "corp_number": "1101113702043",
+      "ownership_rate": 71.43,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)파라다이스글로벌",
+      "largest_stockholder": "주식회사파라다이스글로벌",
+      "largest_stockholder_rate": 71.43,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "other_affiliates": [],
+  "stats": {
+    "total_affiliates": 11,
+    "in_holding_structure": 10,
+    "other_affiliates": 0,
+    "inferred_relations": 1,
+    "subsidiaries": 6,
+    "grandchildren": 3,
+    "great_grandchildren": 0
+  }
+}

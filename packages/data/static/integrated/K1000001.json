@@ -1,0 +1,194 @@
+{
+  "group_code": "K1000001",
+  "group_name": "케이씨씨",
+  "owner": "정몽진",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)동주상사",
+      "corp_number": "1101116191194",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)동주피앤지",
+      "corp_number": "1747110022090",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)케이씨씨",
+      "corp_number": "1101110221814",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 47.47,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)금강레저",
+          "corp_number": "1312110001433",
+          "ownership_rate": 20.5,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)케이씨씨",
+          "largest_stockholder": "(주)케이씨씨글라스",
+          "largest_stockholder_rate": 28.25,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)케이씨씨건설",
+      "corp_number": "1101110607618",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "(주)케이씨씨",
+      "largest_stockholder_rate": 36.03,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "미래(주)",
+          "corp_number": "1101114339035",
+          "ownership_rate": 23.57,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)케이씨씨건설",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 76.43,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)케이씨씨글라스",
+      "corp_number": "1101117342473",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 56.74,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)케이씨더블유",
+          "corp_number": "1101118160064",
+          "ownership_rate": 16.25,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)케이씨씨글라스",
+          "largest_stockholder": "(주)케이씨씨",
+          "largest_stockholder_rate": 38.75,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "신한벽지(주)",
+              "corp_number": "1649110003577",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)케이씨더블유",
+              "largest_stockholder": "(주)케이씨더블유",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "(주)케이씨씨실리콘",
+      "corp_number": "1101117701760",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "모멘티브퍼포먼스머티리얼스코리아(주)",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "대호포장(주)",
+      "corp_number": "1341110004379",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "세우실업(주)",
+      "corp_number": "1348110004458",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)동주",
+          "corp_number": "1341110006127",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "세우실업(주)",
+          "largest_stockholder": "세우실업(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_affiliates": 13,
+    "in_holding_structure": 0,
+    "other_affiliates": 8,
+    "inferred_relations": 5,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

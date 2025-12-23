@@ -1,0 +1,286 @@
+{
+  "group_code": "K3000178",
+  "group_name": "BGF",
+  "owner": "홍석조",
+  "holding_company": "(주)비지에프",
+  "holding_corp_number": "1101111105215",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "(주)헬로네이처",
+      "corp_number": "1101114767898",
+      "ownership_rate": 50.1,
+      "relation_type": "자회사",
+      "source": "holding",
+      "inferred": false,
+      "legal_parent_name": "(주)비지에프",
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)비지에프리테일",
+      "corp_number": "1101116555770",
+      "ownership_rate": 30.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)비지에프",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 50.75,
+      "parent_mismatch": true,
+      "children": [
+        {
+          "name": "(주)비지에프푸드",
+          "corp_number": "2101110058828",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)비지에프리테일",
+          "largest_stockholder": "(주)비지에프리테일",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)비지에프로지스",
+          "corp_number": "1345110036845",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)비지에프리테일",
+          "largest_stockholder": "(주)비지에프리테일",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)씨펙스로지스틱",
+              "corp_number": "2341110083736",
+              "ownership_rate": 100.0,
+              "relation_type": "증손자회사",
+              "source": "both",
+              "inferred": false,
+              "legal_parent_name": "(주)비지에프로지스",
+              "largest_stockholder": "(주) 비지에프로지스",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "(주)비지에프휴먼넷",
+          "corp_number": "1101114062347",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)비지에프리테일",
+          "largest_stockholder": "(주)비지에프리테일",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)비지에프네트웍스",
+      "corp_number": "1101114235267",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)비지에프",
+      "largest_stockholder": "(주)비지에프",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)비지에프에코바이오",
+      "corp_number": "1101117152351",
+      "ownership_rate": 83.33,
+      "relation_type": "자회사",
+      "source": "holding",
+      "inferred": false,
+      "legal_parent_name": "(주)비지에프",
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)비지에프에코솔루션",
+          "corp_number": "1201110581919",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)비지에프에코바이오",
+          "largest_stockholder": "(주)비지에프에코머티리얼즈",
+          "largest_stockholder_rate": 62.5,
+          "parent_mismatch": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)사우스스프링스",
+      "corp_number": "1101111809429",
+      "ownership_rate": 94.83,
+      "relation_type": "자회사",
+      "source": "holding",
+      "inferred": false,
+      "legal_parent_name": "(주)비지에프",
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)비지에프에코머티리얼즈",
+      "corp_number": "1350110079381",
+      "ownership_rate": 65.09,
+      "relation_type": "추론",
+      "source": "affiliate",
+      "inferred": true,
+      "legal_parent_name": "(주)비지에프",
+      "largest_stockholder": "(주)비지에프",
+      "largest_stockholder_rate": 65.09,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "other_affiliates": [
+    {
+      "name": "(주)케이엔더블유",
+      "corp_number": "1311110056480",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "(주)비지에프에코머티리얼즈",
+      "largest_stockholder_rate": 56.75,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)비지에프에코스페셜티",
+          "corp_number": "2301110114139",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)케이엔더블유",
+          "largest_stockholder": "(주)케이엔더블유",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)피와이언홀딩스",
+      "corp_number": "1101113163196",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)에미커스파트너스",
+          "corp_number": "1101113796658",
+          "ownership_rate": 87.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)피와이언홀딩스",
+          "largest_stockholder": "(주)피와이언홀딩스",
+          "largest_stockholder_rate": 87.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "대원케미칼(주)",
+      "corp_number": "1345110130910",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "보광인베스트먼트 (주)",
+      "corp_number": "1701110038895",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 19.26,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에이치아너스(주)",
+      "corp_number": "1101117942455",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "폴스타파트너스(주)",
+      "corp_number": "1101117781754",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 50.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "폴스타홀딩스(주)",
+      "corp_number": "1101117926566",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 19,
+    "in_holding_structure": 11,
+    "other_affiliates": 7,
+    "inferred_relations": 3,
+    "subsidiaries": 5,
+    "grandchildren": 4,
+    "great_grandchildren": 1
+  }
+}

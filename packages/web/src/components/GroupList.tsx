@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { fetchGroups, searchAll, type SearchResult } from '../services/api'
+import { fetchGroups, searchAll } from '../services/sqlite-service'
 import type { CorporateGroup } from '../types'
 
 interface Props {
@@ -15,12 +15,14 @@ export function GroupList({ onSelect }: Props) {
     queryKey: ['groups'],
     queryFn: () => fetchGroups(),
     enabled: !keyword,
+    staleTime: 1000 * 60 * 60,
   })
 
   const { data: searchData, isLoading: searchLoading } = useQuery({
     queryKey: ['search', keyword],
     queryFn: () => searchAll(keyword),
     enabled: keyword.length > 0,
+    staleTime: 1000 * 60 * 5,
   })
 
   const isLoading = keyword ? searchLoading : groupsLoading
@@ -158,10 +160,19 @@ export function GroupList({ onSelect }: Props) {
 
         {/* 기업집단 목록 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {groupsData?.items.map((group) => (
+          {groupsData?.items.map((group, index) => (
             <div
-              key={group.id}
-              onClick={() => onSelect(group)}
+              key={group.code}
+              onClick={() => onSelect({
+                id: index,
+                code: group.code,
+                name: group.name,
+                owner: group.owner,
+                representative_company: group.representative_company,
+                affiliate_count: group.affiliate_count,
+                group_type: group.group_type,
+                is_public: group.is_public,
+              })}
               className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 cursor-pointer transition-all"
             >
               <div className="flex justify-between items-start">

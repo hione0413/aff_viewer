@@ -1,0 +1,394 @@
+{
+  "group_code": "K3000093",
+  "group_name": "미래에셋",
+  "owner": "박현주",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "미래에셋컨설팅(주)",
+      "corp_number": "1101113974957",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 48.63,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "미래에셋매니지먼트(주)",
+          "corp_number": "1101117962700",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "미래에셋컨설팅(주)",
+          "largest_stockholder": "미래에셋컨설팅(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "미래에셋자산운용(주)",
+          "corp_number": "1101111441685",
+          "ownership_rate": 36.92,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "미래에셋컨설팅(주)",
+          "largest_stockholder": "동일인",
+          "largest_stockholder_rate": 60.19,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "미래에셋파트너스사호사모투자전문회사",
+              "corp_number": "1101130012607",
+              "ownership_rate": 0.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "미래에셋자산운용(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 84.11,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "미래에셋파트너스제11호사모투자합자회사",
+              "corp_number": "1101130033025",
+              "ownership_rate": 15.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "미래에셋자산운용(주)",
+              "largest_stockholder": "미래에셋증권(주)",
+              "largest_stockholder_rate": 75.0,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "미래에셋이노베이션엑스원(유)",
+                  "corp_number": "1101140296275",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "미래에셋파트너스제11호사모투자합자회사",
+                  "largest_stockholder": "미래에셋파트너스제11호사모투자합자회사",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "에너지인프라자산운용(주)",
+              "corp_number": "1101116223260",
+              "ownership_rate": 90.1,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "미래에셋자산운용(주)",
+              "largest_stockholder": "미래에셋자산운용(주)",
+              "largest_stockholder_rate": 90.1,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "미래에셋캐피탈(주)",
+          "corp_number": "2001110076179",
+          "ownership_rate": 9.98,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "미래에셋컨설팅(주)",
+          "largest_stockholder": "동일인",
+          "largest_stockholder_rate": 34.32,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "미래에셋글로벌유니콘사모투자합자회사",
+              "corp_number": "1101130022523",
+              "ownership_rate": 5.36,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "미래에셋캐피탈(주)",
+              "largest_stockholder": "미래에셋증권(주)",
+              "largest_stockholder_rate": 86.79,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "미래에셋네이버아시아그로쓰사모투자합자회사",
+              "corp_number": "1101130023068",
+              "ownership_rate": 0.17,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "미래에셋캐피탈(주)",
+              "largest_stockholder": "미래에셋증권(주)",
+              "largest_stockholder_rate": 83.17,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "미래에셋벤처투자(주)",
+              "corp_number": "1101111710527",
+              "ownership_rate": 10.7,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "미래에셋캐피탈(주)",
+              "largest_stockholder": "미래에셋증권(주)",
+              "largest_stockholder_rate": 56.0,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "미래에셋위반도체1호창업벤처전문사모투자합자회사",
+                  "corp_number": "1101130031235",
+                  "ownership_rate": 14.99,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "미래에셋벤처투자(주)",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 81.02,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "미래에셋이에스지기업재무안정사모투자합자회사",
+                  "corp_number": "1101130029983",
+                  "ownership_rate": 10.6,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "미래에셋벤처투자(주)",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 89.41,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "에스케이에스미래에셋기업재무안정 사모투자합자회사",
+                  "corp_number": "1101130025957",
+                  "ownership_rate": 4.83,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "미래에셋벤처투자(주)",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 95.17,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "에스케이에스미래에셋콘텐츠(유)",
+                      "corp_number": "1101140250354",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "에스케이에스미래에셋기업재무안정 사모투자합자회사",
+                      "largest_stockholder": "에스케이에스미래에셋기업재무안정 사모투자합자회사",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "미래에셋생명보험(주)",
+              "corp_number": "1601110014483",
+              "ownership_rate": 13.93,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "미래에셋캐피탈(주)",
+              "largest_stockholder": "미래에셋생명보험(주)",
+              "largest_stockholder_rate": 34.15,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "미래에셋금융서비스(주)",
+                  "corp_number": "1101115371359",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "미래에셋생명보험(주)",
+                  "largest_stockholder": "미래에셋생명보험(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "미래에셋파트너스제구호사모투자합자회사",
+                  "corp_number": "1101130019843",
+                  "ownership_rate": 11.63,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "미래에셋생명보험(주)",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 70.74,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "오딘제8차(유)",
+                      "corp_number": "1101140225513",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "미래에셋파트너스제구호사모투자합자회사",
+                      "largest_stockholder": "미래에셋파트너스제구호사모투자합자회사",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "오딘제9차(유)",
+                      "corp_number": "1101140213873",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "미래에셋파트너스제구호사모투자합자회사",
+                      "largest_stockholder": "미래에셋파트너스제구호사모투자합자회사",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "자스민제일호(유)",
+                      "corp_number": "1101140255148",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "미래에셋파트너스제구호사모투자합자회사",
+                      "largest_stockholder": "미래에셋파트너스제구호사모투자합자회사",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "수원학교사랑(주)",
+                  "corp_number": "1358110136028",
+                  "ownership_rate": 85.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "미래에셋생명보험(주)",
+                  "largest_stockholder": "미래에셋생명보험(주)",
+                  "largest_stockholder_rate": 85.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "미래에셋증권(주)",
+              "corp_number": "1101110011679",
+              "ownership_rate": 25.19,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "미래에셋캐피탈(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 54.2,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "미래에셋큐리어스구조혁신기업재무안정 사모투자합자회사",
+                  "corp_number": "1101130024785",
+                  "ownership_rate": 18.44,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "미래에셋증권(주)",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 74.66,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "미래에셋파트너스오호사모투자전문회사",
+                  "corp_number": "1101130013275",
+                  "ownership_rate": 12.54,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "미래에셋증권(주)",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 84.97,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "시니안(유)",
+                      "corp_number": "1101140078706",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "미래에셋파트너스오호사모투자전문회사",
+                      "largest_stockholder": "미래에셋파트너스오호사모투자전문회사",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "와이케이디벨롭먼트(주)",
+          "corp_number": "2062110059713",
+          "ownership_rate": 50.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "미래에셋컨설팅(주)",
+          "largest_stockholder": "미래에셋컨설팅(주)",
+          "largest_stockholder_rate": 50.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "큐리어스에이드(유)",
+      "corp_number": "1101140333431",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 28,
+    "in_holding_structure": 0,
+    "other_affiliates": 2,
+    "inferred_relations": 26,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

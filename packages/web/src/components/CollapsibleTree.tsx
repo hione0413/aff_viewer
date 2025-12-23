@@ -20,7 +20,7 @@ import {
 } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 import { useQuery } from '@tanstack/react-query'
-import { fetchIntegratedGroup, type CompanyNode } from '../services/api'
+import { fetchIntegratedGroup, type CompanyNode } from '../services/sqlite-service'
 import { StockholderPanel } from './StockholderPanel'
 
 // 검색 결과 타입
@@ -883,26 +883,34 @@ function CollapsibleTreeInner({
   return (
     <div className="bg-white rounded-lg shadow-sm border">
       {/* 헤더 */}
-      <div className="p-3 md:p-4 border-b">
-        {/* 첫째 줄: 목록 버튼 + 기업명 */}
-        <div className="flex items-center gap-2 mb-2">
+      <div className="border-b">
+        {/* 네비게이션 바 */}
+        <div className="flex items-center h-12 md:h-14 px-2 md:px-4 relative">
+          {/* 뒤로가기 버튼 */}
           <button
             onClick={onBack}
-            className="text-gray-600 hover:text-gray-900 text-sm md:text-base shrink-0"
+            className="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors"
           >
-            ← 목록
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
           </button>
-          <div className="min-w-0 flex-1">
-            <span className="text-base md:text-xl font-bold text-gray-900 block truncate">
+
+          {/* 중앙 타이틀 */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center max-w-[70%]">
+            <h1 className="text-base md:text-lg font-bold text-gray-900 truncate">
               {data.group_name}
-            </span>
-            {data.owner && (
-              <span className="text-xs md:text-sm text-gray-500">
-                동일인: {data.owner}
-              </span>
-            )}
+              {data.owner && (
+                <span className="text-xs md:text-sm font-normal text-gray-500 ml-1.5">
+                  (동일인: {data.owner})
+                </span>
+              )}
+            </h1>
           </div>
         </div>
+
+        {/* 컨트롤 영역 */}
+        <div className="px-3 md:px-4 pb-3">
 
         {/* 둘째 줄: 검색창 (모바일에서는 전체 너비) */}
         <div className="relative mb-3">
@@ -1002,10 +1010,11 @@ function CollapsibleTreeInner({
             </label>
           </div>
         )}
+        </div>
       </div>
 
       {/* 그래프 */}
-      <div className="h-[calc(100vh-280px)] md:h-[600px] min-h-[400px] relative">
+      <div className="h-[calc(100vh-280px)] md:h-[600px] min-h-[400px] relative" style={{ touchAction: 'none' }}>
         {nodes.length > 0 ? (
           <ReactFlow
             nodes={nodes}
@@ -1017,11 +1026,12 @@ function CollapsibleTreeInner({
             fitView
             attributionPosition="bottom-left"
             nodesDraggable={false}
-            panOnDrag
+            panOnDrag={true}
             panOnScroll={false}
-            zoomOnPinch
-            zoomOnScroll
-            preventScrolling
+            zoomOnPinch={true}
+            zoomOnScroll={true}
+            preventScrolling={true}
+            selectionOnDrag={false}
           >
             <Background />
             <Controls />
@@ -1222,6 +1232,7 @@ export function CollapsibleTree({ groupCode, onBack }: Props) {
   const { data, isLoading, error } = useQuery({
     queryKey: ['integrated-group', groupCode],
     queryFn: () => fetchIntegratedGroup(groupCode),
+    staleTime: 1000 * 60 * 60,
   })
 
   if (isLoading) {

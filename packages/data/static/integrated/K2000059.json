@@ -1,0 +1,46 @@
+{
+  "group_code": "K2000059",
+  "group_name": "에쓰-오일",
+  "owner": "에쓰-오일(주)",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "에쓰-오일(주)",
+      "corp_number": "1101110189955",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 99.81,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에쓰-오일토탈에너지스윤활유(주)",
+      "corp_number": "1101112805004",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 50.0,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 2,
+    "in_holding_structure": 0,
+    "other_affiliates": 2,
+    "inferred_relations": 0,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

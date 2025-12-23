@@ -1,0 +1,234 @@
+{
+  "group_code": "K3000199",
+  "group_name": "오케이금융그룹",
+  "owner": "최윤",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)씨앤피컴퍼니",
+      "corp_number": "1101116571065",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "비콜렉트대부(주)",
+      "corp_number": "1101115942572",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "에이치앤에이치(주)",
+          "corp_number": "1101117921532",
+          "ownership_rate": 94.92,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "비콜렉트대부(주)",
+          "largest_stockholder": "비콜렉트대부(주)",
+          "largest_stockholder_rate": 94.92,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "오케이데이터시스템(주)",
+      "corp_number": "1101112998833",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "오케이에프앤아이대부(주)",
+      "corp_number": "1101112343343",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "J&K Capital",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)엑스인하우징",
+          "corp_number": "1101111187867",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "오케이에프앤아이대부(주)",
+          "largest_stockholder": "오케이에프앤아이대부(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "오케이넥스트(주)",
+          "corp_number": "1101111781148",
+          "ownership_rate": 0.03,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "오케이에프앤아이대부(주)",
+          "largest_stockholder": "J&K Capital",
+          "largest_stockholder_rate": 98.84,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)오케이인베스트먼트파트너스",
+              "corp_number": "1101113482497",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "오케이넥스트(주)",
+              "largest_stockholder": "오케이넥스트(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)뉴데이즈",
+                  "corp_number": "1101110989222",
+                  "ownership_rate": 96.24,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)오케이인베스트먼트파트너스",
+                  "largest_stockholder": "(주)오케이인베스트먼트파트너스",
+                  "largest_stockholder_rate": 96.24,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "오케이홀딩스대부(주)",
+              "corp_number": "1101115402873",
+              "ownership_rate": 4.36,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "오케이넥스트(주)",
+              "largest_stockholder": "동일인",
+              "largest_stockholder_rate": 93.19,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)오케이벤처스",
+                  "corp_number": "1101117781499",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "오케이홀딩스대부(주)",
+                  "largest_stockholder": "오케이홀딩스대부(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "(주)오케이저축은행",
+                  "corp_number": "1101115062289",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "오케이홀딩스대부(주)",
+                  "largest_stockholder": "오케이홀딩스대부(주)",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "오케이캐피탈(주)",
+      "corp_number": "1101110175087",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "오케이홀딩스대부(주)",
+      "largest_stockholder_rate": 64.25,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "오케이네트웍스(주)",
+          "corp_number": "1101112459132",
+          "ownership_rate": 2.96,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "오케이캐피탈(주)",
+          "largest_stockholder": "오케이넥스트(주)",
+          "largest_stockholder_rate": 28.13,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "오케이신용정보(주)",
+          "corp_number": "1101114012714",
+          "ownership_rate": 51.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "오케이캐피탈(주)",
+          "largest_stockholder": "오케이캐피탈(주)",
+          "largest_stockholder_rate": 51.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "프로이데아홀딩스(주)",
+      "corp_number": "1101115430147",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 16,
+    "in_holding_structure": 0,
+    "other_affiliates": 6,
+    "inferred_relations": 10,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

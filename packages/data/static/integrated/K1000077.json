@@ -1,0 +1,300 @@
+{
+  "group_code": "K1000077",
+  "group_name": "한솔",
+  "owner": "조동길",
+  "holding_company": "한솔홀딩스(주)",
+  "holding_corp_number": "1101110017867",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "한솔테크닉스(주)",
+      "corp_number": "1101110004682",
+      "ownership_rate": 20.26,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "한솔홀딩스(주)",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 77.58,
+      "parent_mismatch": true,
+      "children": [
+        {
+          "name": "한솔아이원스(주)",
+          "corp_number": "1348110109828",
+          "ownership_rate": 35.03,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "한솔테크닉스(주)",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 59.06,
+          "parent_mismatch": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "한솔피엔에스(주)",
+      "corp_number": "1101110175970",
+      "ownership_rate": 46.07,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "한솔홀딩스(주)",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 53.93,
+      "parent_mismatch": true,
+      "children": []
+    },
+    {
+      "name": "(주)한솔홈데코",
+      "corp_number": "1101110825624",
+      "ownership_rate": 23.32,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "한솔홀딩스(주)",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 76.34,
+      "parent_mismatch": true,
+      "children": [
+        {
+          "name": "한솔모두의봄(주)",
+          "corp_number": "1101118440705",
+          "ownership_rate": 99.4,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)한솔홈데코",
+          "largest_stockholder": "(주)한솔홈데코",
+          "largest_stockholder_rate": 99.4,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "한솔인티큐브(주)",
+      "corp_number": "1101112915605",
+      "ownership_rate": 26.65,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "한솔홀딩스(주)",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 56.19,
+      "parent_mismatch": true,
+      "children": []
+    },
+    {
+      "name": "한솔페이퍼텍(주)",
+      "corp_number": "2043110008603",
+      "ownership_rate": 99.94,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "한솔홀딩스(주)",
+      "largest_stockholder": "한솔홀딩스(주)",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "한솔제지(주)",
+      "corp_number": "1101115604700",
+      "ownership_rate": 30.49,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "한솔홀딩스(주)",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 69.34,
+      "parent_mismatch": true,
+      "children": [
+        {
+          "name": "한솔이엠이(주)",
+          "corp_number": "1601110123185",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "holding",
+          "inferred": false,
+          "legal_parent_name": "한솔제지(주)",
+          "largest_stockholder": null,
+          "largest_stockholder_rate": null,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "문경에스코(주)",
+              "corp_number": "1313110079553",
+              "ownership_rate": 98.79,
+              "relation_type": "증손자회사",
+              "source": "both",
+              "inferred": false,
+              "legal_parent_name": "한솔이엠이(주)",
+              "largest_stockholder": "한솔제지(주)",
+              "largest_stockholder_rate": 98.79,
+              "parent_mismatch": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "한솔에코패키징(주)",
+          "corp_number": "1801110411221",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "한솔제지(주)",
+          "largest_stockholder": "한솔제지(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "한솔로지스틱스(주)",
+      "corp_number": "1101110150659",
+      "ownership_rate": 21.37,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "한솔홀딩스(주)",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 77.05,
+      "parent_mismatch": true,
+      "children": [
+        {
+          "name": "한솔티씨에스(주)",
+          "corp_number": "1801110831081",
+          "ownership_rate": 100.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "한솔로지스틱스(주)",
+          "largest_stockholder": "한솔로지스틱스(주)",
+          "largest_stockholder_rate": 99.4,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "한솔로지스유(주)",
+          "corp_number": "1101118201496",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "한솔로지스틱스(주)",
+          "largest_stockholder": "한솔로지스틱스(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "other_affiliates": [
+    {
+      "name": "(유)와이에이치에이치홀딩스",
+      "corp_number": "1101140350211",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)바이옥스",
+      "corp_number": "1201110832916",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)한솔케미칼",
+      "corp_number": "1101110270895",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 81.61,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)솔머티리얼즈",
+          "corp_number": "1501110275938",
+          "ownership_rate": 72.41,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)한솔케미칼",
+          "largest_stockholder": "(주)한솔케미칼",
+          "largest_stockholder_rate": 72.41,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)에이치에스머티리얼즈",
+          "corp_number": "2101110156151",
+          "ownership_rate": 90.01,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)한솔케미칼",
+          "largest_stockholder": "(주)한솔케미칼",
+          "largest_stockholder_rate": 90.01,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)테이팩스",
+          "corp_number": "1201110095499",
+          "ownership_rate": 44.94,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)한솔케미칼",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 54.67,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "코스코페이퍼(주)",
+      "corp_number": "2844110080851",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 54.91,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 21,
+    "in_holding_structure": 11,
+    "other_affiliates": 4,
+    "inferred_relations": 7,
+    "subsidiaries": 7,
+    "grandchildren": 2,
+    "great_grandchildren": 1
+  }
+}

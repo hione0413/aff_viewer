@@ -1,0 +1,114 @@
+{
+  "group_code": "K3000282",
+  "group_name": "DN",
+  "owner": "김상헌",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)디엔오토모티브",
+      "corp_number": "1845110000642",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 35.35,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)이큐포올",
+          "corp_number": "1101116562569",
+          "ownership_rate": 83.62,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)디엔오토모티브",
+          "largest_stockholder": "(주)디엔오토모티브",
+          "largest_stockholder_rate": 83.62,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)지엠티홀딩스",
+          "corp_number": "2301110356624",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)디엔오토모티브",
+          "largest_stockholder": "(주)디엔오토모티브",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)디엔솔루션즈",
+              "corp_number": "1942110254136",
+              "ownership_rate": 90.32,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)지엠티홀딩스",
+              "largest_stockholder": "(주)지엠티홀딩스",
+              "largest_stockholder_rate": 90.32,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)다현테크",
+                  "corp_number": "1942110177081",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)디엔솔루션즈",
+                  "largest_stockholder": "(주)디엔솔루션즈",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "(주)디티알",
+      "corp_number": "2341110113583",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 50.43,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)브레이브뉴인베스트먼트",
+      "corp_number": "1101117578888",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "DN Automotive USA Inc.",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 7,
+    "in_holding_structure": 0,
+    "other_affiliates": 3,
+    "inferred_relations": 4,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "group_code": "K3000144",
+  "group_name": "장금상선",
+  "owner": "정태순",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)흥아로지스틱스",
+      "corp_number": "1101113631557",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "흥아해운(주)",
+      "largest_stockholder_rate": 85.0,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "동보항공(주)",
+          "corp_number": "1101110541824",
+          "ownership_rate": 95.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)흥아로지스틱스",
+          "largest_stockholder": "(주)흥아로지스틱스",
+          "largest_stockholder_rate": 95.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "보람항공(주)",
+          "corp_number": "1101111947443",
+          "ownership_rate": 60.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)흥아로지스틱스",
+          "largest_stockholder": "(주)흥아로지스틱스",
+          "largest_stockholder_rate": 60.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "부산신항웅동개발(주)",
+      "corp_number": "1942110330762",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "(주)태영건설",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "시노코탱커(주)",
+      "corp_number": "1101114389022",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "오션플러스(주)",
+          "corp_number": "1101114323765",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "시노코탱커(주)",
+          "largest_stockholder": "시노코탱커(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "시노코페트로케미컬(주)",
+      "corp_number": "1101114547034",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 18.46,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "장금마리타임(주)",
+      "corp_number": "1101113997826",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "시노코쉽매니지먼트(주)",
+          "corp_number": "1801110965749",
+          "ownership_rate": 50.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금마리타임(주)",
+          "largest_stockholder": "장금마리타임(주)",
+          "largest_stockholder_rate": 50.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "장금상선(주)",
+      "corp_number": "1101111680663",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "Sinokor Company Limited",
+      "largest_stockholder_rate": 82.97,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)와이제이씨",
+          "corp_number": "1101114217504",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)한성라인",
+          "corp_number": "1101112878134",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "경평물류(주)",
+          "corp_number": "1313110064596",
+          "ownership_rate": 65.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 65.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "국양로지텍(주)",
+          "corp_number": "1101111618325",
+          "ownership_rate": 90.97,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 90.97,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "부산항터미널(주)",
+          "corp_number": "1801111064756",
+          "ownership_rate": 50.35,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 50.35,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "소르젠바이오베터(주)",
+          "corp_number": "1101117782398",
+          "ownership_rate": 50.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 50.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "슈퍼랙(주)",
+          "corp_number": "1101117231113",
+          "ownership_rate": 60.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 60.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "정일울산컨테이너터미널(주)",
+          "corp_number": "1812110019379",
+          "ownership_rate": 90.35,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 90.35,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "퍼시픽엔지니어링(주)",
+          "corp_number": "1101111586548",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "광양항서부컨테이너터미널(주)",
+              "corp_number": "1101113547514",
+              "ownership_rate": 8.57,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "퍼시픽엔지니어링(주)",
+              "largest_stockholder": "장금상선(주)",
+              "largest_stockholder_rate": 83.29,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "에스엠상선광양터미널(주)",
+                  "corp_number": "2046110032383",
+                  "ownership_rate": 97.86,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "광양항서부컨테이너터미널(주)",
+                  "largest_stockholder": "광양항서부컨테이너터미널(주)",
+                  "largest_stockholder_rate": 97.86,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "흥아라인(주)",
+          "corp_number": "1101117291597",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "흥아해운(주)",
+          "corp_number": "1101110515275",
+          "ownership_rate": 84.85,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "장금상선(주)",
+          "largest_stockholder": "장금상선(주)",
+          "largest_stockholder_rate": 84.85,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)흥아프로퍼티그룹",
+              "corp_number": "1101113697591",
+              "ownership_rate": 50.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "흥아해운(주)",
+              "largest_stockholder": "흥아해운(주)",
+              "largest_stockholder_rate": 50.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "에이치앤브이물류(주)",
+              "corp_number": "1344110027565",
+              "ownership_rate": 50.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "흥아해운(주)",
+              "largest_stockholder": "흥아해운(주)",
+              "largest_stockholder_rate": 50.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "진인해운(주)",
+              "corp_number": "1101112692394",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "흥아해운(주)",
+              "largest_stockholder": "흥아해운(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "한로해운(주)",
+              "corp_number": "1101111060196",
+              "ownership_rate": 51.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "흥아해운(주)",
+              "largest_stockholder": "흥아해운(주)",
+              "largest_stockholder_rate": 51.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "흥아마린(주)",
+              "corp_number": "1801110986000",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "흥아해운(주)",
+              "largest_stockholder": "흥아해운(주)",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_affiliates": 28,
+    "in_holding_structure": 0,
+    "other_affiliates": 6,
+    "inferred_relations": 22,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

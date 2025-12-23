@@ -1,0 +1,246 @@
+{
+  "group_code": "K3000280",
+  "group_name": "엘엑스",
+  "owner": "구본준",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(주)엘엑스판토스부산신항물류센터",
+      "corp_number": "1801110641133",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "LX PANTOS LOGISTICS (QINGDAO) CO., LTD.",
+      "largest_stockholder_rate": 80.0,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)엘엑스판토스신항에코물류센터",
+          "corp_number": "1942110380600",
+          "ownership_rate": 90.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)엘엑스판토스부산신항물류센터",
+          "largest_stockholder": "(주)엘엑스판토스부산신항물류센터",
+          "largest_stockholder_rate": 90.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)엘엑스홀딩스",
+      "corp_number": "1101117875359",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 59.34,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)엘엑스벤처스",
+          "corp_number": "1101118680814",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)엘엑스홀딩스",
+          "largest_stockholder": "(주)엘엑스홀딩스",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)엘엑스세미콘",
+          "corp_number": "1601110089395",
+          "ownership_rate": 33.08,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)엘엑스홀딩스",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 66.88,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)엘엑스엠디아이",
+          "corp_number": "1101118490932",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)엘엑스홀딩스",
+          "largest_stockholder": "(주)엘엑스홀딩스",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)엘엑스엠엠에이",
+          "corp_number": "2062110001805",
+          "ownership_rate": 50.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)엘엑스홀딩스",
+          "largest_stockholder": "(주)엘엑스홀딩스",
+          "largest_stockholder_rate": 50.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)엘엑스인터내셔널",
+          "corp_number": "1101110004632",
+          "ownership_rate": 24.69,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)엘엑스홀딩스",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 68.06,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)에코앤로지스부산",
+              "corp_number": "1801111424877",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)엘엑스인터내셔널",
+              "largest_stockholder": "(주)엘엑스인터내셔널",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)엘엑스글라스",
+              "corp_number": "1101117324116",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)엘엑스인터내셔널",
+              "largest_stockholder": "(주)엘엑스인터내셔널",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)엘엑스판토스",
+              "corp_number": "1101110208127",
+              "ownership_rate": 51.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)엘엑스인터내셔널",
+              "largest_stockholder": "(주)엘엑스인터내셔널",
+              "largest_stockholder_rate": 51.0,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)한울타리",
+                  "corp_number": "1101116628337",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)엘엑스판토스",
+                  "largest_stockholder": "(주)엘엑스판토스",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "(주)헬리스타항공",
+                  "corp_number": "1201110528086",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)엘엑스판토스",
+                  "largest_stockholder": "(주)엘엑스판토스",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "당진탱크터미널(주)",
+              "corp_number": "1650110011709",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)엘엑스인터내셔널",
+              "largest_stockholder": "(주)엘엑스인터내셔널",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "포승그린파워(주)",
+              "corp_number": "1313110143077",
+              "ownership_rate": 63.34,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)엘엑스인터내셔널",
+              "largest_stockholder": "(주)엘엑스인터내셔널",
+              "largest_stockholder_rate": 63.34,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "(주)엘엑스하우시스",
+          "corp_number": "1101114071207",
+          "ownership_rate": 30.07,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)엘엑스홀딩스",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 69.61,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)그린누리",
+              "corp_number": "2301110286144",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)엘엑스하우시스",
+              "largest_stockholder": "(주)엘엑스하우시스",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_affiliates": 17,
+    "in_holding_structure": 0,
+    "other_affiliates": 2,
+    "inferred_relations": 15,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

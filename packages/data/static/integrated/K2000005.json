@@ -1,0 +1,311 @@
+{
+  "group_code": "K2000005",
+  "group_name": "농심",
+  "owner": "신동원",
+  "holding_company": "(주)농심홀딩스",
+  "holding_corp_number": "1101112819005",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "(주)농심",
+      "corp_number": "1101110057574",
+      "ownership_rate": 32.72,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)농심홀딩스",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 50.77,
+      "parent_mismatch": true,
+      "children": [
+        {
+          "name": "농심이스포츠(주)",
+          "corp_number": "1101117076022",
+          "ownership_rate": 88.0,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)농심",
+          "largest_stockholder": "(주)농심",
+          "largest_stockholder_rate": 90.3,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)농심기획",
+          "corp_number": "1101111305188",
+          "ownership_rate": 90.0,
+          "relation_type": "손자회사",
+          "source": "holding",
+          "inferred": false,
+          "legal_parent_name": "(주)농심",
+          "largest_stockholder": null,
+          "largest_stockholder_rate": null,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "(주)허심청브로이",
+          "corp_number": "1801111483055",
+          "ownership_rate": 100.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)농심",
+          "largest_stockholder": "(주)농심",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "농심엔지니어링(주)",
+      "corp_number": "1101111444069",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)농심홀딩스",
+      "largest_stockholder": "(주)농심홀딩스",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "농심개발(주)",
+      "corp_number": "1154110002700",
+      "ownership_rate": 96.92,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)농심홀딩스",
+      "largest_stockholder": "(주)농심홀딩스",
+      "largest_stockholder_rate": 96.94,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "농심태경(주)",
+      "corp_number": "1341110005814",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)농심홀딩스",
+      "largest_stockholder": "(주)농심홀딩스",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "율촌화학(주)",
+      "corp_number": "1101110145147",
+      "ownership_rate": 31.94,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)농심홀딩스",
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 43.52,
+      "parent_mismatch": true,
+      "children": []
+    }
+  ],
+  "other_affiliates": [
+    {
+      "name": "(주)농심미분",
+      "corp_number": "1648110051396",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)대주실업",
+      "corp_number": "1801110007103",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)엔에스아리아",
+      "corp_number": "1101116513124",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)이스턴웰스",
+      "corp_number": "1101111862104",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)메가마트",
+          "corp_number": "1101110222557",
+          "ownership_rate": 9.54,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)이스턴웰스",
+          "largest_stockholder": "농심근로복지기금",
+          "largest_stockholder_rate": 17.7,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)농심캐피탈",
+              "corp_number": "1801110607482",
+              "ownership_rate": 32.37,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)메가마트",
+              "largest_stockholder": "(주)메가마트",
+              "largest_stockholder_rate": 32.37,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)엔디에스",
+              "corp_number": "1101110912687",
+              "ownership_rate": 53.97,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)메가마트",
+              "largest_stockholder": "(주)메가마트",
+              "largest_stockholder_rate": 53.97,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "언양농림개발(주)",
+              "corp_number": "1812110003067",
+              "ownership_rate": 49.5,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)메가마트",
+              "largest_stockholder": "(주)메가마트",
+              "largest_stockholder_rate": 49.5,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "(주)이에스에이그룹",
+      "corp_number": "1101117497286",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 34.86,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)캐처스",
+      "corp_number": "1955110093488",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "반도통운(주)",
+      "corp_number": "1711110001403",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 45.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "전일운수(유)",
+      "corp_number": "1801140008981",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(유)전일연마",
+          "corp_number": "1801140010431",
+          "ownership_rate": 90.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "전일운수(유)",
+          "largest_stockholder": "전일운수(유)",
+          "largest_stockholder_rate": 90.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "구미물류(주)",
+          "corp_number": "1760110059334",
+          "ownership_rate": 10.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "전일운수(유)",
+          "largest_stockholder": "반도통운(주)",
+          "largest_stockholder_rate": 40.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_affiliates": 22,
+    "in_holding_structure": 8,
+    "other_affiliates": 8,
+    "inferred_relations": 7,
+    "subsidiaries": 5,
+    "grandchildren": 2,
+    "great_grandchildren": 0
+  }
+}

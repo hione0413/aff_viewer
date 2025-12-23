@@ -1,0 +1,420 @@
+{
+  "group_code": "K1000052",
+  "group_name": "영풍",
+  "owner": "장형진",
+  "holding_company": null,
+  "holding_corp_number": null,
+  "finance_type": null,
+  "tree": [],
+  "other_affiliates": [
+    {
+      "name": "(유)와이피씨",
+      "corp_number": "1314140001931",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "씨케이(유)",
+      "corp_number": "1314140004396",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)코리아써키트",
+          "corp_number": "1301110026749",
+          "ownership_rate": 0.02,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "씨케이(유)",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 49.65,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)인터플렉스",
+              "corp_number": "1350110042924",
+              "ownership_rate": 30.56,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)코리아써키트",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 52.28,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)테라닉스",
+              "corp_number": "1350110042950",
+              "ownership_rate": 50.09,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)코리아써키트",
+              "largest_stockholder": "(주)코리아써키트",
+              "largest_stockholder_rate": 50.09,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "시그네틱스(주)",
+                  "corp_number": "1101110070815",
+                  "ownership_rate": 35.3,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)테라닉스",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 62.12,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "에스아이앤엘(주)",
+      "corp_number": "1201111060681",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "서린상사(주)",
+      "largest_stockholder_rate": 70.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "에이치씨(유)",
+      "corp_number": "1314140010319",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "영풍문고홀딩스(주)",
+      "corp_number": "1101110855530",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "씨케이(유)",
+      "largest_stockholder_rate": 33.95,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)영풍문고",
+          "corp_number": "1101117577393",
+          "ownership_rate": 80.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "영풍문고홀딩스(주)",
+          "largest_stockholder": "영풍문고홀딩스(주)",
+          "largest_stockholder_rate": 80.0,
+          "parent_mismatch": false,
+          "children": []
+        },
+        {
+          "name": "영풍개발(주)",
+          "corp_number": "1101110612914",
+          "ownership_rate": 34.0,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "영풍문고홀딩스(주)",
+          "largest_stockholder": "영풍문고홀딩스(주)",
+          "largest_stockholder_rate": 34.0,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)영풍",
+              "corp_number": "1101110003824",
+              "ownership_rate": 15.53,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "영풍개발(주)",
+              "largest_stockholder": "기타",
+              "largest_stockholder_rate": 22.88,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)영풍이앤이",
+                  "corp_number": "1311110238400",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)영풍",
+                  "largest_stockholder": "(주)영풍",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "고려아연(주)",
+                  "corp_number": "1101110168404",
+                  "ownership_rate": 25.15,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)영풍",
+                  "largest_stockholder": "기타",
+                  "largest_stockholder_rate": 57.92,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "(주)알란텀",
+                      "corp_number": "1311110215078",
+                      "ownership_rate": 11.4,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "고려아연(주)",
+                      "largest_stockholder": "기타",
+                      "largest_stockholder_rate": 23.18,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "서린정보기술(주)",
+                      "corp_number": "1101111260077",
+                      "ownership_rate": 33.34,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "고려아연(주)",
+                      "largest_stockholder": "고려아연(주)",
+                      "largest_stockholder_rate": 33.34,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "스틸싸이클(주)",
+                      "corp_number": "1101114260123",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "고려아연(주)",
+                      "largest_stockholder": "고려아연(주)",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": [
+                        {
+                          "name": "스틸싸이클에스씨(주)",
+                          "corp_number": "1101114789511",
+                          "ownership_rate": 100.0,
+                          "relation_type": "추론",
+                          "source": "affiliate",
+                          "inferred": true,
+                          "legal_parent_name": "스틸싸이클(주)",
+                          "largest_stockholder": "스틸싸이클(주)",
+                          "largest_stockholder_rate": 100.0,
+                          "parent_mismatch": false,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "주식회사 케이지엑스",
+                      "corp_number": "1812110020558",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "고려아연(주)",
+                      "largest_stockholder": "고려아연(주)",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "케이잼(주)",
+                      "corp_number": "2301110328053",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "고려아연(주)",
+                      "largest_stockholder": "고려아연(주)",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "케이지그린텍(주)",
+                      "corp_number": "2301110164077",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "고려아연(주)",
+                      "largest_stockholder": "고려아연(주)",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    },
+                    {
+                      "name": "켐코(주)",
+                      "corp_number": "1311110470424",
+                      "ownership_rate": 73.44,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "고려아연(주)",
+                      "largest_stockholder": "고려아연(주)",
+                      "largest_stockholder_rate": 73.44,
+                      "parent_mismatch": false,
+                      "children": [
+                        {
+                          "name": "한국전구체(주)",
+                          "corp_number": "2301110378397",
+                          "ownership_rate": 51.0,
+                          "relation_type": "추론",
+                          "source": "affiliate",
+                          "inferred": true,
+                          "legal_parent_name": "켐코(주)",
+                          "largest_stockholder": "켐코(주)",
+                          "largest_stockholder_rate": 51.0,
+                          "parent_mismatch": false,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "농업회사법인 에스피팜랜드(유)",
+                  "corp_number": "1757140000651",
+                  "ownership_rate": 90.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)영풍",
+                  "largest_stockholder": "(주)영풍",
+                  "largest_stockholder_rate": 90.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "영풍전자(주)",
+                  "corp_number": "1350110032106",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)영풍",
+                  "largest_stockholder": "(주)영풍",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "코리아니켈(주)",
+                  "corp_number": "1101110529482",
+                  "ownership_rate": 27.14,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)영풍",
+                  "largest_stockholder": "고려아연(주)",
+                  "largest_stockholder_rate": 33.93,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "케이지트레이딩(주)",
+              "corp_number": "1101110365068",
+              "ownership_rate": 10.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "영풍개발(주)",
+              "largest_stockholder": "고려아연(주)",
+              "largest_stockholder_rate": 49.97,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "유미개발(주)",
+      "corp_number": "1101110235542",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "기타",
+      "largest_stockholder_rate": 32.68,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "케이젯정밀(주)",
+          "corp_number": "1101110342496",
+          "ownership_rate": 5.41,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "유미개발(주)",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 52.73,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "제리코파트너스(주)",
+      "corp_number": "1345110243698",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "stats": {
+    "total_affiliates": 30,
+    "in_holding_structure": 0,
+    "other_affiliates": 7,
+    "inferred_relations": 23,
+    "subsidiaries": 0,
+    "grandchildren": 0,
+    "great_grandchildren": 0
+  }
+}

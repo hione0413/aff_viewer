@@ -1,0 +1,326 @@
+{
+  "group_code": "K1000041",
+  "group_name": "세아",
+  "owner": "이순형",
+  "holding_company": "(주)세아제강지주",
+  "holding_corp_number": "1101110118996",
+  "finance_type": "일반",
+  "tree": [
+    {
+      "name": "(주)세아스틸인터내셔날",
+      "corp_number": "1101116733392",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)세아제강지주",
+      "largest_stockholder": "(주)세아제강지주",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)에스에스아이케이",
+      "corp_number": "1101116572344",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)세아제강지주",
+      "largest_stockholder": "(주)세아제강지주",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "동아스틸(주)",
+          "corp_number": "1801110113091",
+          "ownership_rate": 97.67,
+          "relation_type": "손자회사",
+          "source": "both",
+          "inferred": false,
+          "legal_parent_name": "(주)에스에스아이케이",
+          "largest_stockholder": "(주)에스에스아이케이",
+          "largest_stockholder_rate": 100.0,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)세아제강",
+      "corp_number": "1101116860640",
+      "ownership_rate": 46.32,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)세아제강지주",
+      "largest_stockholder": "(주)세아제강지주",
+      "largest_stockholder_rate": 49.63,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)세아씨엠",
+      "corp_number": "2111110050667",
+      "ownership_rate": 100.0,
+      "relation_type": "자회사",
+      "source": "both",
+      "inferred": false,
+      "legal_parent_name": "(주)세아제강지주",
+      "largest_stockholder": "(주)세아제강지주",
+      "largest_stockholder_rate": 100.0,
+      "parent_mismatch": false,
+      "children": []
+    }
+  ],
+  "other_affiliates": [
+    {
+      "name": "(주)에이앤에이인베스트",
+      "corp_number": "1101117533311",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 0.31,
+      "parent_mismatch": false,
+      "children": []
+    },
+    {
+      "name": "(주)에이치피피",
+      "corp_number": "1101115386366",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": null,
+      "largest_stockholder_rate": null,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "탈리다쿰(주)",
+          "corp_number": "1101117106473",
+          "ownership_rate": 84.1,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)에이치피피",
+          "largest_stockholder": "(주)에이치피피",
+          "largest_stockholder_rate": 84.1,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "(주)에이팩인베스터스",
+      "corp_number": "1101110038011",
+      "ownership_rate": null,
+      "relation_type": null,
+      "source": "affiliate",
+      "inferred": false,
+      "legal_parent_name": null,
+      "largest_stockholder": "동일인",
+      "largest_stockholder_rate": 78.02,
+      "parent_mismatch": false,
+      "children": [
+        {
+          "name": "(주)세아홀딩스",
+          "corp_number": "1101112276809",
+          "ownership_rate": 0.01,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)에이팩인베스터스",
+          "largest_stockholder": "(주)에이치피피",
+          "largest_stockholder_rate": 9.38,
+          "parent_mismatch": false,
+          "children": [
+            {
+              "name": "(주)브이엔티지",
+              "corp_number": "1101117507291",
+              "ownership_rate": 88.03,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)세아홀딩스",
+              "largest_stockholder": "(주)세아홀딩스",
+              "largest_stockholder_rate": 88.03,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)세아기술투자",
+              "corp_number": "1101118483565",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)세아홀딩스",
+              "largest_stockholder": "(주)세아홀딩스",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)세아네트웍스",
+              "corp_number": "1101110862519",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)세아홀딩스",
+              "largest_stockholder": "(주)세아홀딩스",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)세아베스틸지주",
+              "corp_number": "1101110035794",
+              "ownership_rate": 61.72,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)세아홀딩스",
+              "largest_stockholder": "(주)세아홀딩스",
+              "largest_stockholder_rate": 61.72,
+              "parent_mismatch": false,
+              "children": [
+                {
+                  "name": "(주)세아베스틸",
+                  "corp_number": "1101118256467",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)세아베스틸지주",
+                  "largest_stockholder": "(주)세아베스틸지주",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                },
+                {
+                  "name": "(주)세아창원특수강",
+                  "corp_number": "1942110025248",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)세아베스틸지주",
+                  "largest_stockholder": "(주)세아베스틸지주",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": [
+                    {
+                      "name": "(주)씨티씨",
+                      "corp_number": "2844110108489",
+                      "ownership_rate": 100.0,
+                      "relation_type": "추론",
+                      "source": "affiliate",
+                      "inferred": true,
+                      "legal_parent_name": "(주)세아창원특수강",
+                      "largest_stockholder": "(주)세아창원특수강",
+                      "largest_stockholder_rate": 100.0,
+                      "parent_mismatch": false,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "(주)세아항공방산소재",
+                  "corp_number": "1942110051392",
+                  "ownership_rate": 100.0,
+                  "relation_type": "추론",
+                  "source": "affiliate",
+                  "inferred": true,
+                  "legal_parent_name": "(주)세아베스틸지주",
+                  "largest_stockholder": "(주)세아베스틸지주",
+                  "largest_stockholder_rate": 100.0,
+                  "parent_mismatch": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "(주)세아엘앤에스",
+              "corp_number": "1511110000847",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)세아홀딩스",
+              "largest_stockholder": "(주)세아홀딩스",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)세아엠앤에스",
+              "corp_number": "1244110076473",
+              "ownership_rate": 83.92,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)세아홀딩스",
+              "largest_stockholder": "(주)세아홀딩스",
+              "largest_stockholder_rate": 83.92,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)세아특수강",
+              "corp_number": "1746110005478",
+              "ownership_rate": 69.86,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)세아홀딩스",
+              "largest_stockholder": "(주)세아홀딩스",
+              "largest_stockholder_rate": 69.86,
+              "parent_mismatch": false,
+              "children": []
+            },
+            {
+              "name": "(주)아이언그레이",
+              "corp_number": "1101114992768",
+              "ownership_rate": 100.0,
+              "relation_type": "추론",
+              "source": "affiliate",
+              "inferred": true,
+              "legal_parent_name": "(주)세아홀딩스",
+              "largest_stockholder": "(주)세아홀딩스",
+              "largest_stockholder_rate": 100.0,
+              "parent_mismatch": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "(주)피앤아이",
+          "corp_number": "1101111900813",
+          "ownership_rate": 43.15,
+          "relation_type": "추론",
+          "source": "affiliate",
+          "inferred": true,
+          "legal_parent_name": "(주)에이팩인베스터스",
+          "largest_stockholder": "기타",
+          "largest_stockholder_rate": 56.83,
+          "parent_mismatch": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_affiliates": 24,
+    "in_holding_structure": 6,
+    "other_affiliates": 3,
+    "inferred_relations": 15,
+    "subsidiaries": 4,
+    "grandchildren": 1,
+    "great_grandchildren": 0
+  }
+}
