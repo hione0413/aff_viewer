@@ -4,6 +4,8 @@ import {
   BannerAdOptions,
   BannerAdSize,
   BannerAdPosition,
+  BannerAdPluginEvents,
+  AdMobBannerSize,
 } from '@capacitor-community/admob'
 
 // 테스트용 광고 단위 ID
@@ -53,7 +55,7 @@ export async function initializeAdMob(): Promise<void> {
 /**
  * 하단 배너 광고 표시
  */
-export async function showBannerAd(): Promise<void> {
+export async function showBannerAd(onSize?: (height: number) => void): Promise<void> {
   if (!Capacitor.isNativePlatform()) {
     return
   }
@@ -73,6 +75,19 @@ export async function showBannerAd(): Promise<void> {
       position: BannerAdPosition.BOTTOM_CENTER,
       margin: 0,
       isTesting: isDev,
+    }
+
+    // 크기 변경 이벤트 리스너 등록
+    if (onSize) {
+      AdMob.addListener(BannerAdPluginEvents.SizeChanged, (info: AdMobBannerSize) => {
+        console.log('[AdMob] 배너 크기 변경:', info.height)
+        onSize(info.height)
+      })
+
+      AdMob.addListener(BannerAdPluginEvents.Loaded, () => {
+        // 로드 시에도 크기 확인이 필요할 수 있음
+        console.log('[AdMob] 배너 로드됨')
+      })
     }
 
     await AdMob.showBanner(options)
