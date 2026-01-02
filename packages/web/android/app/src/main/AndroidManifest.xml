@@ -35,10 +35,9 @@
         </provider>
 
         <!-- AdMob App ID -->
-        <!-- TODO: 배포 시 실제 ID로 변경: ca-app-pub-9167710302823457~2889628387 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-9167710302823457~2889628387"/>
     </application>
 
     <!-- Permissions -->

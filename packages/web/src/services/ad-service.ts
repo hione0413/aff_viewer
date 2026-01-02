@@ -7,17 +7,17 @@ import {
 } from '@capacitor-community/admob'
 
 // 테스트용 광고 단위 ID
-const TEST_BANNER_ID = 'ca-app-pub-3940256099942544/6300978111'
+// const TEST_BANNER_ID = 'ca-app-pub-3940256099942544/6300978111'
 
 // 실제 광고 단위 ID (AdMob 콘솔에서 발급받은 ID로 교체)
-// const PROD_BANNER_ID = 'ca-app-pub-9167710302823457/6680521977'
+const PROD_BANNER_ID = 'ca-app-pub-9167710302823457/6680521977'
 
 // 개발 모드 여부
 const isDev = import.meta.env.DEV
 
 // 광고 단위 ID (테스트 시 TEST_BANNER_ID, 배포 시 PROD_BANNER_ID)
 // TODO: 배포 시 PROD_BANNER_ID로 변경
-const BANNER_AD_ID = TEST_BANNER_ID
+const BANNER_AD_ID = PROD_BANNER_ID
 
 let isInitialized = false
 let isBannerShowing = false
