@@ -17,6 +17,7 @@ export interface CorporateGroup {
   affiliate_count: number
   group_type: string | null
   is_public: boolean
+  designation_year: string | null
 }
 
 export interface Affiliate {
@@ -240,12 +241,12 @@ export async function searchAll(keyword: string): Promise<{
 
   const groups = groupResult.length > 0
     ? groupResult[0].values.map((row: unknown[]) => ({
-        id: row[0] as number,
-        code: row[1] as string,
-        name: row[2] as string,
-        owner: row[3] as string | null,
-        affiliate_count: row[4] as number
-      }))
+      id: row[0] as number,
+      code: row[1] as string,
+      name: row[2] as string,
+      owner: row[3] as string | null,
+      affiliate_count: row[4] as number
+    }))
     : []
 
   // 계열사 검색
@@ -260,12 +261,12 @@ export async function searchAll(keyword: string): Promise<{
 
   const affiliates = affiliateResult.length > 0
     ? affiliateResult[0].values.map((row: unknown[]) => ({
-        id: row[0] as number,
-        name: row[1] as string,
-        group_code: row[2] as string,
-        group_name: row[3] as string | null,
-        ceo: row[4] as string | null
-      }))
+      id: row[0] as number,
+      name: row[1] as string,
+      group_code: row[2] as string,
+      group_name: row[3] as string | null,
+      ceo: row[4] as string | null
+    }))
     : []
 
   return {
@@ -304,10 +305,10 @@ export async function fetchIntegratedGroup(groupCode: string): Promise<Integrate
 
   const affiliates: Affiliate[] = affiliateResult.length > 0
     ? affiliateResult[0].values.map((row: unknown[]) => {
-        const obj: Record<string, unknown> = {}
-        affiliateResult[0].columns.forEach((col: string, i: number) => { obj[col] = row[i] })
-        return obj as unknown as Affiliate
-      })
+      const obj: Record<string, unknown> = {}
+      affiliateResult[0].columns.forEach((col: string, i: number) => { obj[col] = row[i] })
+      return obj as unknown as Affiliate
+    })
     : []
 
   const affiliateCorpNumbers = new Set(affiliates.filter(a => a.corporate_number).map(a => a.corporate_number!))
@@ -517,8 +518,8 @@ export async function fetchIntegratedGroup(groupCode: string): Promise<Integrate
   // 루트 기타 계열사 찾기
   const rootOtherAffiliates = affiliates.filter(
     a => a.corporate_number &&
-         !processedCorpNumbers.has(a.corporate_number) &&
-         !hasParentInOthers.has(a.corporate_number)
+      !processedCorpNumbers.has(a.corporate_number) &&
+      !hasParentInOthers.has(a.corporate_number)
   )
 
   // 기타 계열사 트리 구성
@@ -687,4 +688,22 @@ export async function checkDBConnection(): Promise<boolean> {
   } catch {
     return false
   }
+}
+
+/**
+ * 메타데이터(지정년월 등) 조회
+ */
+export async function fetchMetadata(): Promise<{ designationYear: string | null }> {
+  try {
+    const database = await initDB()
+    const result = database.exec('SELECT designation_year FROM corporate_groups WHERE designation_year IS NOT NULL LIMIT 1')
+
+    if (result.length > 0 && result[0].values.length > 0) {
+      return { designationYear: result[0].values[0][0] as string }
+    }
+  } catch (e) {
+    console.error('Metadata fetch error:', e)
+  }
+
+  return { designationYear: null }
 }

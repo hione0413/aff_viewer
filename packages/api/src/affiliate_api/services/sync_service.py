@@ -23,11 +23,13 @@ class SyncService:
     def sync_all(self, year: str | None = None):
         """기업집단만 동기화 (빠름)"""
         if not year:
+            # 기본적으로 가장 최근 지정월(5월)을 기준으로 함. 
+            # 2025년 데이터가 아직 없을 수 있으므로 현재는 202405를 기본값으로 사용하거나 동적으로 계산
             now = datetime.now()
-            if now.month >= 5:
+            if now.year >= 2025 and now.month >= 5:
                 year = f"{now.year}05"
             else:
-                year = f"{now.year - 1}05"
+                year = "202405" # 안정적인 최신 데이터
 
         logger.info(f"동기화 시작: year={year}")
 
@@ -58,11 +60,25 @@ class SyncService:
             }
             affiliates = self._fetch_api("appnGroupAffiList/appnGroupAffiListApi", params)
 
+            current_corp_numbers = [a.get("jurirno") for a in affiliates if a.get("jurirno")]
             for affiliate_data in affiliates:
                 self._upsert_affiliate(group_code, affiliate_data, year)
 
+            # API 명단에 없는 계열사 삭제 (제외된 계열사 처리)
+            # 안전장치: API가 데이터를 하나라도 반환했을 때만 삭제 진행
+            deleted_count = 0
+            if current_corp_numbers:
+                deleted_count = (
+                    self.db.query(Affiliate)
+                    .filter(
+                        Affiliate.group_code == group_code,
+                        ~Affiliate.corporate_number.in_(current_corp_numbers)
+                    )
+                    .delete(synchronize_session=False)
+                )
+
             self.db.commit()
-            logger.info(f"계열사 동기화 완료: {len(affiliates)}개")
+            logger.info(f"계열사 동기화 완료: {len(affiliates)}개 추가/수정, {deleted_count}개 삭제")
             return len(affiliates)
         except Exception as e:
             logger.error(f"계열사 동기화 실패: {e}")
@@ -195,11 +211,22 @@ class SyncService:
 
         logger.info(f"조회된 기업집단: {len(groups)}개")
 
+        current_group_codes = [g.get("unityGrupCode") for g in groups if g.get("unityGrupCode")]
         for group_data in groups:
             self._upsert_group(group_data, year)
 
+        # API 명단에 없는 기업집단 삭제 (지정 취소된 경우)
+        # 안전장치: API가 데이터를 하나라도 반환했을 때만 삭제 진행
+        deleted_count = 0
+        if current_group_codes:
+            deleted_count = (
+                self.db.query(CorporateGroup)
+                .filter(~CorporateGroup.code.in_(current_group_codes))
+                .delete(synchronize_session=False)
+            )
+
         self.db.commit()
-        logger.info("기업집단 동기화 완료")
+        logger.info(f"기업집단 동기화 완료: {len(groups)}개 추가/수정, {deleted_count}개 삭제")
 
     def _sync_affiliates(self, year: str):
         """모든 기업집단의 계열사 동기화"""
